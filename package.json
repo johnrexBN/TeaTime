@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "sweetalert2": "^8.19.1"
+  }
+}

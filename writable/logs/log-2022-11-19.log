@@ -1,0 +1,16 @@
+CRITICAL - 2022-11-19 23:59:46 --> Undefined variable $data
+in APPPATH\Views\Homepage\inc\prods.php on line 13.
+ 1 APPPATH\Views\Homepage\inc\prods.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\Homepage\\inc\\prods.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\prods.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/prods', null, true)
+ 5 APPPATH\Views\Homepage\homepage.php(4): CodeIgniter\View\View->include('Homepage/inc/prods')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\homepage.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/homepage', [], true)
+ 9 APPPATH\Controllers\home.php(12): view('Homepage/homepage', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->homepage()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

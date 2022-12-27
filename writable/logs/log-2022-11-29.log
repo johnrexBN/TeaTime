@@ -1,0 +1,28 @@
+CRITICAL - 2022-11-29 00:53:00 --> Undefined array key "HTTP_REFERER"
+in APPPATH\Controllers\admin.php on line 67.
+ 1 APPPATH\Controllers\admin.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "HTTP_REFERER"', 'APPPATH\\Controllers\\admin.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->delete('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-29 00:53:15 --> Undefined array key "HTTP_REFERER"
+in APPPATH\Controllers\admin.php on line 67.
+ 1 APPPATH\Controllers\admin.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "HTTP_REFERER"', 'APPPATH\\Controllers\\admin.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->delete('16')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-29 00:53:43 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\edit.php on line 42.
+ 1 APPPATH\Views\Admin\edit.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\edit.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/edit', [], true)
+ 5 APPPATH\Controllers\admin.php(48): view('admin/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->edit('16')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
