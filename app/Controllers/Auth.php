@@ -65,7 +65,8 @@ class Auth extends BaseController
                 'name'=>$name,
                 'email'=>$email,
                 'password'=>Hash::make($password),
-                'usertype'=> 'user'
+                'usertype'=> 'user',
+                'token' => $this->token(100)
             ];
             $usersmodel = new \App\Models\UsersModel();
             $query =$usersmodel->insert($values);
@@ -120,6 +121,7 @@ class Auth extends BaseController
                     'password' => $user_info['password'],
                     'email' => $user_info['email'],
                     'usertype' => $user_info['usertype'],
+                    'token' => $user_info['token']
                 ];
                 session()->set('loggedUser',$userid);
                 session()->set($data);
@@ -138,6 +140,11 @@ class Auth extends BaseController
     }
     public function dashboard(){
         return view('auth/dashboard');
+    }
+    public function token($lenght)
+    {
+       $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+       return substr(str_shuffle($str_result),0,$lenght);
     }
 }
 ?>
