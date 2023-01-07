@@ -45,6 +45,9 @@ $routes->get('/register', 'Auth::register');
 $routes->post('/save', 'Auth::save');
 $routes->post('/check', 'Auth::check');
 $routes->get('/dashboard', 'Auth::dashboard');
+$routes->match(['get','post'],'/fpass', 'Auth::fpass');
+$routes->match(['get','post'],'/otp', 'Auth::otp');
+$routes->match(['get','post'],'/reset', 'Auth::reset');
 
 //Admin Side
 
