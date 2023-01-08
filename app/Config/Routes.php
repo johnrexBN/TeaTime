@@ -48,6 +48,7 @@ $routes->get('/dashboard', 'Auth::dashboard');
 $routes->match(['get','post'],'/fpass', 'Auth::fpass');
 $routes->match(['get','post'],'/otp', 'Auth::otp');
 $routes->match(['get','post'],'/reset', 'Auth::reset');
+$routes->match(['get','post'],'/logout', 'Auth::logout');
 
 //Admin Side
 

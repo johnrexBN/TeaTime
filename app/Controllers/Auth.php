@@ -256,4 +256,11 @@ class Auth extends BaseController
         }
         
     }
+    public function logout()
+    {
+        if(session()->has('loggedUser')){
+            session()->remove('loggedUser');
+        }
+        return redirect()->to('login');
+    }
 }

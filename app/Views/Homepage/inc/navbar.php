@@ -7,7 +7,6 @@
     </div>
     <!--PreLoader Ends-->
    	
-
 <!-- header -->
 <div class="top-header-area" id="sticker">
 		<div class="container">
@@ -47,7 +46,7 @@
 										<a class="" ><i class="fas fa-user-circle"></i></a>
 										<ul class="sub-menu">
 											<li><a href="<?= site_url(''); ?>"><i class="fas fa-user-circle"></i>  Profile</a></li>
-											<li><a href="<?= site_url(''); ?>"><i class="fa fa-sign-out"></i>  Logout</a></li>
+											<li><a href="<?= site_url('logout'); ?>"><i class="fa fa-sign-out"></i>  Logout</a></li>
 										</ul>	
 									</div>
 								</li>
