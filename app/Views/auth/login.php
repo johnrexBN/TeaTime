@@ -48,7 +48,7 @@
                                                 </div>
                                                 <br>
                                                 <button type="submit" class="btn btn-primary">Log In</button>
-                                                <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot
+                                                <p class="mb-0 mt-4 text-center"><a href="fpass" class="link">Forgot
                                                         your password?</a></p>
                                         </div>
                                     </div>

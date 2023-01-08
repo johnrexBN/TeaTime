@@ -20,11 +20,11 @@
                             <h5 style="text-align: center;"><strong> Password Reset</strong></h5>
                             <br>
                         </div>
-                        <form>
+                        <form action="reset" method="post">
                             <div class="mb-3">
-                                <input type="email" id="email" class="form-control" name="email" placeholder="Enter new password" required="">
+                                <input type="text"  class="form-control" name="new_password" placeholder="Enter new password" required="">
                                 <br>
-                                <input type="email" id="email" class="form-control" name="email" placeholder="Retype new password" required="">
+                                <input type="text"  class="form-control" name="confirm_password" placeholder="Retype new password" required="">
                             </div>
                             <div class="mb-3 d-grid">
                                 <button type="submit" class="btn btn-primary">
