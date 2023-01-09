@@ -21,11 +21,11 @@
 	<div class="hero-area hero-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-9 offset-sm-2 text-center">
+				<div class="col-lg-12 col-sm-12 text-center">
 					<div class="hero-text">
 						<div class="hero-text-tablecell">
 							<p class="subtitle">Give life more flavours</p>
-							<h1>Tea Time Socorro</h1>
+							<h1 style="text-align: center;">Tea Time Socorro</h1>
 							<div class="hero-btns">
 								<a href="shop.html" class="boxed-btn">Food Collection</a>
 								<a href="<?= site_url('book');?>" class="bordered-btn">Reserve Now</a>

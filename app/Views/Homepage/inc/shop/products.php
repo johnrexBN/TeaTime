@@ -1,8 +1,7 @@
 
 	<!-- products -->
-	<div class="product-section mt-150 mb-150">
+	<div class="product-section mt-80 mb-150	">
 		<div class="container">
-
 			<div class="row">
                 <div class="col-md-12">
                     <div class="product-filters">
@@ -32,7 +31,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-12 text-center">
+				<div class="col-lg-12 text-center mb-5">
 					<div class="pagination-wrap">
 						<ul>
 							<li><a href="#">Prev</a></li>

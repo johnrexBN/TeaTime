@@ -857,7 +857,7 @@ a.mobile-show {
 
 ----------------------------------------------------------------------------- */
 .single-logo-item img {
-  max-width: 180px;
+  max-width: 150px;
   margin: 0 auto;
 }
 
@@ -870,7 +870,7 @@ a.mobile-show {
   background-color: #000000;
   opacity: 0.7;
   color: #fff;
-  padding: 150px 0;
+  padding: 30px 0;
 }
 
 h2.widget-title {
@@ -1410,6 +1410,7 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 7px;
   font-size: 15px;
+  margin-top: 190px;
 }
 
 .hero-text h1 {
@@ -1440,6 +1441,7 @@ html, body {
 
 .hero-btns {
   margin-top: 35px;
+  margin-right: 35px;
 }
 
 .hero-btns a.bordered-btn {

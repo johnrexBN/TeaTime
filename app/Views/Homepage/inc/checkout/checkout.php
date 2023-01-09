@@ -1,6 +1,6 @@
 
 	<!-- check out section -->
-	<div class="checkout-section mt-150 mb-150">
+	<div class="checkout-section mt-80 mb-150">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
@@ -9,7 +9,7 @@
 						  <div class="card single-accordion">
 						    <div class="card-header" id="headingOne">
 						      <h5 class="mb-0">
-						        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: black; color: white; opacity: 0.7;">
 						          Billing Address
 						        </button>
 						      </h5>
@@ -32,7 +32,7 @@
 						  <div class="card single-accordion">
 						    <div class="card-header" id="headingTwo">
 						      <h5 class="mb-0">
-						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: black; color: white; opacity: 0.7;" >
 						          Shipping Address
 						        </button>
 						      </h5>
@@ -48,7 +48,7 @@
 						  <div class="card single-accordion">
 						    <div class="card-header" id="headingThree">
 						      <h5 class="mb-0">
-						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: black; color: white; opacity: 0.7;">
 						          Card Details
 						        </button>
 						      </h5>
@@ -69,35 +69,35 @@
 				<div class="col-lg-4">
 					<div class="order-details-wrap">
 						<table class="order-details">
-							<thead>
-								<tr>
-									<th>Your order Details</th>
-									<th>Price</th>
+							<thead >
+								<tr style="border: 2px solid black;">
+									<th style="border: 2px solid black; background-color: black; color: white; opacity: 0.7;">Your Order Details</th>
+									<th style="background-color: black; color: white; opacity: 0.7;">Price</th>
 								</tr>
 							</thead>
 							<tbody class="order-details-body">
 								<tr>
-									<td>Product</td>
-									<td>Total</td>
+									<td style="border: 2px solid black;" >Product</td>
+									<td style="border: 2px solid black;" >Total</td>
 								</tr>
 								<tr>
-									<td>Strawberry</td>
-									<td>$85.00</td>
+									<td style="border: 2px solid black;" >Strawberry</td>
+									<td style="border: 2px solid black;" >$85.00</td>
 								</tr>
 								
 							</tbody>
 							<tbody class="checkout-details">
 								<tr>
-									<td>Subtotal</td>
-									<td>₱120</td>
+									<td style="border: 2px solid black;" >Subtotal</td>
+									<td style="border: 2px solid black;" >₱120</td>
 								</tr>
 								<tr>
-									<td>Shipping</td>
-									<td>₱120</td>
+									<td style="border: 2px solid black;" >Shipping</td>
+									<td style="border: 2px solid black;" >₱120</td>
 								</tr>
 								<tr>
-									<td>Total</td>
-									<td>₱120</td>
+									<td style="border: 2px solid black;" >Total</td>
+									<td style="border: 2px solid black;" >₱120</td>
 								</tr>
 							</tbody>
 						</table>
