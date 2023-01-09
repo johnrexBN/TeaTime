@@ -3,18 +3,18 @@
 //
 
 @mixin scrollbar-color-gray() {
-  scrollbar-color: #a9a9a9 transparent;
+  scrollbar-color: #cb8c58;
 
   &::-webkit-scrollbar-thumb {
-    background-color: #a9a9a9;
+    background-color: #000000;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: #cb8c58;
   }
 
   &::-webkit-scrollbar-corner {
-    background-color: transparent;
+    background-color: #cb8c58;
   }
 }
 
