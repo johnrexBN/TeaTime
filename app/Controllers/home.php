@@ -7,6 +7,7 @@ use App\Models\MenuModel;
 use CodeIgniter\Validation\Validation;
 use App\Models\ProductModel;
 use CodeIgniter\Files\File;
+use App\Models\ReservationModel;
 
 class home extends BaseController
 {
@@ -39,6 +40,32 @@ class home extends BaseController
     {
         return view('Homepage/book');
     }
+    public function save_reservation()
+    {
+        $bookmodel = new ReservationModel();
+        $name = $this->request->getPost('name');
+        $email = $this->request->getPost('email');
+        $phone = $this->request->getPost('phone');
+        $subject = $this->request->getPost('subject');
+        $tables = $this->request->getPost('tables');
+        $message = $this->request->getPost('message');
+        $date = $this->request->getPost('date');
+        
+
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'subject' =>$subject,
+            'tables' => $tables,
+            'message' => $message,
+            'date' => $date,
+            
+        ];
+        $result = $bookmodel->insert($data);
+        return view('Homepage/book');
+
+    }
     public function cart()
     {
         $id = session()->get('id');
@@ -47,8 +74,6 @@ class home extends BaseController
         $cart['cart'] = $cart_model->select('*')
         ->join('menu', 'cart.menuid = menu.id', 'right')
         ->where('cart.userid', $id)->get()->getResultArray();
-
-
 
         $cart['total'] = $cart_model->selectSum('total')
             ->where('userid', $id)->get()->getResultArray();
