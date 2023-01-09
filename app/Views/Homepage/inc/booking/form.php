@@ -9,7 +9,7 @@
 				</div>
 				<div id="form_status"></div>
 				<div class="contact-form">
-					<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+					<form action="<?= site_url('save_reservation') ?>" type="POST" method="post" id="fruitkha-contact" onSubmit="return valid_datas( this );">
 						<p>
 							<input type="text" placeholder="Name" name="name" id="name">
 							<input type="email" placeholder="Email" name="email" id="email">
@@ -19,11 +19,11 @@
 							<input type="text" placeholder="Subject" name="subject" id="subject">
 						</p>
 						<div class="input-group mb-3">
-							<select class="custom-select" id="inputGroupSelect02" >
-								<option value="1">One</option>
-								<option value="2">Two</option>
-								<option value="3">Three</option>
-								<option value="4">Four</option>
+							<select name="tables" class="custom-select" id="inputGroupSelect02" >
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+
 							</select>
 							<div class="input-group-append">
 								<label class="input-group-text" for="inputGroupSelect02">Tables</label>
@@ -32,10 +32,7 @@
 
 						<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
 						<input type="hidden" name="token" value="FsWga4&@f6aw" />
-
-						<form action="">
-							<input class="form-control" type="datetime-local" placeholder="Select date-time">
-						</form>
+						<input name="date" class="form-control" type="datetime-local" placeholder="Select date-time">
 						<br>
 						<button type="submit" ><span><b>Submit</b></span></button>
 					</form>
