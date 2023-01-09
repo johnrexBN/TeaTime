@@ -10,7 +10,7 @@
 					</div>
 				 	<div id="form_status"></div>
 					<div class="contact-form">
-						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+						<form method="post" action="<?= site_url('save_contact') ?>" type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
 							<p>
 								<input type="text" placeholder="Name" name="name" id="name">
 								<input type="email" placeholder="Email" name="email" id="email">

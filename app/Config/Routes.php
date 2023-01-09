@@ -71,6 +71,7 @@ $routes->get('/editmenu/(:any)', 'admin::editmenu/$1');
 //Homepage
 $routes->get('/homepage', 'home::homepage');
 $routes->get('/contact', 'home::contact');
+$routes->match(['get','post'],'/save_contact', 'home::save_contact');
 $routes->get('/about', 'home::about');
 $routes->match(['get','post'],'/book', 'home::book');
 $routes->match(['get','post'],'/save_reservation', 'home::save_reservation');

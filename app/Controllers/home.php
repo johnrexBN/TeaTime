@@ -8,6 +8,7 @@ use CodeIgniter\Validation\Validation;
 use App\Models\ProductModel;
 use CodeIgniter\Files\File;
 use App\Models\ReservationModel;
+use App\Models\ContactModel;
 
 class home extends BaseController
 {
@@ -32,6 +33,28 @@ class home extends BaseController
     {
         return view('Homepage/contact');
     }
+    public function save_contact()
+    {
+        $contactmodel = new ContactModel();
+        $name = $this->request->getPost('name');
+        $email = $this->request->getPost('email');
+        $phone = $this->request->getPost('phone');
+        $subject = $this->request->getPost('subject');
+        $message = $this->request->getPost('message');
+
+
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'subject' =>$subject,
+            'message' => $message
+        ];
+
+        $result = $contactmodel->insert($data);
+        return view('Homepage/contact');
+    }
+
     public function about()
     {
         return view('Homepage/about');
