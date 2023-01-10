@@ -101,7 +101,7 @@ class home extends BaseController
         $cart['total'] = $cart_model->selectSum('total')
             ->where('userid', $id)->get()->getResultArray();
           
-        
+
         return view('Homepage/cart', $cart);
        
     }
@@ -130,24 +130,46 @@ class home extends BaseController
     }
     public function userCart()
     {
+
     $id = $this->request->getPost('id');
+    $userid= session()->get('loggedUser');
       $new_model = new MenuModel();
+      $new_cart = new CartModel();
       $prod = $new_model->find($id);
       $quantity =  $this->request->getPost('quantity');
       $discount = (((float)$prod['prices'] * (int)$prod['discount'])/100) * (int)$quantity;
       $price = (float)$prod['prices'] * (int)$quantity;
 
+    $resultExist = $new_cart->where('userid', $userid)->where('menuid', $id)->find();
+    $productInfo = $new_model->find($id);
+
       $values = [
-        'userid' => session()->get('id'),
-        'menuid' => (int)$this->request->getVar('id'),
-        'quantity' => $quantity,
+        'userid' => $userid,
+        'menuid' => (int)$id,
+        'order_count' => $quantity,
         'total' => $price - $discount
       ];
+
+      if(count($resultExist) == 0 && $productInfo['stocks'] != 0){
+        $new_cart->insert($values);
+      }
+      elseif(count($resultExist) > 0 && $productInfo['stocks'] != 0){
+        $new_cart->set('order_count', $resultExist[0]['order_count'] + $quantity)->set('total', $resultExist[0]['total'] + $price)->where('userid', $userid)->where('menuid', $id)->update();
+      }
+      else{
+        echo 'out of stock';
+      }
       
-      $cart_model = new CartModel();
+      //$cart_model = new CartModel();
       //var_dump($values);
-      $cart = $cart_model->insert($values);
+      //$cart = $cart_model->insert($values);
       
       return redirect('cart');
+    }
+    public function delete_cart($id = null)
+    {
+        $cart = new CartModel();
+        $cart->where('userid', session()->get('loggedUser'))->where('menuid', $id)->delete();
+        return redirect()->route('cart');
     }
 }

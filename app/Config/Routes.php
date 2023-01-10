@@ -83,6 +83,7 @@ $routes->post('/try', 'home::try');
 $routes->get('/cart/(:any)', 'home::cart/$1');
 $routes->post('/userCart', 'home::userCart');
 $routes->get('/cart', 'home::cart');
+$routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
 
 
 /*

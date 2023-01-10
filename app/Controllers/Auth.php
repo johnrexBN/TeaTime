@@ -112,8 +112,7 @@ class Auth extends BaseController
             $check_password = Hash::Check($password, $user_info['password']);
 
             if (!$check_password) {
-                session()->setFlashdata('fail', 'Incorrect password!');
-                return redirect()->to($_SERVER['HTTP_REFERER']);
+                return redirect()->to($_SERVER['HTTP_REFERER'])->with('fail', 'Incorrect Password!');
             } else {
                 $userid = $user_info['id'];
                 $data = [
