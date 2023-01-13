@@ -30,7 +30,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Menu Table</h3>     
-                <div align="right"><a class="btn btn-success" href="addmenu" role="button">Add Menu</a></div>          
+                <div align="right"><a class="btn btn-success" href="addmenu" role="button"><i class="nav-icon fas fa-plus"></i></a></div>          
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -59,7 +59,7 @@
                     <td><?= $item['status']?></td>
                     <td>
                       <span>
-                      <a href="<?= site_url('editmenu/'.$item['id']) ?>" class="btn-sm btn-warning">Edit</a>
+                      <a href="<?= site_url('editmenu/'.$item['id']) ?>" class="btn-sm btn-warning"><i class="nav-icon fas fa-pen"></i></a>
                       </span>
                     </td>
                   </tr>

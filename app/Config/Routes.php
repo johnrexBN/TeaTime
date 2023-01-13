@@ -67,6 +67,8 @@ $routes->get('/delete/(:any)', 'admin::delete/$1');
 $routes->get('/stockcount', 'admin::stockcount');
 $routes->put('/updatemenu/(:any)', 'admin::updatemenu/$1');
 $routes->get('/editmenu/(:any)', 'admin::editmenu/$1');
+$routes->get('/calendar', 'admin::calendar');
+$routes->get('/inbox', 'admin::inbox');
 
 //Homepage
 $routes->get('/homepage', 'home::homepage');

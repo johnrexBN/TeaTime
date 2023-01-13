@@ -52,6 +52,23 @@
 <script src="<?= base_url();?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?= base_url();?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
+<!-- jQuery Mapael -->
+<script src="<?= base_url();?>/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="<?= base_url();?>/plugins/raphael/raphael.min.js"></script>
+<script src="<?= base_url();?>/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="<?= base_url();?>/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="<?= base_url();?>/plugins/chart.js/Chart.min.js"></script>
+
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="<?= base_url();?>/dist/js/pages/dashboard2.js"></script>
+
+<!-- fullCalendar 2.2.5 -->
+<script src="<?= base_url();?>/plugins/moment/moment.min.js"></script>
+<script src="<?= base_url();?>/plugins/fullcalendar/main.js"></script>
+
+<!-- jQuery UI -->
+<script src="<?= base_url();?>/plugins/jquery-ui/jquery-ui.min.js"></script>
 
 </body>
 </html>

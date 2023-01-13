@@ -30,7 +30,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Product Table</h3>     
-                <div align="right"><a class="btn btn-success" href="addproducts" role="button">Add Products</a></div>          
+                <div align="right"><a class="btn btn-success" href="addproducts" role="button"><i class="nav-icon fas fa-plus"></i></a></div>          
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -57,7 +57,7 @@
                     <td><img src="<?= base_url().'/'.'uploads/'.$prod['image'] ?>" height="130" width="95"></td>
                     <td>
                       <span>
-                      <a href="<?= site_url('edit/'.$prod['id']) ?>" class="btn-sm btn-warning">Edit</a>
+                      <a href="<?= site_url('edit/'.$prod['id']) ?>" class="btn-sm btn-warning"><i class="nav-icon fas fa-pen"></i></a>
                       </span>
                     </td>
                   </tr>

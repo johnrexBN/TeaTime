@@ -270,6 +270,13 @@ class admin extends BaseController
             }
         }
     }
-
+    public function calendar()
+    {
+        return view('admin/calendar');
+    }
+    public function inbox()
+    {
+        return view('admin/inbox');
+    }
 
 }
