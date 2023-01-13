@@ -87,6 +87,8 @@ $routes->post('/userCart', 'home::userCart');
 $routes->get('/cart', 'home::cart');
 $routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
 
+//Guess
+$routes->get('/guest_home', 'Guest::guest_home');
 
 /*
  * --------------------------------------------------------------------
