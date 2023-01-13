@@ -33,12 +33,6 @@
 										<li><a href="cart">Cart</a></li>
 									</ul>
 								</li>
-								<li><a href="#">Login</a>
-                                    <ul class="sub-menu">
-                                            <li><a href="<?= site_url(''); ?>">Admin</a></li>
-                                            <li><a href="<?= site_url('login'); ?>">User</a></li>                                
-                                    </li>
-                                    </ul>
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart"><i class="fas fa-shopping-cart"></i></a>
