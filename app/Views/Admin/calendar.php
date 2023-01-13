@@ -6,8 +6,7 @@
         <?= $this->include('admin/inc/sidebar'); ?>
     </div>
         <div class="content-wrapper">
-            <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+           
                     <!-- Content Header (Page header) -->
                     <section class="content-header">
                         <div class="container-fluid">
@@ -96,8 +95,6 @@
                             </div>
                         </div>
                     </section>
-                </ul>
-            </nav>
         </div>
 
         <?= $this->include('admin/inc/end'); ?>

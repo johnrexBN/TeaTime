@@ -90,6 +90,9 @@ $routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
 //Guess
 $routes->get('/guest_home', 'Guest::guest_home');
 
+//User Profile
+$routes->get('/profile', 'User::profile');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
