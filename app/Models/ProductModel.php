@@ -13,7 +13,6 @@ class ProductModel extends Model
         'description', 
         'price',
         'quantity',
-        'image',
         'category'
     ];
 

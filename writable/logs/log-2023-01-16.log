@@ -41,6 +41,7 @@ WHERE `cart`.`userid` IS NULL', [], false)
  7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-01-16 21:37:28 --> Trying to access array offset on value of type null
 in APPPATH\Controllers\home.php on line 126.
  1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
@@ -89,3 +90,106 @@ in APPPATH\Controllers\home.php on line 153.
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+=======
+CRITICAL - 2023-01-16 08:11:49 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\editmenu.php on line 42.
+ 1 APPPATH\Views\Admin\editmenu.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\editmenu.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\editmenu.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/editmenu', [], true)
+ 5 APPPATH\Controllers\admin.php(178): view('admin/editmenu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->editmenu('index')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 20:49:20 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->menu()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\TeaTime\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\TeaTime\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(30): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->menu()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-16 20:49:20 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\admin.php(30): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->menu()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 20:55:18 --> mysqli_sql_exception: Duplicate entry 'Winter Melon' for key 'name' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\TeaTime\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(119): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->saveproduct()
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#11 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-01-16 20:55:18 --> Duplicate entry 'Winter Melon' for key 'name'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `products` (`name`, `description`, `quantity`, `price`, `category`, `image`) VALUES (\'Winter Melon\', \'shessh\', \'34\', \'100\', \'Milktea\', \'lauren-mancke-aOC7TSLb1o8-unsplash.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `products` (`name`, `description`, `quantity`, `price`, `category`, `image`) VALUES (\'Winter Melon\', \'shessh\', \'34\', \'100\', \'Milktea\', \'lauren-mancke-aOC7TSLb1o8-unsplash.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `products` (`name`, `description`, `quantity`, `price`, `category`, `image`) VALUES (\'Winter Melon\', \'shessh\', \'34\', \'100\', \'Milktea\', \'lauren-mancke-aOC7TSLb1o8-unsplash.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products` (`name`, `description`, `quantity`, `price`, `category`, `image`) VALUES (:name:, :description:, :quantity:, :price:, :category:, :image:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\admin.php(119): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->saveproduct()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 21:10:26 --> Undefined array key "image"
+in APPPATH\Views\Admin\products.php on line 57.
+ 1 APPPATH\Views\Admin\products.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "image"', 'APPPATH\\Views\\Admin\\products.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\products.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/products', [], true)
+ 5 APPPATH\Controllers\admin.php(24): view('admin/products', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->products()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+>>>>>>> Stashed changes

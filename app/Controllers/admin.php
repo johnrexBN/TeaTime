@@ -48,13 +48,7 @@ class admin extends BaseController
     {
 
         $validation = $this->validate([
-            'product' => [
-                'label' => 'Image File',
-                'rules' => 'uploaded[product]'
-                    . '|is_image[product]'
-                    . '|mime_in[product,image/jpg,image/jpeg,image/gif,image/png,image/webp]'
-
-            ],
+            
             'name' => [
                 'rules' => 'required',
                 'errors' => [
@@ -100,10 +94,6 @@ class admin extends BaseController
             $quantity = $this->request->getVar('quantity');
             $price = $this->request->getVar('price');
             $category = $this->request->getVar('category');
-            $img = $this->request->getFile('product');
-
-            if (!$img->hasMoved()) {
-                $img->move(FCPATH . 'uploads');
 
                 $prod = new ProductModel();
                 $data = [
@@ -112,17 +102,17 @@ class admin extends BaseController
                     'quantity' => $quantity,
                     'price' => $price,
                     'category' => $category,
-                    'image' => $img->getClientName()
+                   
                 ];
                 $session = session();
 
-                if ($prod->save($data)) {
+                if ($prod->insert($data)) {
                     $session->setFlashdata('msg', 'Successfully Addedd!');
                     return redirect()->to($_SERVER['HTTP_REFERER']);
                 } else {
-                    return redirect('products');
+                    return redirect()->to($_SERVER['HTTP_REFERER'])->with('msg', 'Failed to save!');
                 }
-            }
+            
         }
     }
 

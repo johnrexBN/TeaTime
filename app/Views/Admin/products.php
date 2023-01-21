@@ -42,7 +42,6 @@
                       <th>price</th>
                       <th>quantity</th>
                       <th>category</th>
-                      <th>image</th>
                       <th>action</th>
                     </tr>
                   </thead>
@@ -54,7 +53,6 @@
                     <td><?= $prod['price']?></td>
                     <td><?= $prod['quantity']?></td>
                     <td><?= $prod['category']?></td>
-                    <td><img src="<?= base_url().'/'.'uploads/'.$prod['image'] ?>" height="130" width="95"></td>
                     <td>
                       <span>
                       <a href="<?= site_url('edit/'.$prod['id']) ?>" class="btn-sm btn-warning"><i class="nav-icon fas fa-pen"></i></a>

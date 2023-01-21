@@ -25,9 +25,9 @@
     <section>
       <div class="content">
         <div class="container-fluid">
-        <?php if (!empty(session()->getFlashdata('msg', 'Successfully Added!'))) : ?>
+        <?php if (!empty(session()->getFlashdata('msg'))) : ?>
               <div class="alert alert-success">
-                <?= session()->getFlashdata('msg', 'Successfully Added!') ?>
+                <?= session()->getFlashdata('msg') ?>
               </div>
             <?php endif; ?>
           <div class="row">
@@ -41,7 +41,7 @@
                 <!-- /.card-header -->
                 <div class="card-body">
                   <div>
-                    <form action="<?= site_url('saveproduct') ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= site_url('saveproduct') ?>" method="post"">
                       <label>Name</label>
                       <span class="text-danger"><?= isset($validation) ? display_error($validation, 'name') : '' ?></span>
                       <input type="text" name="name" class="form-control" placeholder="Enter Product Name">
@@ -61,10 +61,6 @@
                       <label>Category</label>
                       <span class="text-danger"><?= isset($validation) ? display_error($validation, 'category') : '' ?></span>
                       <input type="text" name="category" class="form-control" placeholder="Enter Product Category">
-
-                      <span class="text-danger"><?= isset($validation) ? display_error($validation, 'product') : '' ?></span>
-                      <br><label>Upload image</label>
-                      <input type="file" name="product" size="30" />
 
                       <div><button type="submit" style="float:right" class="btn btn-info">Add new product</button></div>
                     </form>
