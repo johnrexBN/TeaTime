@@ -29,7 +29,7 @@
 											<td style="color: #000; border: 2px solid black;" class="product-name"><?= $item['name'] ?></td>
 											<td style="color: #000; border: 2px solid black;" class="product-price">₱<?= number_format($item['prices'], 2) ?></td>
 											<td style="color: #000; border: 2px solid black;" class="product-quantity" value="quantity"><?= $item['order_count'] ?></td>
-											<td style="color: #000; border: 2px solid black;" class="product-total" value="total">₱<?= number_format($item['total'], 2) ?></td>
+											<td style="color: #000; border: 2px solid black;" class="product-total" value="total">₱<?= $item['total'] ?></td>
 											<td style="color: #000; border: 2px solid black;"><a href="<?= site_url('delete_cart/' . $item['id']) ?>" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10">Remove</a></td>
 										</tr>
 									<?php endforeach; ?>

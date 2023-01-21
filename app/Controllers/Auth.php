@@ -5,6 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Validation\Validation;
 use App\Libraries\Hash;
 use App\Models\ProductModel;
+use App\Models\UsersModel;
 
 class Auth extends BaseController
 {
@@ -76,7 +77,9 @@ class Auth extends BaseController
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong.');
             } else {
-                return redirect()->to('login')->with('success', 'Register Successfully!');
+                $this->sendOtp($email);
+                session()->setFlashdata('registration', true);
+                return view('auth/otp');
             }
         }
     }
@@ -125,21 +128,19 @@ class Auth extends BaseController
                 ];
                 session()->set('loggedUser', $userid);
                 session()->set($data);
-                if ($user_info['usertype'] == 'user') {
+                if ($user_info['usertype'] == 'user' && $user_info['status'] == "active") {
                     $prod = new ProductModel();
                     $data = $prod->retrieve_mod();
-
                     return view('Homepage/homepage', $data);
-                } else {
-                    return redirect('index');
+                } elseif($user_info['usertype'] == 'admin') {
+                    return redirect()->route('index');
+                }else{
+                    return redirect()->to($_SERVER['HTTP_REFERER'])->with('fail', 'Inactive account! Please verify');
                 }
             }
         }
     }
-    public function dashboard()
-    {
-        return view('auth/dashboard');
-    }
+
     public function fpass()
     {
 
@@ -174,17 +175,17 @@ class Auth extends BaseController
             if (!$validation) {
                 return view('auth/fpass', ['validation' => $this->validator]);
             } else {
-                
+
                 $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
-              
+
                 $email->setTo($postEmail);
-               
+
                 $email->setSubject('Otp Verification');
                 $email->setMessage("{$html}");
-               
-    
+
+
                 if ($email->send()) {
-                   
+
                     $data = [
                         'email' => $postEmail,
                         'otp' => $otp,
@@ -193,32 +194,29 @@ class Auth extends BaseController
                     return redirect()->route('otp');
                 }
             }
-           
         } else {
             return view('auth/fpass');
         }
     }
     public function otp()
-    {   
-           
-        $otp = $this->request->getPost('otp[]');  
-        if(!isset($otp)){
+    {
+
+        $otp = $this->request->getPost('otp[]');
+        if (!isset($otp)) {
             return view('auth/otp');
-        }   
-        $otp_new = join('', $otp);
-        if($otp_new != session()->get('otp')){
-            return redirect()->route('otp')->with('validation', 'You have entered an incorrect otp!');
         }
-        else{
+        $otp_new = join('', $otp);
+        if ($otp_new != session()->get('otp')) {
+            return redirect()->route('otp')->with('validation', 'You have entered an incorrect otp!');
+        } else {
             return redirect()->route('reset');
         }
-        
     }
     public function reset()
     {
         $confirm = $this->request->getPost('confirm_password');
         $password = $this->request->getPost('new_password');
-        if(isset($confirm) && isset($password)){
+        if (isset($confirm) && isset($password)) {
             $validation = $this->validate([
                 'new_password' => [
                     'rules' => 'required|min_length[8]',
@@ -236,30 +234,79 @@ class Auth extends BaseController
                     ]
                 ]
             ]);
-            if(!$validation){
+            if (!$validation) {
                 return view('auth/reset', ['validation' => $this->validator]);
-            }
-            else{
+            } else {
                 $userModel = new \App\Models\UsersModel();
                 $data = [
                     'password' => Hash::make($password)
                 ];
 
-                if($userModel->set('password', Hash::make($password))->where('email', session()->get('email'))->update()){
+                if ($userModel->set('password', Hash::make($password))->where('email', session()->get('email'))->update()) {
                     return redirect()->route('login')->with('msg', 'password updated succesfuly');
                 }
             }
-        }
-        else{
+        } else {
             return view('auth/reset');
         }
-        
     }
     public function logout()
     {
-        if(session()->has('loggedUser')){
+        if (session()->has('loggedUser')) {
             session()->remove('loggedUser');
         }
         return redirect()->to('login');
+    }
+
+    public function verifyOtp()
+    {
+        $otp = $this->request->getPost('otp[]');
+        if (!isset($otp)) {
+            return view('auth/otp');
+        }
+        $otp_new = join('', $otp);
+        if ($otp_new != session()->get('otp')) {
+            return redirect()->route('verifyOtp')->with('validation', 'You have entered an incorrect otp!');
+        } else {
+            $userModel = new UsersModel();
+            $userModel->set('status', 'active')->where('email', session()->get('email'))->update();
+            return redirect()->route('login');
+            
+        }
+    }
+    public function sendOtp($postEmail)
+    {
+        $email = \Config\Services::email();
+
+        if (isset($postEmail)) {
+            $otp = rand(999999, 111111);
+            $html = <<<HTML
+                <div class="card-body">
+                    <div class="mb-4">      
+                        <h2 style="text-align: center; color: #9d7651;"><strong>OTP Verification Number</strong></h2>
+                        <br>
+                        <p class="mb-2" style="text-align: center;">The  OTP for your TEATime account Verification is</p>
+                        <p style="text-align: center;"><strong>{$otp}</strong></p>
+                        <p class="mb-2" style="text-align: center;"><strong>REMINDER:</strong>Do not share your One Time Verification Code for everyone.</p>
+                    </div>
+                </div>
+            HTML;
+
+            $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+
+            $email->setTo($postEmail);
+
+            $email->setSubject('Otp Verification');
+            $email->setMessage("{$html}");
+
+
+            if ($email->send()) {
+                $data = [
+                    'email' => $postEmail,
+                    'otp' => $otp,
+                ];
+                session()->set($data);
+            }
+        }
     }
 }

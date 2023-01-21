@@ -1,0 +1,196 @@
+CRITICAL - 2023-01-21 00:02:32 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:02:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:02:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:02:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:02:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:02:53 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 140.
+ 1 APPPATH\Controllers\home.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:07:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:07:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:07:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:07:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:07:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:07:29 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 140.
+ 1 APPPATH\Controllers\home.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:16:43 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:16:43 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:16:43 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:16:43 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:16:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:30:23 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:30:24 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:30:24 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:30:25 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 00:30:25 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\home.php on line 126.
+ 1 APPPATH\Controllers\home.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\home.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 02:55:16 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Controllers\Auth.php(270): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verifyOtp()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 03:05:32 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Auth.php on line 139.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

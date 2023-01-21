@@ -44,6 +44,7 @@ $routes->get('/login', 'Auth::login');
 $routes->get('/register', 'Auth::register');
 $routes->post('/save', 'Auth::save');
 $routes->post('/check', 'Auth::check');
+$routes->post('/verifyOtp', 'Auth::verifyOtp');
 $routes->get('/dashboard', 'Auth::dashboard');
 $routes->match(['get','post'],'/fpass', 'Auth::fpass');
 $routes->match(['get','post'],'/otp', 'Auth::otp');

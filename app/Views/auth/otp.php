@@ -67,7 +67,8 @@
                             <p class="mb-2">Your One Time Password has been sent through your <?= session('email') ?>. Please enter the number below.
                             </p>
                         </div>
-                        <form action="otp" method="post">
+                       
+                        <form action="<?php if(session()->getFlashdata('registration')) { echo "verifyOtp"; } else{echo "otp";} ?>" method="post">
                             <div class="mb-3">
                                 <div><label class="form-label">OTP number</label></div>
                                 <input type="number" name="otp[]" id='ist' maxlength="1" onkeyup="clickEvent(this,'sec')">
