@@ -69,10 +69,11 @@ $routes->put('/updatemenu/(:any)', 'admin::updatemenu/$1');
 $routes->get('/editmenu/(:any)', 'admin::editmenu/$1');
 $routes->get('/calendar', 'admin::calendar');
 $routes->get('/inbox', 'admin::inbox');
+$routes->get('/contactus', 'admin::contactus');
 
 //Homepage
 $routes->get('/homepage', 'home::homepage');
-$routes->get('/contact', 'home::contact');
+$routes->match(['get','post'],'/contact', 'home::contact');
 $routes->match(['get','post'],'/save_contact', 'home::save_contact');
 $routes->get('/about', 'home::about');
 $routes->match(['get','post'],'/book', 'home::book');
@@ -86,9 +87,6 @@ $routes->get('/cart/(:any)', 'home::cart/$1');
 $routes->post('/userCart', 'home::userCart');
 $routes->get('/cart', 'home::cart');
 $routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
-
-//Guess
-$routes->get('/guest_home', 'Guest::guest_home');
 
 //User Profile
 $routes->get('/profile', 'User::profile');

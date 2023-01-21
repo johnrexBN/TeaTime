@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\ProductModel;
 use App\Models\MenuModel;
+use App\Models\ContactModel;
+use App\Models\ReservationModel;
 
 class admin extends BaseController
 {
@@ -266,7 +268,15 @@ class admin extends BaseController
     }
     public function inbox()
     {
-        return view('admin/inbox');
+        
+    }
+    public function contactus()
+    {
+        $inbox = new ContactModel();
+        $data =[
+            'feeds' => $inbox->findAll()
+        ];
+        return view('admin/contact', $data);
     }
 
 }

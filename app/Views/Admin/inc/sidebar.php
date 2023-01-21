@@ -65,7 +65,15 @@
           <a href="<?= site_url('inbox') ?>" class="nav-link">
             <i class="nav-icon fas fa-table"></i>
             <p>
-              Inbox
+              Booking
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= site_url('contactus') ?>" class="nav-link">
+            <i class="nav-icon fas fa-address-book"></i>
+            <p>
+              Contact
             </p>
           </a>
         </li>

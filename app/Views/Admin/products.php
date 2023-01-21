@@ -69,7 +69,9 @@
         </div>
       </div>
     </section>
+  </div>
     </body>
+
 <?= $this->include('admin/inc/end'); ?>
 
 <script>
