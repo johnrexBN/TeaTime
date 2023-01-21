@@ -61,7 +61,7 @@
 <script>
 	config = {
 		enableTime: true,
-    	dateFormat: "Y-m-d (H:i K)",
+    	dateFormat: "Y-m-d H:i K",
 	}
 	flatpickr("input[type=datetime-local]", config);
 </script>

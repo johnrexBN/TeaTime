@@ -268,7 +268,11 @@ class admin extends BaseController
     }
     public function inbox()
     {
-        
+        $inbox = new ReservationModel();
+        $data =[
+            'book' => $inbox->findAll()
+        ];
+        return view('admin/inbox', $data);
     }
     public function contactus()
     {

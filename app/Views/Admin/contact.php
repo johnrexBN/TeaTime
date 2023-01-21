@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-          <h3><b>Products</b></h3>
+          <h3><b>Customer Service Inbox</b></h3>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="products">Home</a></li>
-              <li class="breadcrumb-item active">Product Table</li>
+              <li class="breadcrumb-item active">Customer Service Inbox Table</li>
             </ol>
           </div>
         </div>
@@ -27,8 +27,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Product Table</h3>     
-                <div align="right"><a class="btn btn-success" href="addproducts" role="button"><i class="nav-icon fas fa-plus"></i></a></div>          
+                <h3 class="card-title">Customer Service Inbox Table</h3>              
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -70,3 +69,21 @@
     </div>
 
     <?= $this->include('admin/inc/end'); ?>
+    
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
