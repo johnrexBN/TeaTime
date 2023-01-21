@@ -79,7 +79,7 @@ $routes->match(['get','post'],'/save_contact', 'home::save_contact');
 $routes->get('/about', 'home::about');
 $routes->match(['get','post'],'/book', 'home::book');
 $routes->match(['get','post'],'/save_reservation', 'home::save_reservation');
-$routes->get('/checkout', 'home::checkout');
+$routes->match(['get','post'],'/checkout', 'home::checkout');
 $routes->get('/shop', 'home::shop');
 $routes->get('/single_product/(:any)', 'home::single_product/$1');
 $routes->get('/addtocart', 'home::addtocart');

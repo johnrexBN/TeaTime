@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Validation\Validation;
 use App\Libraries\Hash;
+use App\Models\MenuModel;
 use App\Models\ProductModel;
 use App\Models\UsersModel;
 
@@ -129,9 +130,8 @@ class Auth extends BaseController
                 session()->set('loggedUser', $userid);
                 session()->set($data);
                 if ($user_info['usertype'] == 'user' && $user_info['status'] == "active") {
-                    $prod = new ProductModel();
-                    $data = $prod->retrieve_mod();
-                    return view('Homepage/homepage', $data);
+                    
+                    return redirect()->route('shop');
                 } elseif($user_info['usertype'] == 'admin') {
                     return redirect()->route('index');
                 }else{

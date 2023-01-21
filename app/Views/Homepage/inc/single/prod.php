@@ -17,7 +17,7 @@
 					<p><?= $products['description'] ?></p>
 					<div class="single-product-form">
 						<form action="<?= site_url('userCart') ?>" method="post">
-							<input type="number"  min="1" max="<?= $stocks['quantity'] ?>" name="quantity" 
+							<input type="number"  min="1" max="<?= $products['stocks'] ?>" name="quantity" 
 							value="1">
 							<input type="hidden" value="<?= $products['id']?>" name="id">
 							<button type="submit" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>

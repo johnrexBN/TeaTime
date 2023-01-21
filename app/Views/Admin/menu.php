@@ -38,10 +38,11 @@
                   <thead>
                     <tr>
                       <th>name</th>
-                      <th>Flavor</th>
+                      <th>Description</th>
                       <th>price</th>
                       <th>category</th>
                       <th>discount</th>
+                      <th>stocks</th>
                       <th>image</th>
                       <th>status</th>
                       <th>action</th>
@@ -51,10 +52,11 @@
                   <?php foreach($menu as $item):?>
                   <tr>
                     <td><?= $item['name']?></td>
-                    <td><?= $item['prod_name']?></td>
+                    <td><?= $item['description']?></td>
                     <td><?= $item['prices']?></td>
                     <td><?= $item['category']?></td>
                     <td><?= $item['discount']?></td>
+                    <td><?= $item['stocks']?></td>
                     <td><img src="<?= base_url().'/'.'uploads/'.$item['image'] ?>" height="130" width="95"></td>
                     <td><?= $item['status']?></td>
                     <td>

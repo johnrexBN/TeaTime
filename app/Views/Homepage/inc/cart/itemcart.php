@@ -42,6 +42,7 @@
 									</tr>
 
 								<?php endif; ?>
+								<button type="submit" id="submit" style="display:none"></button>
 								</form>
 							</tbody>
 						</table>
@@ -69,18 +70,7 @@
 							</tbody>
 						</table>
 						<div class="cart-buttons">
-							<a href="cart" class="boxed-btn">Update Cart</a>
-							<a href="checkout" class="boxed-btn black">Check Out</a>
-						</div>
-					</div>
-
-					<div class="coupon-section mb-80	 mt-0">
-						<h3>Apply Coupon</h3>
-						<div class="coupon-form-wrap">
-							<form action="index.html">
-								<p style="border: 2px solid black;"><input type="text" placeholder="Coupon"></p>
-								<p><input type="submit" value="Apply"></p>
-							
+							<a href="#" id="checkout" class="boxed-btn black">Check Out</a>
 						</div>
 					</div>
 				</div>

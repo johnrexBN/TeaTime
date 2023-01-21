@@ -46,6 +46,10 @@
                       <span class="text-danger" ><?= isset($validation) ? display_error($validation, 'name') : '' ?></span>
                       <input type="text" name="name" class="form-control" placeholder="Enter Menu Name" required>
 
+                       <label>description</label>
+                      <span class="text-danger" ><?= isset($validation) ? display_error($validation, 'description') : '' ?></span>
+                      <input type="text" name="description" class="form-control" placeholder="Enter Menu description" required>
+
                       <label>Category</label>
                       <span class="text-danger" require><?= isset($validation) ? display_error($validation, 'category') : '' ?></span>
                       <input type="text" name="category" class="form-control" placeholder="Enter Menu Category" required>
@@ -54,15 +58,13 @@
                       <span class="text-danger" require><?= isset($validation) ? display_error($validation, 'price') : '' ?></span>
                       <input type="text" name="price" class="form-control" placeholder="Enter Menu Price" required>
 
+                      <label>Stocks</label>
+                      <span class="text-danger" require><?= isset($validation) ? display_error($validation, 'stocks') : '' ?></span>
+                      <input type="number" name="stocks" class="form-control" placeholder="Enter Menu Stocks" required>
+
                       <label>Discount</label>
                       <span class="text-danger" require><?= isset($validation) ? display_error($validation, 'discount') : '' ?></span>
                       <input type="text" name="discount" class="form-control" placeholder="Enter Menu Discount" required>
-                      <hr> <label>Flavor</label>
-                      <select class="form-select" name="prod_name" required>
-                        <?php foreach ($prod_name as $name) : ?>
-                          <option value="<?= $name['name']; ?>"><?= $name['name']; ?></option>
-                        <?php endforeach; ?>
-                      </select>
                       <hr>
                       <span class="text-danger" require><?= isset($validation) ? display_error($validation, 'menu') : '' ?></span>
                       <label>Upload image</label>

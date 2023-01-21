@@ -16,15 +16,7 @@ class admin extends BaseController
     {
         return view('admin/index');
     }
-    public function products()
-    {
-        $prod = new ProductModel();
-        $data = [
-            'products' => $prod->findAll()
-        ];
-
-        return view('admin/products', $data);
-    }
+    
     public function menu()
     {
         $prod = new MenuModel();
@@ -40,112 +32,9 @@ class admin extends BaseController
     }
     public function addmenu()
     {
-        $prod_model = new ProductModel();
-        $prod_name = [
-           'prod_name' => $prod_model->findAll()
-        ];
-        return view('admin/addmenu', $prod_name);
+        return view('admin/addmenu');
     }
-    public function saveproduct()
-    {
-
-        $validation = $this->validate([
-            
-            'name' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Product name is required.'
-                ]
-            ],
-            'description' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Product description is required.'
-                ]
-            ],
-            'price' => [
-                'rules' => 'required|numeric',
-                'errors' => [
-                    'required' => 'Product price is required.',
-                    'numeric' => 'needs  to be numeric.'
-                ]
-            ],
-            'quantity' => [
-                'rules' => 'required|numeric',
-                'errors' => [
-                    'required' => 'Product quantity is required.',
-                    'numeric' => 'needs  to be numeric.'
-                ]
-            ],
-            'category' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Product category is required.'
-                ]
-            ],
-
-
-        ]);
-        if (!$validation) {
-            $msg = ['validation' => $this->validator];
-            return view('admin/addproducts', $msg);
-        } else {
-
-            $name = $this->request->getVar('name');
-            $description = $this->request->getVar('description');
-            $quantity = $this->request->getVar('quantity');
-            $price = $this->request->getVar('price');
-            $category = $this->request->getVar('category');
-
-                $prod = new ProductModel();
-                $data = [
-                    'name' => $name,
-                    'description' => $description,
-                    'quantity' => $quantity,
-                    'price' => $price,
-                    'category' => $category,
-                   
-                ];
-                $session = session();
-
-                if ($prod->insert($data)) {
-                    $session->setFlashdata('msg', 'Successfully Addedd!');
-                    return redirect()->to($_SERVER['HTTP_REFERER']);
-                } else {
-                    return redirect()->to($_SERVER['HTTP_REFERER'])->with('msg', 'Failed to save!');
-                }
-            
-        }
-    }
-
-
-    public function edit($id)
-    {
-        $prod = new ProductModel();
-        $data['products'] = $prod->find($id);
-        return view('admin/edit', $data);
-    }
-    public function update($id)
-    {
-        $prod = new ProductModel();
-        $data = [
-            'name' => $this->request->getPost('name'),
-            'description' => $this->request->getPost('description'),
-            'quantity' => $this->request->getPost('quantity'),
-            'price' => $this->request->getPost('price'),
-            'category' => $this->request->getPost('category')
-        ];
-        $prod->update($id, $data);
-        $session = session();
-        $session->setFlashdata('msg', 'Updated Successfully!');
-        return redirect()->to($_SERVER['HTTP_REFERER']);
-    }
-    public function delete($id = null)
-    {
-        $prod = new ProductModel();
-        $prod->delete($id);
-        return redirect()->to($_SERVER['HTTP_REFERER']);
-    }
+    
 
     public function updatemenu($id)
     {
@@ -223,18 +112,8 @@ class admin extends BaseController
             $category = $this->request->getVar('category');
             $discount = $this->request->getVar('discount');
             $img = $this->request->getFile('menu');
-            $prod_model = new ProductModel();
-            $stocks = $prod_model->stockCount($name);
-            $status = '';
-            $prod_id = '';
-            foreach ($stocks as $count) {
-                if ($count['quantity'] == 0)
-                    $status = 'out of stock';
-                else
-                    $status = 'Available';
-
-                $prod_id = $count['id'];
-            }
+            $stocks = $this->request->getPost('stocks');
+            $description = $this->request->getPost('description');
 
             if (!$img->hasMoved()) {
                 $img->move(FCPATH . 'uploads');
@@ -242,13 +121,14 @@ class admin extends BaseController
                 $prod = new MenuModel();
                 $data = [
                     'name' => $name,
-                    'prod_name'=> $this->request->getVar('prod_name'),
                     'prices' => $price,
                     'category' => $category,
                     'discount' => $discount,
                     'image' => $img->getClientName(),
-                    'prod_id' => $prod_id,
-                    'status' => $status
+                    'status' => "Available",
+                    'stocks' => $stocks,
+                    'description' => $description
+
 
                 ];
                 $session = session();

@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MenuModel extends Model
+class CheckoutModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'menu';
-    protected $primaryKey       = 'id';
-    protected $useAutoIncrement = true;
+    protected $table            = 'checkout';
+    protected $primaryKey       = 'userid';
+    protected $useAutoIncrement = false;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'category', 'prices', 'discount','image', 'stocks', 'status', 'description'];
+    protected $allowedFields    = ['userid', 'menuid'];
 
     // Dates
     protected $useTimestamps = false;
@@ -39,14 +39,4 @@ class MenuModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function retrieve_mod()
-    {
-        $prod = new MenuModel();
-        $data = [
-            'products'=> $prod->findAll()
-        ];
-
-        return $data;
-    }
 }
