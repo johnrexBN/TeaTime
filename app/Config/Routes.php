@@ -91,6 +91,8 @@ $routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
 
 //User Profile
 $routes->get('/profile', 'User::profile');
+$routes->get('/editprofile', 'User::editprofile');
+$routes->get('/show', 'User::show');
 
 /*
  * --------------------------------------------------------------------

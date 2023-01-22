@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #CB8C58;">
 
   <!-- Sidebar -->
   <div class="sidebar">
@@ -9,13 +9,13 @@
         <img src="<?php base_url(); ?>/dist/img/1.jpg" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block"><?= session()->get('name') ?></a>
+        <a style="color: white;" href="#" class="d-block"><?= session()->get('name') ?></a>
       </div>
     </div>
     <!-- SidebarSearch Form -->
     <div class="form-inline">
-      <div class="input-group" data-widget="sidebar-search">
-        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+      <div class="input-group" data-widget="sidebar-search"> 
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" style="background-color: white; border: white;" aria-label="Search">
         <div class="input-group-append">
           <button class="btn btn-sidebar">
             <i class="fas fa-search fa-fw"></i>
@@ -30,13 +30,12 @@
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-        <li class="nav-item">
-          <a href="profile" class="nav-link">
+        <li class="nav-item mt-5">
+          <a href="profile" class="nav-link active" style="background-color: #3f474e;">
           <i class="nav-icon fas fa-user"></i>
-            <p>Profile</p>
+            <p>Profile Settings</p>
           </a>
         </li>
-
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         </div>
         <li class="nav-item">

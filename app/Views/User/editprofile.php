@@ -45,7 +45,7 @@
                                     </li>
                                 </ul>
                                 <div class="text-center">
-                                <a href="<?= site_url('editprofile');?>" class="btn btn"  style="color: #3f474e;"><b>EDIT PROFILE</b></a>
+                                <a href="<?= site_url('profile');?>" class="btn btn"  style="color: #3f474e;"><b>PROFILE HOME</b></a>
                                 </div>
                             </div>
                             <!-- /.card-body -->
@@ -67,43 +67,40 @@
                                         <form class="form-horizontal">
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Name:</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-6">
                                                     <input type="email" class="form-control" id="inputName" placeholder="Name">
                                                 </div>
                                                 
                                             </div>
                                             <div class="form-group row">
                                             <label for="inputEmail" class="col-sm-2 col-form-label">Username:</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-6">
                                                     <input type="email" class="form-control" id="inputEmail" placeholder="Username">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Email: </label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-6">
                                                     <input type="text" class="form-control" id="inputName2" placeholder="Email">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                             <label for="inputSkills" class="col-sm-2 col-form-label">Phone Number:</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-6">
                                                     <input type="text" class="form-control" id="inputSkills" placeholder="Phone Number">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputExperience" class="col-sm-2 col-form-label">Address: </label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-6">
                                                     <input class="form-control" id="inputExperience" placeholder="Address"></input>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class=" col-sm-4 mt-3">
-                                                    <button type="submit" style="background-color: #CB8C58;" class="btn btn">Submit</button>
+                                                    <button type="submit" style="background-color: #CB8C58;" class="btn btn">UPDATE</button>
                                                 </div>
                                             </div>
-                                            <div class=" float-right">
-                                                    <a href="<?= site_url('show');?>" button type="submit" style="background-color: #CB8C58;" class="btn btn">Show Personal Information</button></a>
-                                                </div>
                                             
                                         </form>
                                     </div>

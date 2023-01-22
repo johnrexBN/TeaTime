@@ -11,4 +11,11 @@ class User extends BaseController{
         return view('User/profile');
     }
 
+    public function editprofile(){
+        return view('User/editprofile');
+    }
+
+    public function show(){
+        return view('User/show');
+    }
 }
