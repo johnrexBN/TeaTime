@@ -155,6 +155,8 @@ class home extends BaseController
         $menu = $menu_model->retrieve_mod();
         return view('Homepage/shop', $menu);
     }
+
+
     public function single_product($id)
     {
         $prod = new MenuModel();

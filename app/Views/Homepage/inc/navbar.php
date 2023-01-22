@@ -30,8 +30,8 @@
 								<li><a href="<?= site_url('book');?>" style="text-decoration: none;">Reservation</a></li>
 								<li><a>Shop</a>
 									<ul class="sub-menu">
-										<li><a href="shop">Shop</a></li>
-										<li><a href="cart">Cart</a></li>
+										<li><a href="shop" style="text-decoration: none;"><i class="fa fa-shopping-bag" style="color: white; margin-right: 10px;"></i>Store</a></li>
+										<li><a href="request" style="text-decoration: none;"><i class="fa fa-list"  style="color: white; margin-right: 10px;"></i>Request</a></li>
 									</ul>
 								</li>
 								<li>
