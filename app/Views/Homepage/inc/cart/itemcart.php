@@ -3,19 +3,18 @@
 	<div class="container">
 		<div class="row">
 			
-				<div class="col-lg-8 col-md-12">
+				<div class="col-lg-8 col-md-12" style="border-radius: 20px;">
 					<div class="cart-table-wrap">
-						<table class="cart-table">
-							<thead class="cart-table-head">
-								<tr class="table-head-row" style="background-color: black; color: white; opacity: 0.7;">
-						
-									<th class="product-remove" style="border: 2px solid black;"></th>
-									<th class="product-image" style="border: 2px solid black;">Product Image</th>
-									<th class="product-name" style="border: 2px solid black;">Name</th>
-									<th class="product-price" style="border: 2px solid black;">Price</th>
-									<th class="product-quantity" style="border: 2px solid black;">Quantity</th>
-									<th class="product-total" style="border: 2px solid black;">Total</th>
-									<th style="border: 2px solid black;">Remove</th>
+						<table class="cart-table" >
+							<thead class="cart-table-head" >
+								<tr class="table-head-row" style="background-color: #CB8C58; color: white; ">
+									<th class="product-remove"></th>
+									<th class="product-image" >Product Image</th>
+									<th class="product-name" >Name</th>
+									<th class="product-price" >Price</th>
+									<th class="product-quantity" >Quantity</th>
+									<th class="product-total">Total</th>
+									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -53,15 +52,15 @@
 					<div class="total-section">
 						<table class="total-table">
 							<thead class="total-table-head">
-								<tr class="table-total-row" style="background-color: black; color: white; opacity: 0.7;">
-									<th style="border: 2px solid black;">Total</th>
-									<th style="border: 2px solid black;">Price</th>
+								<tr class="table-total-row" style="background-color: #CB8C58; color: white;">
+									<th style="border: 1px solid white;">Total</th>
+									<th style="border: 1px solid white;">Price</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr class="total-data">
-									<td style="border: 2px solid black;"><strong>Subtotal: </strong></td>
-									<td style="border: 2px solid black;">₱<?php if (empty($total[0]['total'])) {
+									<td style="border: 1px solid white;"><strong>Subtotal: </strong></td>
+									<td style="border: 1px solid white;">₱<?php if (empty($total[0]['total'])) {
 																				echo ' 0.00';
 																			} else {
 																				echo ' ' . $total[0]['total'];
@@ -70,7 +69,7 @@
 							</tbody>
 						</table>
 						<div class="cart-buttons">
-							<a href="#" id="checkout" class="boxed-btn black">Check Out</a>
+							<a href="#" id="checkout" class="bordered-btn" style="color: black; border-color: black;">Check Out</a>
 						</div>
 					</div>
 				</div>

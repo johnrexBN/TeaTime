@@ -9,7 +9,7 @@
 						<div class="search-bar-tablecell">
 							<h3>Search For:</h3>
 							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
+							<button type="submit" c;ass="boxed-btn" style="font-size: 12px;">Search <i class="fas fa-search" ></i></button>
 						</div>
 					</div>
 				</div>

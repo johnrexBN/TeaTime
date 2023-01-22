@@ -10,8 +10,8 @@
       button {
         display: inline-block;
         background-color: #fe6e00;
-		border: 0;
-		border-radius: 100%;
+		    border: 0;
+		    border-radius: 100%;
         text-align: center;
         font-size: 35px;
         padding: 10px;
@@ -19,6 +19,7 @@
         transition: all 0.5s;
         cursor: pointer;
         margin: 5px;
+        text-decoration: none;
       }
       button span {
         cursor: pointer;
@@ -46,7 +47,7 @@
       }
     </style>
 	<!-- title -->
-	<title>Fruitkha</title>
+	<title>Booking</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">

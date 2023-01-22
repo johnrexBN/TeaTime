@@ -34,7 +34,7 @@
 						<input type="hidden" name="token" value="FsWga4&@f6aw" />
 						<input name="date" class="form-control" type="datetime-local" placeholder="Select date-time">
 						<br>
-						<button type="submit" ><span><b>Submit</b></span></button>
+						<button type="submit" style="background-color: #CB8C58; color: white;" ><span><b>Submit</b></span></button>
 					</form>
 				</div>
 			</div>

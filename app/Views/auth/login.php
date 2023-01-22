@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOGIN/REGISTER - TEATIME</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/13b0780e3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= base_url()?>/assets/css/login.css">
     
 </head>
@@ -30,12 +31,14 @@
                                                 <?= csrf_field(); ?>
                                                 
                                                 <div class="form-group">
-                                                    <input type="email" name="email" class="form-style" placeholder="Enter Your Email" id="logemail" class="form-control" value="<?= set_value('email'); ?>">
-                                                    <p>
-                                                        <?= isset($validation) ? display_error($validation, 'email')
-                                                            : '' ?>
-                                                    </p>
-                                                    <i class="input-icon uil uil-at"></i>
+                                                    
+                                                <input type="email" name="email" class="form-style" placeholder="Enter Your Email" id="logemail" class="form-control" value="<?= set_value('email'); ?>">
+                                                        <p>
+                                                            <?= isset($validation) ? display_error($validation, 'email')
+                                                                : '' ?>
+                                                        </p>
+                                                    
+                                                        
                                                 </div>
                                                 <div class="form-group mt-2">
                                                     <input type="password" name="password" class="form-style" placeholder="Enter Your Password" id="logpass" class="form-control" value="<?= set_value('password'); ?>">
@@ -46,7 +49,7 @@
                                                         ) : '' ?>
                                                     </p>
                                                     <span style="color: red"><?= session()->getFlashdata('fail') ?></span>
-                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                    <i class="input-icon fa fa-lock-alt"></i>
                                                 </div>
                                                 <br>
                                                 <button type="submit" class="btn btn-primary">Log In</button>

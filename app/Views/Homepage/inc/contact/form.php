@@ -21,7 +21,7 @@
 							</p>
 							<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
 							<input type="hidden" name="token" value="FsWga4&@f6aw" />
-							<button type="submit" ><span><b>Submit</b></span></button>
+							<button type="submit" style="border-radius: 25px; border-color: white; background-color: #CB8C58; color: white;" ><span><b>Submit</b></span></button>
 						</form>
 					</div>
 				</div>

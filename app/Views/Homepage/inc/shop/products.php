@@ -1,6 +1,6 @@
 
 	<!-- products -->
-	<div class="product-section mt-80 mb-150	">
+	<div class="product-section mt-150 mb-150">
 		<div class="container">
 			<div class="row">
                 <div class="col-md-12">
@@ -35,8 +35,8 @@
 					<div class="pagination-wrap">
 						<ul>
 							<li><a href="#">Prev</a></li>
-							<li><a href="#">1</a></li>
-							<li><a class="active" href="#">2</a></li>
+							<li><a class="active" href="#">1</a></li>
+							<li><a href="#">2</a></li>
 							<li><a href="#">3</a></li>
 							<li><a href="#">Next</a></li>
 						</ul>

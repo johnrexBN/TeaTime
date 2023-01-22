@@ -24,9 +24,10 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="<?= site_url('homepage');?>">Home</a></li>
-								<li><a href="<?= site_url('about');?>">About</a></li>
-								<li><a href="<?= site_url('contact');?>">Contact</a></li>
+								<li><a href="<?= site_url('homepage');?>" style="text-decoration: none;">Home</a></li>
+								<li><a href="<?= site_url('about');?>" style="text-decoration: none;">About</a></li>
+								<li><a href="<?= site_url('contact');?>" style="text-decoration: none;">Contact</a></li>
+								<li><a href="<?= site_url('book');?>" style="text-decoration: none;">Reservation</a></li>
 								<li><a>Shop</a>
 									<ul class="sub-menu">
 										<li><a href="shop">Shop</a></li>

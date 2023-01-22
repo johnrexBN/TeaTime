@@ -20,7 +20,7 @@
 								<a href="single-product.html"><img src="<?= base_url() . '/' . 'uploads/' . $prod['image'] ?>" alt=""></a>
 							</div>
 							<h3><?= $prod['name']?></h3>
-							<p class="product-price"><span>₱<?=number_format( $prod['price'],2)?></span></p>
+							<p class="product-price"><span>₱<?=number_format( $prod['prices'],2)?></span></p>
 							<p><?= $prod['description']?></p>
 							<a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 						</div>
