@@ -61,18 +61,18 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= site_url('contactus') ?>" class="nav-link">
-            <i class="nav-icon fas fa-address-book"></i>
-            <p>
-              Contact
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="<?= site_url('orders') ?>" class="nav-link">
             <i class="nav-icon fas fa-shopping-bag"></i>
             <p>
               Orders
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= site_url('contactus') ?>" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+            Customer Service
             </p>
           </a>
         </li>
