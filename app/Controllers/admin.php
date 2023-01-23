@@ -2,19 +2,21 @@
 
 namespace App\Controllers;
 
-use App\Models\ProductModel;
+use App\Models\UsersModel;
 use App\Models\MenuModel;
 use App\Models\ContactModel;
 use App\Models\ReservationModel;
 
 class admin extends BaseController
 {
-
     protected $helpers = ['form'];
 
     public function index()
     {
-        return view('admin/index');
+        $info = new UsersModel();
+        $data['users'] = $info->selectCount('id', 'totaluser')->first();
+
+        return view('admin/index', $data);
     }
     
     public function menu()
@@ -162,5 +164,7 @@ class admin extends BaseController
         ];
         return view('admin/contact', $data);
     }
-
+    public function orders(){
+        return view('admin/orders');
+    }
 }

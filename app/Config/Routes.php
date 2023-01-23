@@ -71,6 +71,7 @@ $routes->get('/editmenu/(:any)', 'admin::editmenu/$1');
 $routes->get('/calendar', 'admin::calendar');
 $routes->get('/inbox', 'admin::inbox');
 $routes->get('/contactus', 'admin::contactus');
+$routes->get('/orders', 'admin::orders');
 
 //Homepage
 $routes->get('/homepage', 'home::homepage');

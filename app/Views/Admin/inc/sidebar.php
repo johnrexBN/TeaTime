@@ -68,6 +68,14 @@
             </p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="<?= site_url('orders') ?>" class="nav-link">
+            <i class="nav-icon fas fa-shopping-bag"></i>
+            <p>
+              Orders
+            </p>
+          </a>
+        </li>
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         </div>
         <li class="nav-item">
