@@ -29,23 +29,23 @@
                                     <img class="profile-user-img img-fluid img-circle" src="../../dist/img/1.jpg" alt="User profile picture">
                                 </div>
 
-                                <h3 class="profile-username text-center"><?= session()->get('name') ?></h3>
+                                <h3 class="profile-username text-center"><?= $profile['name'] ?></h3>
 
                                 <p class="text-muted text-center"><?= session()->get('email') ?></p>
-
+                                
                                 <ul class="list-group list-group-unbordered mb-3">
                                     <li class="list-group-item"><i class="fas fa-user-tie fa-sm"></i>
-                                        <b> </b> <a class="float-right"><!--retrieve--></a>
+                                        <b> </b> <a class="float-right"><?= $profile['username'] ?></a>
                                     </li>
                                     <li class="list-group-item"><i class="fas fa-phone fa-sm"></i>
-                                        <b> </b> <a class="float-right"><!--retrieve--></a>
+                                        <b> </b> <a class="float-right"><?= $profile['phone_number'] ?></a>
                                     </li>
                                     <li class="list-group-item"><i class="fas fa-home fa-sm"></i>
-                                        <b> </b> <a class="float-right"><!--retrieve--></a>
+                                        <b> </b> <a class="float-right"><?= $profile['address'] ?></a>
                                     </li>
                                 </ul>
                                 <div class="text-center">
-                                <a href="<?= site_url('editprofile');?>" class="btn btn"  style="color: #3f474e;"><b>EDIT PROFILE</b></a>
+                                <a href="<?= site_url('show');?>" class="btn btn"  style="color: #3f474e;"><b>Show Information</b></a>
                                 </div>
                             </div>
                             <!-- /.card-body -->
@@ -64,36 +64,32 @@
                             <div class="card-body">
                                 <div class="tab-content">
                                     <div class="active tab-pane" id="information">
-                                        <form class="form-horizontal">
+                                        
+                                            <form action="<?= site_url('update_profile/'.$profile['id']) ?>" method="post">
+                                            <input type="hidden" name="_method" value="PUT" />
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Name:</label>
                                                 <div class="col-sm-8">
-                                                    <input type="email" class="form-control" id="inputName" placeholder="Name">
+                                                    <input type="text" name="name" value="<?=$profile['name']?>" class="form-control" id="inputName" placeholder="Name">
                                                 </div>
                                                 
                                             </div>
                                             <div class="form-group row">
                                             <label for="inputEmail" class="col-sm-2 col-form-label">Username:</label>
                                                 <div class="col-sm-8">
-                                                    <input type="email" class="form-control" id="inputEmail" placeholder="Username">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Email: </label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" id="inputName2" placeholder="Email">
+                                                    <input type="text" name="username" value="<?=$profile['username']?>" class="form-control" id="inputEmail" placeholder="Username">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                             <label for="inputSkills" class="col-sm-2 col-form-label">Phone Number:</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" id="inputSkills" placeholder="Phone Number">
+                                                    <input type="text" name="phone_number" value="<?=$profile['phone_number']?>" class="form-control" id="inputSkills" placeholder="Phone Number">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputExperience" class="col-sm-2 col-form-label">Address: </label>
                                                 <div class="col-sm-8">
-                                                    <input class="form-control" id="inputExperience" placeholder="Address"></input>
+                                                    <input class="form-control" name="address" value="<?=$profile['address']?>" id="inputExperience" placeholder="Address"></input>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -101,11 +97,9 @@
                                                     <button type="submit" style="background-color: #CB8C58;" class="btn btn">Submit</button>
                                                 </div>
                                             </div>
-                                            <div class=" float-right">
-                                                    <a href="<?= site_url('show');?>" button type="submit" style="background-color: #CB8C58;" class="btn btn">Show Personal Information</button></a>
-                                                </div>
                                             
                                         </form>
+                                        
                                     </div>
                                     <!-- /.tab-pane -->
                                 </div>

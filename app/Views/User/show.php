@@ -45,7 +45,7 @@
                                     </li>
                                 </ul>
                                 <div class="text-center">
-                                <a href="<?= site_url('editprofile');?>" class="btn btn"  style="color: #3f474e;"><b>PROFILE HOME</b></a>
+                                <a href="<?= site_url('profile');?>" class="btn btn"  style="color: #3f474e;"><b>PROFILE HOME</b></a>
                                 </div>
                             </div>
                             <!-- /.card-body -->

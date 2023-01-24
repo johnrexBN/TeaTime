@@ -202,4 +202,29 @@ class home extends BaseController
         $cart->where('userid', session()->get('loggedUser'))->where('menuid', $id)->delete();
         return redirect()->route('cart');
     }
+
+    public function place_order()
+    {
+        $order_model = new \App\Models\PlaceOrderModel();
+        $cart_model = new CartModel();
+        $menuid = $this->request->getPost('menuid[]');
+        $total = $this->request->getPost('total[]');
+
+        for($i = 0; $i < count($menuid); $i++){
+            $data = [
+                'menuid' => $menuid[$i],
+                'userid' => session()->get('loggedUser'),
+                'total' => $total[$i]      
+            ];
+            if($order_model->insert($data) == 0){
+                
+                $cart_model->where('menuid',  $menuid[$i])->where('userid', session()->get('loggedUser'))->delete();
+                
+            }
+        }
+        return redirect()->route('order_history');
+        
+        
+        
+    }
 }

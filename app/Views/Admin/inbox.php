@@ -56,7 +56,8 @@
                     <td><?= $inbox['date']?></td>
                     <td>
                       <span>
-                      <a href="" class="btn-sm btn-warning"><i class="nav-icon fas fa-pen"></i></a>
+                      <a href="" class="btn-sm btn-primary"><i class="nav-icon fas fa-check"></i></a>
+                      <a href="" class="btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i></a>
                       </span>
                     </td>
                   </tr>

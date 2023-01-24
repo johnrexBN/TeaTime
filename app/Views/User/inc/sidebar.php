@@ -14,7 +14,7 @@
     </div>
     <!-- SidebarSearch Form -->
     <div class="form-inline">
-      <div class="input-group" data-widget="sidebar-search"> 
+      <div class="input-group" data-widget="sidebar-search">
         <input class="form-control form-control-sidebar" type="search" placeholder="Search" style="background-color: white; border: white;" aria-label="Search">
         <div class="input-group-append">
           <button class="btn btn-sidebar">
@@ -29,17 +29,30 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+        <li class="nav-item mt-5">
+          <a href="<?= site_url('order_status') ?>" class="nav-link active" style="background-color: #3f474e;">
+            <i class="nav-icon fas fa-user"></i>
+            <p>order Status</p>
+          </a>
+        </li>
 
         <li class="nav-item mt-5">
-          <a href="profile" class="nav-link active" style="background-color: #3f474e;">
-          <i class="nav-icon fas fa-user"></i>
+          <a href=""<?= site_url('order_history') ?>" class="nav-link active" style="background-color: #3f474e;">
+            <i class="nav-icon fas fa-user"></i>
+            <p>order History</p>
+          </a>
+        </li>
+
+        <li class="nav-item mt-5">
+          <a href=""<?= site_url('profile') ?>" class="nav-link active" style="background-color: #3f474e;">
+            <i class="nav-icon fas fa-user"></i>
             <p>Profile Settings</p>
           </a>
         </li>
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         </div>
         <li class="nav-item">
-          <a href="logout" class="nav-link">
+          <a href="<?= site_url('logout') ?>" class="nav-link">
             <i class="nav-icon fas fa-power-off"></i>
             <p>
               Log Out

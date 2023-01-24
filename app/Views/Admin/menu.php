@@ -30,7 +30,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Menu Table</h3>     
-                <div align="right"><a class="btn btn-success" href="addmenu" role="button"><i class="nav-icon fas fa-plus"></i></a></div>          
+                <div align="right"><a class="btn btn-success" href="addmenu" role="button"><i class="nav-icon fas fa-plus"></i> Add</a></div>          
               </div>
               <!-- /.card-header -->
               <div class="card-body">

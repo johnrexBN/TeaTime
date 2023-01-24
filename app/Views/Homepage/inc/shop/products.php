@@ -24,7 +24,7 @@
 						</div>
 						<h3><?=$prod['name'] ?></h3>
 						<p class="product-price"><span></span>₱<?= number_format( $prod['prices'],2) ?> </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<a href="<?= site_url('single_product/'.$prod['id'])?>" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					</div>
 				</div>
 				<?php endforeach; ?>

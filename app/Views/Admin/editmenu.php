@@ -34,7 +34,7 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">Edit Menu</h3>
-                  <div align="right"><a class="btn btn-danger" href="<?= site_url('menu') ?>" role="button">Cancel</a></div>
+                  <div align="right"><a class="btn btn-danger" href="<?= site_url('menu') ?>" role="button"><i class="nav-icon fas fa-door-open"></i>  Cancel</a></div>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -43,8 +43,8 @@
                     <input type="hidden" name="_method" value="PUT" />
                       <label>Name</label>
                       <input type="text" name="name" value="<?= $menu['name']; ?>" class="form-control" placeholder="Enter Menu Name">
-                      <label>Flavor</label>
-                      <input type="text" name="prod_name" value="<?= $menu['prod_name']; ?>" class="form-control" placeholder="Enter Menu Flavor">
+                      <label>Description</label>
+                      <input type="text" name="description" value="<?= $menu['description']; ?>" class="form-control" placeholder="Enter Menu Description">
                       <label>Category</label>
                       <input type="text" name="category" value="<?= $menu['category']; ?>" class="form-control" placeholder="Enter Menu Category">
                       <label>Price</label>
@@ -52,7 +52,7 @@
                       <label>Discount</label>
                       <input type="text" name="discount" value="<?= $menu['discount']; ?>" class="form-control" placeholder="Enter Menu Discount">
                       <br>
-                      <div><button type="submit" class="btn btn-info">Update Menu</button>
+                      <div><button type="submit" class="btn btn-info"><i class="nav-icon fas fa-upload"></i>  Upload</button>
                     </form>
                   </div>
                 <!-- /.card-body -->

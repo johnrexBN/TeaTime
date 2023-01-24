@@ -72,6 +72,7 @@ $routes->get('/calendar', 'admin::calendar');
 $routes->get('/inbox', 'admin::inbox');
 $routes->get('/contactus', 'admin::contactus');
 $routes->get('/orders', 'admin::orders');
+$routes->get('/accept/(:any)', 'admin::accept/$1');
 
 //Homepage
 $routes->get('/homepage', 'home::homepage');
@@ -89,12 +90,17 @@ $routes->get('/cart/(:any)', 'home::cart/$1');
 $routes->post('/userCart', 'home::userCart');
 $routes->get('/cart', 'home::cart');
 $routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
+$routes->post('/placeorder', 'home::place_order');
 
 
 //User Profile
+$routes->match(['get','post'],'/profile/(:any)', 'User::profile/$1');
+$routes->put('/update_profile/(:any)', 'User::update_profile/$1');
 $routes->get('/profile', 'User::profile');
 $routes->get('/editprofile', 'User::editprofile');
 $routes->get('/show', 'User::show');
+$routes->get('/order_history', 'User::order_history');
+$routes->get('/order_status', 'User::order_status');
 
 /*
  * --------------------------------------------------------------------

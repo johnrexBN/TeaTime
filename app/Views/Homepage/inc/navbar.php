@@ -1,10 +1,10 @@
     	
 	<!--PreLoader-->
-    <!-- <div class="loader">
+    <div class="loader">
         <div class="loader-inner">
             <div class="circle"></div>
         </div>
-    </div> -->
+    </div>
     <!--PreLoader Ends-->
    	
 <!-- header -->
@@ -16,7 +16,7 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.html">
-								<img src="assets/img/logo.png" alt="">
+								<img src="<?php base_url() ?>/assets/img/logo.png" alt="">
 							</a>
 						</div>
 						<!-- logo -->
@@ -26,7 +26,7 @@
 							<ul>
 								<li><a href="<?= site_url('homepage');?>" style="text-decoration: none;">Home</a></li>
 								<li><a href="<?= site_url('about');?>" style="text-decoration: none;">About</a></li>
-								<li><a href="<?= site_url('contact');?>" style="text-decoration: none;">Contact</a></li>
+								<li><a href="<?= site_url('contact');?>" style="text-decoration: none;">Contact Us</a></li>
 								<li><a href="<?= site_url('book');?>" style="text-decoration: none;">Reservation</a></li>
 								<li><a>Shop</a>
 									<ul class="sub-menu">
@@ -38,7 +38,7 @@
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-										<a class="" href="profile" ><i class="fas fa-user-circle" ></i></a>	
+										<a class="" href="<?= site_url('profile');?>" ><i class="fas fa-user-circle" ></i></a>	
 									</div>
 								</li>
 							</ul>

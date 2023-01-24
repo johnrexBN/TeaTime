@@ -6,26 +6,7 @@
 				<div class="checkout-accordion-wrap">
 					<div class="accordion" id="accordionExample">
 						<div class="card single-accordion">
-							<div class="card-header" id="headingOne">
-								<h5 class="mb-0">
-									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: black; color: white; opacity: 0.7;">
-										Customer Info
-									</button>
-								</h5>
-							</div>
-
-							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-								<div class="card-body">
-									<div class="billing-address-form">
-										<form action="index.html">
-											<p><input type="text" placeholder="Name"></p>
-											<p><input type="email" placeholder="Email"></p>
-											<p><input type="tel" placeholder="Phone"></p>
-											<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-										</form>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 						<div class="card single-accordion">
 							<div class="card-header" id="headingTwo">
@@ -50,10 +31,12 @@
 													</tr>
 												</thead>
 												<tbody>
-													<form action="checkout" method="post">
+													<form action="placeorder" method="post">
 														<?php if (count($cart) > 0) : ?>
 															<?php foreach ($cart as $item) : ?>
 																<tr class="table-body-row">
+																	<input type="hidden" name="menuid[]" value="<?= $item['menuid'] ?>"></input>
+																	<input type="hidden" name="total[]" value="<?= $item['total'] ?>"></input>
 																	<td style="color: #000; border: 2px solid black;" class="product-image"><img src="<?= base_url() . '/' . 'uploads/' . $item['image'] ?>" alt=""></td>
 																	<td style="color: #000; border: 2px solid black;" class="product-name"><?= $item['name'] ?></td>
 																	<td style="color: #000; border: 2px solid black;" class="product-price">₱<?= number_format($item['prices'], 2) ?></td>
@@ -63,6 +46,7 @@
 															<?php endforeach; ?>
 
 														<?php endif; ?>
+														<button type="submit" id="submit" style="display:none;"></button>
 													</form>
 												</tbody>
 											</table>
@@ -87,14 +71,14 @@
 						<tbody class="order-details-body">
 							<tr>
 								<td style="border: 2px solid black;">Subtotal</td>
-								<td style="border: 2px solid black;">₱<?= $total[0]['total']?></td>
+								<td style="border: 2px solid black;">₱<?= $total[0]['total'] ?></td>
 							</tr>
-							
+
 
 						</tbody>
-						
+
 					</table>
-					<a href="" class="boxed-btn">Place Order</a>
+					<a href="#" id="placeorder" class="boxed-btn">Place Order</a>
 				</div>
 			</div>
 		</div>

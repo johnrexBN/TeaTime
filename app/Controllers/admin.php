@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\UsersModel;
 use App\Models\MenuModel;
 use App\Models\ContactModel;
+use App\Models\PlaceOrderModel;
 use App\Models\ReservationModel;
 
 class admin extends BaseController
@@ -165,6 +166,23 @@ class admin extends BaseController
         return view('admin/contact', $data);
     }
     public function orders(){
-        return view('admin/orders');
+
+        $order_model = new PlaceOrderModel();
+        $data = [
+            'placeorder' => $order_model->select('*')
+            ->join('menu', 'menu.id = orders.menuid', 'right')
+            ->join('user', 'user.id = orders.userid', 'right')
+            ->where('state', 'pending')
+            ->get()->getResultArray()
+        ];
+        // var_dump($data);
+        return view('admin/orders', $data);
+    }
+    public function accept($id, $userid){
+        $place_order = new PlaceOrderModel();
+        $place_order->set('state', 'approved')->where('userid', $userid)
+        ->where('menuid', $id)->update();
+
+        return redirect()->route('orders');
     }
 }

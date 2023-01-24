@@ -131,7 +131,7 @@ class Auth extends BaseController
                 session()->set($data);
                 if ($user_info['usertype'] == 'user' && $user_info['status'] == "active") {
                     
-                    return redirect()->route('shop');
+                    return redirect()->route('homepage');
                 } elseif($user_info['usertype'] == 'admin') {
                     return redirect()->route('index');
                 }else{

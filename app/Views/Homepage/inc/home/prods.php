@@ -17,12 +17,12 @@
 				<div class="col-lg-4 col-md-6 text-center">
 						<div class="single-product-item">
 							<div class="product-image">
-								<a href="single-product.html"><img src="<?= base_url() . '/' . 'uploads/' . $prod['image'] ?>" alt=""></a>
+								<a href="<?= site_url('single_product/'.$prod['id'])?>"><img src="<?= base_url() . '/' . 'uploads/' . $prod['image'] ?>" alt=""></a>
 							</div>
 							<h3><?= $prod['name']?></h3>
 							<p class="product-price"><span>₱<?=number_format( $prod['prices'],2)?></span></p>
 							<p><?= $prod['description']?></p>
-							<a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							<a href="<?= site_url('single_product/'.$prod['id'])?>" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 						</div>
 					</div>
 					<?php endif; ?>

@@ -34,31 +34,29 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th>Blabla</th>
-                      <th>Blabla</th>
-                      <th>Blabla</th>
-                      <th>total</th>
-                      <th>status</th>
-                      <th>action</th>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody> 
-                  
+                  <?php foreach($placeorder as $orders): ?>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><img src="<?= base_url().'/'.'uploads/'.$orders['image'] ?>" height="130" width="95"></td>
+                    <td><?= $orders['name'] ?></td>
+                    <td><?= $orders['email'] ?></td>
+                    <td><?= $orders['total'] ?></td>
+                    <td><?= $orders['state'] ?></td>
                     <td>
                       <span>
-                      <a href="" class="btn-sm btn-success"><i class="nav-icon fas fa-eye"></i></a>
-                      <a href="" class="btn-sm btn-primary"><i class="nav-icon fas fa-check"></i></a>
-                      <a href="" class="btn-sm btn-danger"><i class="nav-icon fas fa-trash"></i></a>
+                      <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-sm btn-primary"><i class="nav-icon fas fa-check"></i></a>
                       </span>
                     </td>
                   </tr>
-               
+               <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>
