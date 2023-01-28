@@ -30,21 +30,21 @@
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         <li class="nav-item mt-5">
-          <a href="<?= site_url('order_status') ?>" class="nav-link active" style="background-color: #3f474e;">
-            <i class="nav-icon fas fa-user"></i>
-            <p>order Status</p>
+          <a href="<?= site_url('order_status') ?>" class="nav-link" style="background-color: #3f474e;">
+          <i class="nav-icon fas fa-calendar-check"></i>
+            <p>Status</p>
           </a>
         </li>
 
-        <li class="nav-item mt-5">
-          <a href=""<?= site_url('order_history') ?>" class="nav-link active" style="background-color: #3f474e;">
-            <i class="nav-icon fas fa-user"></i>
-            <p>order History</p>
+        <li class="nav-item">
+          <a href="<?= site_url('order_history') ?>" class="nav-link" style="background-color: #3f474e;">
+          <i class="nav-icon fas fa-file-alt"></i>
+            <p>History</p>
           </a>
         </li>
 
-        <li class="nav-item mt-5">
-          <a href=""<?= site_url('profile') ?>" class="nav-link active" style="background-color: #3f474e;">
+        <li class="nav-item">
+          <a href="<?= site_url('profile') ?>" class="nav-link active" style="background-color: #3f474e;">
             <i class="nav-icon fas fa-user"></i>
             <p>Profile Settings</p>
           </a>
