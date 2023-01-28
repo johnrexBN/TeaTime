@@ -28,12 +28,7 @@
 								<li><a href="<?= site_url('about');?>" style="text-decoration: none;">About</a></li>
 								<li><a href="<?= site_url('contact');?>" style="text-decoration: none;">Contact Us</a></li>
 								<li><a href="<?= site_url('book');?>" style="text-decoration: none;">Reservation</a></li>
-								<li><a>Shop</a>
-									<ul class="sub-menu">
-										<li><a href="shop" style="text-decoration: none;"><i class="fa fa-shopping-bag" style="color: white; margin-right: 10px;"></i>Store</a></li>
-										<li><a href="request" style="text-decoration: none;"><i class="fa fa-list"  style="color: white; margin-right: 10px;"></i>Request</a></li>
-									</ul>
-								</li>
+								<li><a href="<?= site_url('shop');?>" style="text-decoration: none;">Store</a></li>
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart"><i class="fas fa-shopping-cart"></i></a>

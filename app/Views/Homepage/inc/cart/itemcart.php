@@ -7,14 +7,14 @@
 					<div class="cart-table-wrap">
 						<table class="cart-table" >
 							<thead class="cart-table-head" >
-								<tr class="table-head-row" style="background-color: #CB8C58; color: white; ">
-									<th class="product-remove"></th>
-									<th class="product-image" >Product Image</th>
-									<th class="product-name" >Name</th>
-									<th class="product-price" >Price</th>
-									<th class="product-quantity" >Quantity</th>
-									<th class="product-total">Total</th>
-									<th>Action</th>
+								<tr class="table-head-row" style="background-color: #CB8C58; color: white; font-weight: bolder; border-left: 1px solid black; border-top: 1px solid black; ">
+									<th class="product-remove" style="font-weight: bold; font-family: Poppins, sans-serif;">MARK</th>
+									<th class="product-image" style="font-weight: bold; font-family: Poppins, sans-serif;" >PRODUCT IMAGE</th>	
+									<th class="product-name" style="font-weight: bold; font-family: Poppins, sans-serif;">NAME</th>
+									<th class="product-price" style="font-weight: bold; font-family: Poppins, sans-serif;" >PRICE</th>
+									<th class="product-quantity" style="font-weight: bold; font-family: Poppins, sans-serif;" >QUANTITY</th>
+									<th class="product-total" style="font-weight: bold; font-family: Poppins, sans-serif;">TOTAL</th>
+									<th style="border-right: 1px solid black; font-weight: bold; font-family: Poppins, sans-serif;">ACTION</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -23,8 +23,8 @@
 									<?php foreach ($cart as $item) : ?>
 										<tr class="table-body-row">
 											
-											<td class="product-remove" style="border: 2px solid black;"><input type="checkbox" value="<?= $item['id'] ?>" name="id[]"></td>
-											<td style="color: #000; border: 2px solid black;" class="product-image"><img src="<?= base_url() . '/' . 'uploads/' . $item['image'] ?>" alt=""></td>
+											<td class="product-remove" style="border: 2px solid black; border-left: 2px solid black;"><input type="checkbox" value="<?= $item['id'] ?>" name="id[]"></td>
+											<td style="color: #000; border: 2px solid black ;" class="product-image"><img src="<?= base_url() . '/' . 'uploads/' . $item['image'] ?>" alt=""></td>
 											<td style="color: #000; border: 2px solid black;" class="product-name"><?= $item['name'] ?></td>
 											<td style="color: #000; border: 2px solid black;" class="product-price">₱<?= number_format($item['prices'], 2) ?></td>
 											<td style="color: #000; border: 2px solid black;" class="product-quantity" value="quantity"><?= $item['order_count'] ?></td>
@@ -34,9 +34,9 @@
 									<?php endforeach; ?>
 								<?php else : ?>
 
-									<tr>
-										<td>
-											<p style="color: #212529;">No Items In Your Cart!!</p>
+									<tr style="box-shadow: 5px 5px; color: #000; opacity: 0.7;">
+										<td colspan='7' style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black">
+											<p style="color: #212529;">NO ITEMS IN YOUR CART</p>
 										</td>
 									</tr>
 
@@ -69,7 +69,7 @@
 							</tbody>
 						</table>
 						<div class="cart-buttons">
-							<a href="#" id="checkout" class="bordered-btn" style="color: black; border-color: black;">Check Out</a>
+							<a href="#" id="checkout" class="bordered-btn" style="color: black; border-color: #CB8C58;">Check Out</a>
 						</div>
 					</div>
 				</div>

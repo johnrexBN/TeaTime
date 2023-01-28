@@ -7,10 +7,11 @@ body {
     line-height: 1.7;
     color: black;
     overflow-x: hidden;
-    background-image: url('http://localhost/ci4/public/assets/img/hero-bg.png');
+    background-image: url(../img/hero-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(4px);
+    background-attachment: fixed;
 }
 
 img {

@@ -24,7 +24,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
 						<p>Get your sits advance</p>
-						<h1>Book Now</h1>
+						<h1>Reservation</h1>
 					</div>
 				</div>
 			</div>
