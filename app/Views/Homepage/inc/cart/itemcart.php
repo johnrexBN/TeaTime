@@ -2,12 +2,12 @@
 <div class="cart-section mt-80 mb-80">
 	<div class="container">
 		<div class="row">
-			
 				<div class="col-lg-8 col-md-12" style="border-radius: 20px;">
 					<div class="cart-table-wrap">
-						<table class="cart-table" >
+					<p style="color: #212529; font-size: 30px; font-weight: bold; font-family: Poppins, sans-serif;">REVIEW ORDER</p>
+						<table class="cart-table" style="box-shadow: 5px 5px;" >
 							<thead class="cart-table-head" >
-								<tr class="table-head-row" style="background-color: #CB8C58; color: white; font-weight: bolder; border-left: 1px solid black;  border-top: 1px solid black; ">
+								<tr class="table-head-row" style="background-color: #CB8C58; color: white; font-weight: bolder; border-left: 1px solid black;  border-top: 1px solid black;  ">
 									<th class="product-remove" style="font-weight: bold; font-family: Poppins, sans-serif; ">MARK</th>
 									<th class="product-image" style="font-weight: bold; font-family: Poppins, sans-serif;" >PRODUCT IMAGE</th>	
 									<th class="product-name" style="font-weight: bold; font-family: Poppins, sans-serif;">NAME</th>
@@ -50,7 +50,7 @@
 
 				<div class="col-lg-4">
 					<div class="total-section">
-						<table class="total-table">
+						<table class="total-table" style="margin-top: 70px;">
 							<thead class="total-table-head">
 								<tr class="table-total-row" style="background-color: #CB8C58; color: white;">
 									<th style="border: 1px solid white; font-weight: bold; font-family: Poppins, sans-serif;">TOTAL</th>
