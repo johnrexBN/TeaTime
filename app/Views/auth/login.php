@@ -19,7 +19,7 @@
                 <div class="col-12 text-center align-self-center py-5">
                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
                         <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
-                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log">
                         <label for="reg-log"></label>
                         <div class="card-3d-wrap mx-auto">
                             <div class="card-3d-wrapper">
@@ -32,7 +32,9 @@
                                                 
                                                 <div class="form-group">
                                                     
-                                                <input type="email" name="email" class="form-style" placeholder="Enter Your Email" id="logemail" class="form-control" value="<?= set_value('email'); ?>">
+                                               <input type="email" name="email" class="form-style" placeholder="Enter Your Email" id="logemail" class="form-control" value="<?= set_value('email'); ?>">
+                                               <i class="fa fa-envelope"></i>
+                                               
                                                         <p>
                                                             <?= isset($validation) ? display_error($validation, 'email')
                                                                 : '' ?>
@@ -49,7 +51,7 @@
                                                         ) : '' ?>
                                                     </p>
                                                     <span style="color: red"><?= session()->getFlashdata('fail') ?></span>
-                                                    <i class="input-icon fa fa-lock-alt"></i>
+                                                    <i class="fa fa-lock"></i>
                                                 </div>
                                                 <br>
                                                 <button type="submit" class="btn btn-primary">Log In</button>
@@ -69,22 +71,22 @@
                                                 <div class="form-group">
                                                     <input type="text" name="name" class="form-style" placeholder="Enter Your Full Name" id="logname" class="form-control" value="<?= set_value('name'); ?>">
                                                    
-                                                    <i class="input-icon uil uil-user"></i>
+                                                    <i class="fa fa-user"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
                                                     <input type="email" name="email" class="form-style" placeholder="Enter Your Email" id="logemail" class="form-control" value="<?= set_value('email'); ?>">
                                                    
-                                                    <i class="input-icon uil uil-at"></i>
+                                                    <i class="fa fa-envelope"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
                                                     <input type="password" name="password" class="form-style" placeholder="Enter Your Password" id="logpass" class="form-control" value="<?= set_value('password'); ?>">
                                                    
-                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                    <i class="fa fa-lock"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
                                                     <input type="password" name="cpassword" class="form-style" placeholder="Confirm Your Password" id="logpass" class="form-control" value="<?= set_value('cpassword'); ?>">
                                                    
-                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                    <i class="fa fa-lock"></i>
                                                 </div>
                                                 <br>
                                                 <button type="submit" class="btn btn-primary">Sign Up</button>
