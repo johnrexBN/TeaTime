@@ -7,8 +7,8 @@
 					<div class="cart-table-wrap">
 						<table class="cart-table" >
 							<thead class="cart-table-head" >
-								<tr class="table-head-row" style="background-color: #CB8C58; color: white; font-weight: bolder; border-left: 1px solid black; border-top: 1px solid black; ">
-									<th class="product-remove" style="font-weight: bold; font-family: Poppins, sans-serif;">MARK</th>
+								<tr class="table-head-row" style="background-color: #CB8C58; color: white; font-weight: bolder; border-left: 1px solid black;  border-top: 1px solid black; ">
+									<th class="product-remove" style="font-weight: bold; font-family: Poppins, sans-serif; ">MARK</th>
 									<th class="product-image" style="font-weight: bold; font-family: Poppins, sans-serif;" >PRODUCT IMAGE</th>	
 									<th class="product-name" style="font-weight: bold; font-family: Poppins, sans-serif;">NAME</th>
 									<th class="product-price" style="font-weight: bold; font-family: Poppins, sans-serif;" >PRICE</th>
@@ -23,13 +23,13 @@
 									<?php foreach ($cart as $item) : ?>
 										<tr class="table-body-row">
 											
-											<td class="product-remove" style="border: 2px solid black; border-left: 2px solid black;"><input type="checkbox" value="<?= $item['id'] ?>" name="id[]"></td>
-											<td style="color: #000; border: 2px solid black ;" class="product-image"><img src="<?= base_url() . '/' . 'uploads/' . $item['image'] ?>" alt=""></td>
-											<td style="color: #000; border: 2px solid black;" class="product-name"><?= $item['name'] ?></td>
-											<td style="color: #000; border: 2px solid black;" class="product-price">₱<?= number_format($item['prices'], 2) ?></td>
-											<td style="color: #000; border: 2px solid black;" class="product-quantity" value="quantity"><?= $item['order_count'] ?></td>
-											<td style="color: #000; border: 2px solid black;" class="product-total" value="total">₱<?= $item['total'] ?></td>
-											<td style="color: #000; border: 2px solid black;"><a href="<?= site_url('delete_cart/' . $item['id']) ?>" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10">Remove</a></td>
+											<td class="product-remove" style="border-left: 1px solid black; font-family: Poppins, sans-serif; border-bottom: 1px solid black;"><input type="checkbox" value="<?= $item['id'] ?>" name="id[]"></td>
+											<td style="color: #000; border-bottom: 1px solid black; font-family: Poppins, sans-serif; " class="product-image"><img src="<?= base_url() . '/' . 'uploads/' . $item['image'] ?>" alt=""></td>
+											<td style="color: #000; border-bottom: 1px solid black; font-family: Poppins, sans-serif; " class="product-name"><?= $item['name'] ?></td>
+											<td style="color: #000; border-bottom: 1px solid black; font-family: Poppins, sans-serif; " class="product-price">₱<?= number_format($item['prices'], 2) ?></td>
+											<td style="color: #000; border-bottom: 1px solid black; font-family: Poppins, sans-serif; " class="product-quantity" value="quantity"><?= $item['order_count'] ?></td>
+											<td style="color: #000; border-bottom: 1px solid black; font-family: Poppins, sans-serif; " class="product-total" value="total">₱<?= $item['total'] ?></td>
+											<td style="color: #000; border-bottom: 1px solid black; font-family: Poppins, sans-serif; border-right: 1px solid black; border-bottom: 1px solid black "><a href="<?= site_url('delete_cart/' . $item['id']) ?>" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash"></i></a></td>
 										</tr>
 									<?php endforeach; ?>
 								<?php else : ?>
@@ -53,13 +53,13 @@
 						<table class="total-table">
 							<thead class="total-table-head">
 								<tr class="table-total-row" style="background-color: #CB8C58; color: white;">
-									<th style="border: 1px solid white;">Total</th>
-									<th style="border: 1px solid white;">Price</th>
+									<th style="border: 1px solid white; font-weight: bold; font-family: Poppins, sans-serif;">TOTAL</th>
+									<th style="border: 1px solid white; font-weight: bold; font-family: Poppins, sans-serif;">PRICE</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr class="total-data">
-									<td style="border: 1px solid white;"><strong>Subtotal: </strong></td>
+									<td style="border: 1px solid white; font-weight: bold; font-family: Poppins, sans-serif;"><strong>Subtotal: </strong></td>
 									<td style="border: 1px solid white;">₱<?php if (empty($total[0]['total'])) {
 																				echo ' 0.00';
 																			} else {
