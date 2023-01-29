@@ -91,6 +91,9 @@ $routes->post('/userCart', 'home::userCart');
 $routes->get('/cart', 'home::cart');
 $routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
 $routes->post('/placeorder', 'home::place_order');
+$routes->post('/search', 'home::search');
+$routes->get('/search', 'home::search');
+
 
 
 //User Profile

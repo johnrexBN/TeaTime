@@ -225,8 +225,14 @@ class home extends BaseController
             }
         }
         return redirect()->route('order_history')->with('history', 'history');
-        
-        
-        
     }
+    public function search()
+  {
+
+    $query = $this->request->getVar('search');
+    $search = new MenuModel();
+    $searching = array('name' => $query, 'category' => $query, '');
+    $result['products'] = $search->like('name', $query)->orLike('category', $query)->orLike('description', $query)->get()->getResultArray();
+    return view('Homepage/shop', $result);
+  }
 }
