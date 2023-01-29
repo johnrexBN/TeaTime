@@ -52,6 +52,7 @@ class home extends BaseController
         ];
 
         $result = $contactmodel->insert($data);
+        session()->setFlashdata('contactus', 'contact');
         return view('Homepage/contact');
     }
 
@@ -86,6 +87,7 @@ class home extends BaseController
 
         ];
         $result = $bookmodel->insert($data);
+        session()->setFlashdata('reservation', 'book');
         return view('Homepage/book');
     }
     public function cart()
@@ -222,7 +224,7 @@ class home extends BaseController
                 
             }
         }
-        return redirect()->route('order_history');
+        return redirect()->route('order_history')->with('history', 'history');
         
         
         

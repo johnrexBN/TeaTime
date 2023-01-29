@@ -51,6 +51,18 @@
 </style>
 
 <body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('fpass'))) : ?>
+      <script>swal("Success!", "Your OTP for your new password has been sent to your email.", "info");</script>
+      <?php endif ?>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php if(!empty(session()->getFlashdata('verify'))) : ?>
+    <script>swal("Success!", "Your OTP for your account has been sent to your email.", "info");</script>
+    <?php endif ?>
+<!-- /Sweet alert -->
+
+
     <div class="container d-flex flex-column">
         <div class="row align-items-center justify-content-center
       min-vh-100 g-0">

@@ -1,4 +1,9 @@
-
+<!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('contactus'))) : ?>
+      <script>swal("Success!", "Your message has been processed.", "success");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
 	<!-- search area -->
 	<div class="search-area">
 		<div class="container">

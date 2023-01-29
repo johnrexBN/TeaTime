@@ -13,6 +13,17 @@
 </head>
 
 <body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php if(!empty(session()->getFlashdata('inactive'))) : ?>
+    <script>swal("Failed!", "Inactive account! Please verify!.", "error");</script>
+    <?php endif ?>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php if(!empty(session()->getFlashdata('logout'))) : ?>
+    <script>swal("Success!", "Logout Successfully.", "success");</script>
+    <?php endif ?>
+
     <div class="section">
         <div class="container">
             <div class="row full-height justify-content-center">

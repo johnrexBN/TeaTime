@@ -27,8 +27,8 @@ class User extends BaseController{
         ];
         $user->update($id, $data);
         $session = session();
-        $session->setFlashdata('msg', 'Updated Successfully!');
-        // var_dump($data);
+        $session->setFlashdata('profile', 'Updated Successfully!');
+    
         return redirect()->route('profile');
     }
 
@@ -51,7 +51,7 @@ class User extends BaseController{
             ->where('orders.userid', session()->get('loggedUser'))
             ->get()->getResultArray()
         ];
-        // var_dump($data);
+        
         return view('User/order_history', $data);
     }
 }

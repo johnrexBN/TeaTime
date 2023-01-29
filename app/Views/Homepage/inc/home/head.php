@@ -1,4 +1,10 @@
-	
+<!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('home'))) : ?>
+      <script>swal("Welcome!", "You successfully login your account.", "success");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
+
 	<!-- search area -->
 	<div class="search-area">
 		<div class="container">

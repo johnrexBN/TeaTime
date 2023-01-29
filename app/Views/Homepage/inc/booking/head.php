@@ -1,4 +1,9 @@
-
+<!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('reservation'))) : ?>
+      <script>swal("Success!", "Your reservation is on process wait for the admin approval.", "info");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
 	<!-- search area -->
 	<div class="search-area">
 		<div class="container">

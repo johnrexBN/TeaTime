@@ -4,6 +4,12 @@
     <div class="wrapper">
         <?= $this->include('User/inc/navbar'); ?>
     </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('profile'))) : ?>
+      <script>swal("Success!", "Your profile has been updated.", "success");</script>
+      <?php endif ?>
+
     <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #CB8C58;">
 

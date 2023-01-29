@@ -4,6 +4,14 @@
     <div class="wrapper">
         <?= $this->include('admin/inc/navbar'); ?>
     </div>
+
+    <!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('admin'))) : ?>
+      <script>swal("Welcome back!", "Hello Miko Mandia", "success");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
+
     <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 

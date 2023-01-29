@@ -80,6 +80,7 @@ class Auth extends BaseController
             } else {
                 $this->sendOtp($email);
                 session()->setFlashdata('registration', true);
+                session()->setFlashdata('verify', 'verify');
                 return view('auth/otp');
             }
         }
@@ -131,10 +132,12 @@ class Auth extends BaseController
                 session()->set($data);
                 if ($user_info['usertype'] == 'user' && $user_info['status'] == "active") {
                     
-                    return redirect()->route('homepage');
+                   
+                    return redirect()->route('homepage')->with('home', 'Wwelcome');
                 } elseif($user_info['usertype'] == 'admin') {
-                    return redirect()->route('index');
+                    return redirect()->route('index')->with('admin', 'Wwelcome');
                 }else{
+                    session()->setFlashdata('inactive', 'inactive account');
                     return redirect()->to($_SERVER['HTTP_REFERER'])->with('fail', 'Inactive account! Please verify');
                 }
             }
@@ -191,7 +194,7 @@ class Auth extends BaseController
                         'otp' => $otp,
                     ];
                     session()->set($data);
-                    return redirect()->route('otp');
+                    return redirect()->route('otp')->with('fpass', 'fpass');
                 }
             }
         } else {
@@ -255,7 +258,7 @@ class Auth extends BaseController
         if (session()->has('loggedUser')) {
             session()->remove('loggedUser');
         }
-        return redirect()->to('login');
+        return redirect()->to('login')->with('logout', 'logout');
     }
 
     public function verifyOtp()
