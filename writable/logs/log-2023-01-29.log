@@ -218,3 +218,50 @@ in SYSTEMPATH\Database\BaseBuilder.php on line 954.
  5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-29 23:23:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\TeaTime\app\Models\MenuModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(157): App\Models\MenuModel->retrieve_mod()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->shop()
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\TeaTime\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\TeaTime\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\TeaTime\app\Models\MenuModel.php(47): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(157): App\Models\MenuModel->retrieve_mod()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->shop()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-29 23:23:22 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\MenuModel.php(47): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\home.php(157): App\Models\MenuModel->retrieve_mod()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->shop()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

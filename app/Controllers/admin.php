@@ -185,4 +185,20 @@ class admin extends BaseController
 
         return redirect()->route('orders');
     }
+    public function accept_book($id)
+    {
+        $reservation = new ReservationModel();
+        $reservation->set('status', 'accepted')->where('id', $id)->update();
+
+        return redirect()->route('inbox');
+
+    }
+    public function decline_book($id)
+    {
+        $reservation = new ReservationModel();
+        $reservation->set('status', 'declined')->where('id', $id)->update();
+
+        return redirect()->route('inbox');
+    }
+    
 }

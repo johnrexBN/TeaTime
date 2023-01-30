@@ -16,6 +16,7 @@ class ReservationModel extends Model
         'tables',
         'message',
         'date',
+        'status',
         'time_send'
     ];
 }

@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\CartModel;
 use App\Models\MenuModel;
 use CodeIgniter\Validation\Validation;
-use App\Models\ProductModel;
 use CodeIgniter\Files\File;
 use App\Models\ReservationModel;
 use App\Models\ContactModel;
@@ -74,6 +73,7 @@ class home extends BaseController
         $tables = $this->request->getPost('tables');
         $message = $this->request->getPost('message');
         $date = $this->request->getPost('date');
+        
 
 
         $data = [
@@ -84,6 +84,7 @@ class home extends BaseController
             'tables' => $tables,
             'message' => $message,
             'date' => $date,
+            'status' => 'pending',
 
         ];
         $result = $bookmodel->insert($data);

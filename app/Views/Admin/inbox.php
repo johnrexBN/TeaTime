@@ -135,6 +135,7 @@
                       <th>tables</th>
                       <th>message</th>
                       <th>date</th>
+                      <th>status</th>
                       <th>action</th>
                     </tr>
                   </thead>
@@ -148,11 +149,11 @@
                     <td><?= $inbox['tables']?></td>
                     <td><?= $inbox['message']?></td>
                     <td><?= $inbox['date']?></td>
+                    <td><?= $inbox['status']?></td>
                     <td>
                       <span>
-                      <a href="" class="btn-sm btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
-                      <a href="" class="btn-sm btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a>
-                      </span>
+                      <a href="<?= site_url('accept_book/'.$inbox['id']) ?>" class="btn-sm btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
+                      <a href="<?= site_url('decline_book/'.$inbox['id']) ?>" class="btn-sm btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a></span>
                     </td>
                   </tr>
                   <?php endforeach; ?>
