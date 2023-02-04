@@ -5,13 +5,6 @@
         <?= $this->include('User/inc/navbar'); ?>
     </div>
 
-    <!-- Sweet alert -->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      <?php if(!empty(session()->getFlashdata('history'))) : ?>
-      <script>swal("Success!", "Your order has been processed.", "info");</script>
-      <?php endif ?>
-<!-- /Sweet alert -->
-
     <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #CB8C58;">
 
@@ -101,7 +94,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                                <h3 class="card-title">Order History</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">

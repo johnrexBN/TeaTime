@@ -257,8 +257,10 @@ class Auth extends BaseController
     {
         if (session()->has('loggedUser')) {
             session()->remove('loggedUser');
+            session()->destroy();
         }
-        return redirect()->to('login')->with('logout', 'logout');
+        session()->setFlashdata('logout','logout');
+        return redirect()->to('login');
     }
 
     public function verifyOtp()

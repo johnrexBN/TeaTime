@@ -24,6 +24,11 @@
     <script>swal("Success!", "Logout Successfully.", "success");</script>
     <?php endif ?>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php if(!empty(session()->getFlashdata('invalid'))) : ?>
+    <script>swal("Error!", "You need to login first!.", "error");</script>
+    <?php endif ?>
+
     <div class="section">
         <div class="container">
             <div class="row full-height justify-content-center">

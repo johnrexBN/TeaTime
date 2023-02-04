@@ -56,6 +56,8 @@
 <script src="<?= base_url();?>/plugins/jquery-mapael/maps/usa_states.min.js"></script>
 <!-- ChartJS -->
 <script src="<?= base_url();?>/plugins/chart.js/Chart.min.js"></script>
+<!-- OPTIONAL SCRIPTS -->
+<script src="<?= base_url();?>plugins/chart.js/Chart.min.js"></script>
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url();?>/dist/js/pages/dashboard2.js"></script>

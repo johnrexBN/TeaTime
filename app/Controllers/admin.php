@@ -14,8 +14,23 @@ class admin extends BaseController
 
     public function index()
     {
+        $menu_model = new MenuModel();
+        $contact_model = new ContactModel();
+        $book_model = new ReservationModel();
+        $order_model = new PlaceOrderModel();
         $info = new UsersModel();
-        $data['users'] = $info->selectCount('id', 'totaluser')->first();
+        $data = [
+            'users'  => $info->selectCount('id', 'totaluser')->first(),
+            'pending_order' => $order_model->where('state', 'pending')->get()->getNumRows(),
+            'cancelled_order' => $order_model->where('state', 'Cancelled')->get()->getNumRows(),
+            'approved_order' => $order_model->where('state', 'Approved')->get()->getNumRows(),
+            'accept_book' => $book_model->where('status', 'accepted')->get()->getNumRows(),
+            'pending_book' => $book_model->where('status', 'pending')->get()->getNumRows(),
+            'contact_us' => $contact_model->selectCount('id', 'totaluser')->first(),
+            'menu' => $menu_model->selectCount('id', 'totalmenu')->first(),
+        ];
+
+
 
         return view('admin/index', $data);
     }
@@ -171,8 +186,8 @@ class admin extends BaseController
         $order_model = new PlaceOrderModel();
         $data = [
             'placeorder' => $order_model->select('*')
-                ->join('menu', 'menu.id = orders.menuid', 'right')
-                ->join('user', 'user.id = orders.userid', 'right')
+                ->join('menu', 'menu.id = orders.menuid', 'inner')
+                ->join('user', 'user.id = orders.userid', 'inner')
                 ->where('user.usertype', 'user')
                 ->get()->getResultArray()
         ];
@@ -181,11 +196,11 @@ class admin extends BaseController
     }
     public function accept($id, $userid)
     {
-        $email = \Config\Services::email();
+        // $email = \Config\Services::email();
         $place_order = new PlaceOrderModel();
         $place_order->set('state', 'approved')->where('userid', $userid)
             ->where('menuid', $id)->update();
-        $postEmail = $place_order->where('userid', $userid)->where('menuid', $id)->first();
+        // $postEmail = $place_order->where('userid', $userid)->where('menuid', $id)->first();
         
             
                 //     if (isset($postEmail)) {
@@ -205,7 +220,7 @@ class admin extends BaseController
                 //      $email->setSubject('Order Approval');
                 //      $email->setMessage("{$html}");
                 //     $email->send();
-                //      return redirect()->route('orders');     
+                   return redirect()->route('orders');     
                 //  }
         
     }

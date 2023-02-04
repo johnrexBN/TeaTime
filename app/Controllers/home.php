@@ -225,7 +225,7 @@ class home extends BaseController
                 
             }
         }
-        return redirect()->route('order_history')->with('history', 'history');
+        return redirect()->route('order_status')->with('history', 'history');
     }
     public function search()
   {

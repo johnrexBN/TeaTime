@@ -4,6 +4,14 @@
     <div class="wrapper">
         <?= $this->include('User/inc/navbar'); ?>
     </div>
+
+    <!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('history'))) : ?>
+      <script>swal("Success!", "Your order has been processed.", "info");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
+
     <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #CB8C58;">
 
@@ -36,21 +44,21 @@
       <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
       <li class="nav-item mt-5">
-        <a href="<?= site_url('order_status') ?>" class="nav-link active" style="background-color: #3f474e;">
+        <a href="<?= site_url('order_status') ?>" class="nav-link active"style="background-color: #3f474e;">
         <i class="nav-icon fas fa-calendar-check"></i>
           <p>Status</p>
         </a>
       </li>
 
       <li class="nav-item">
-        <a href="<?= site_url('order_history') ?>" class="nav-link ">
+        <a href="<?= site_url('order_history') ?>" class="nav-link " >
         <i class="nav-icon fas fa-file-alt"></i>
           <p>History</p>
         </a>
       </li>
 
       <li class="nav-item">
-        <a href="<?= site_url('profile') ?>" class="nav-link">
+        <a href="<?= site_url('profile') ?>" class="nav-link" >
           <i class="nav-icon fas fa-user"></i>
           <p>Profile Settings</p>
         </a>
@@ -76,7 +84,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Status Table</h1>
+                        <h1>DataTables</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -93,7 +101,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Status Table</h3>
+                                <h3 class="card-title">Order Status</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -102,20 +110,23 @@
                                         <tr>
                                             <th>Image</th>
                                             <th>Name</th>
-                                            <th>Email</th>
                                             <th>Total</th>
                                             <th>Status</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php foreach($placeorder as $orders):?>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td><img src="<?= base_url().'/'.'uploads/'.$orders['image'] ?>" height="130" width="95"></td>
+                                            <td><?= $orders['name'] ?></td>
+                                            <td><?= $orders['total'] ?></td>
+                                            <td><?= $orders['state'] ?></td>
+                                            <td><span><a href="<?= site_url('cancel_order/'.$orders['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a></span></td>
                                         </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
+                                   
                                 </table>
                             </div>
                         </div>

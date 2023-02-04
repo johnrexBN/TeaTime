@@ -39,9 +39,9 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 //Login User
+$routes->get('/login', 'Auth::login');
 $routes->get('/', 'welcome::index');
 $routes->get('/Auth', 'Auth::index');
-$routes->get('/login', 'Auth::login');
 $routes->get('/register', 'Auth::register');
 $routes->post('/save', 'Auth::save');
 $routes->post('/check', 'Auth::check');
@@ -52,8 +52,10 @@ $routes->match(['get','post'],'/otp', 'Auth::otp');
 $routes->match(['get','post'],'/reset', 'Auth::reset');
 $routes->match(['get','post'],'/logout', 'Auth::logout');
 
-//Admin Side
+$routes->group('',['filter' => 'Authguard'], function($routes){
 
+
+//Admin Side
 $routes->get('/index', 'admin::index');
 $routes->get('/products', 'admin::products');
 $routes->post('/savemenu', 'admin::savemenu');
@@ -78,8 +80,6 @@ $routes->get('/decline_book/(:any)', 'admin::decline_book/$1');
 $routes->get('/contact_accept/(:any)', 'admin::contact_accept/$1');
 
 
-
-
 //Homepage
 $routes->get('/homepage', 'home::homepage');
 $routes->match(['get','post'],'/contact', 'home::contact');
@@ -101,7 +101,6 @@ $routes->post('/search', 'home::search');
 $routes->get('/search', 'home::search');
 
 
-
 //User Profile
 $routes->match(['get','post'],'/profile/(:any)', 'User::profile/$1');
 $routes->put('/update_profile/(:any)', 'User::update_profile/$1');
@@ -110,6 +109,9 @@ $routes->get('/editprofile', 'User::editprofile');
 $routes->get('/show', 'User::show');
 $routes->get('/order_history', 'User::order_history');
 $routes->get('/order_status', 'User::order_status');
+$routes->match(['get','post'],'/cancel_order/(:any)', 'User::cancel_order/$1');
+
+});
 
 /*
  * --------------------------------------------------------------------

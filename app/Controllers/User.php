@@ -12,7 +12,6 @@ class User extends BaseController{
     public function profile(){
         $user_model = new UsersModel();
         $data['profile'] = $user_model->where('id', session()->get('loggedUser'))->first();
-        // var_dump($data['profile']);
         return view('User/profile', $data);
     }
 
@@ -32,26 +31,48 @@ class User extends BaseController{
         return redirect()->route('profile');
     }
 
-    public function editprofile(){
-        return view('User/editprofile');
-    }
 
     public function show(){
-        return view('User/show');
+        $profile = new UsersModel();
+        $data = [
+            'profile' => $profile->where('id',session()->get('loggedUser'))->first()
+        ];
+        return view('User/show',$data);
     }
     public function order_status(){
 
-        return view('User/order_status');
+        $placeorder = new PlaceOrderModel();
+        $data = [
+            'placeorder' => $placeorder->select('*')
+            ->join('menu', 'menu.id = orders.menuid', 'inner')
+            ->where('orders.userid', session()->get('loggedUser'))
+            ->where('orders.state', 'Pending')
+            ->get()->getResultArray()
+        ];
+
+        return view('User/order_status', $data);
     }
     public function order_history(){
         $placeorder = new PlaceOrderModel();
         $data = [
             'placeorder' => $placeorder->select('*')
-            ->join('menu', 'menu.id = orders.menuid', 'right')
+            ->join('menu', 'menu.id = orders.menuid', 'inner')
             ->where('orders.userid', session()->get('loggedUser'))
+            ->where('orders.state', 'Approved')
+            ->orWhere('orders.state', 'Cancelled')
             ->get()->getResultArray()
         ];
-        
+       
         return view('User/order_history', $data);
+    }
+
+    public function cancel_order($id)
+    {
+        $place_order = new PlaceOrderModel();
+        $place_order->set('state', 'Cancelled')
+            ->where('menuid', $id)->update();
+
+        session()->setFlashdata('cancelled', 'cancelled');
+        return redirect()->route('order_status');
     }
 }
