@@ -5,6 +5,13 @@
         <?= $this->include('admin/inc/navbar'); ?>
        
     </div>
+
+    <!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('accepted'))) : ?>
+      <script>swal("!", "This reservation is already accepted.", "error");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
         <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
@@ -48,14 +55,6 @@
         <i class="nav-icon fas fa-list"></i>
           <p>
             Menu
-          </p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="<?= site_url('calendar') ?>" class="nav-link ">
-          <i class="nav-icon far fa-calendar"></i>
-          <p>
-            Calendar
           </p>
         </a>
       </li>

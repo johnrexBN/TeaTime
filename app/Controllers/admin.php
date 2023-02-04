@@ -19,7 +19,7 @@ class admin extends BaseController
 
         return view('admin/index', $data);
     }
-    
+
     public function menu()
     {
         $prod = new MenuModel();
@@ -37,7 +37,7 @@ class admin extends BaseController
     {
         return view('admin/addmenu');
     }
-    
+
 
     public function updatemenu($id)
     {
@@ -152,7 +152,7 @@ class admin extends BaseController
     public function inbox()
     {
         $inbox = new ReservationModel();
-        $data =[
+        $data = [
             'book' => $inbox->findAll()
         ];
         return view('admin/inbox', $data);
@@ -160,37 +160,63 @@ class admin extends BaseController
     public function contactus()
     {
         $inbox = new ContactModel();
-        $data =[
+        $data = [
             'feeds' => $inbox->findAll()
         ];
         return view('admin/contact', $data);
     }
-    public function orders(){
+    public function orders()
+    {
 
         $order_model = new PlaceOrderModel();
         $data = [
             'placeorder' => $order_model->select('*')
-            ->join('menu', 'menu.id = orders.menuid', 'right')
-            ->join('user', 'user.id = orders.userid', 'right')
-            ->where('state', 'pending')
-            ->get()->getResultArray()
+                ->join('menu', 'menu.id = orders.menuid', 'right')
+                ->join('user', 'user.id = orders.userid', 'right')
+                ->where('state', 'pending')
+                ->get()->getResultArray()
         ];
         // var_dump($data);
         return view('admin/orders', $data);
     }
-    public function accept($id, $userid){
+    public function accept($id, $userid)
+    {
         $place_order = new PlaceOrderModel();
         $place_order->set('state', 'approved')->where('userid', $userid)
-        ->where('menuid', $id)->update();
+            ->where('menuid', $id)->update();
 
         return redirect()->route('orders');
     }
     public function accept_book($id)
     {
+        $email = \Config\Services::email();
+
         $reservation = new ReservationModel();
         $reservation->set('status', 'accepted')->where('id', $id)->update();
-
-        return redirect()->route('inbox');
+        $postEmail = $reservation->where('id', $id)->first();
+        
+        if($postEmail['status'] == 'accepted') {
+           return redirect()->route('inbox')->with('accepted', 'accepted');
+        } else {
+            if (isset($postEmail)) {
+                $html = <<<HTML
+                    <div class="card-body">
+                        <div class="mb-4">      
+                            <p style="text-align: center;"><strong>Order Approved!</strong></p>
+                            <p class="mb-2" style="text-align: center;">Your Order is approved by the admin!</p>
+                        </div>
+                    </div>
+                HTML;
+    
+                $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+    
+                $email->setTo($postEmail['email']);
+    
+                $email->setSubject('Order Approval');
+                $email->setMessage("{$html}");
+                return redirect()->route('inbox');     
+            }
+        }
 
     }
     public function decline_book($id)
@@ -200,5 +226,4 @@ class admin extends BaseController
 
         return redirect()->route('inbox');
     }
-    
 }

@@ -45,14 +45,6 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= site_url('calendar') ?>" class="nav-link">
-            <i class="nav-icon far fa-calendar"></i>
-            <p>
-              Calendar
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="<?= site_url('inbox') ?>" class="nav-link">
             <i class="nav-icon fas fa-table"></i>
             <p>

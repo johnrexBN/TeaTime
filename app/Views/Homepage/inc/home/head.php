@@ -37,7 +37,7 @@
 							<p class="subtitle">Give life more flavours</p>
 							<h1 style="text-align: center;">Tea Time Socorro</h1>
 							<div class="hero-btns">
-								<a href="shop.html" class="boxed-btn">Food Collection</a>
+								<a href="<?= site_url('shop');?>" class="boxed-btn">Food Collection</a>
 								<a href="<?= site_url('book');?>" class="bordered-btn">Reserve Now</a>
 							</div>
 						</div>

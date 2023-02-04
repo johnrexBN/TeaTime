@@ -11,11 +11,11 @@
 				<div class="contact-form">
 					<form action="<?= site_url('save_reservation') ?>" type="POST" method="post" id="fruitkha-contact" onSubmit="return valid_datas( this );">
 						<p>
-							<input type="text" placeholder="Name" name="name" id="name">
-							<input type="email" placeholder="Email" name="email" id="email">
+							<input type="text" placeholder="Name" name="name" id="name" value="<?= session()->get('name') ?>">
+							<input type="email" placeholder="Email" name="email" id="email" value="<?= session()->get('email') ?>">
 						</p>
 						<p>
-							<input type="tel" placeholder="Phone" name="phone" id="phone">
+							<input type="tel" placeholder="Phone" name="phone_number" id="phone" value="<?=$profile['phone_number']?>">
 							<input type="text" placeholder="Subject" name="subject" id="subject">
 						</p>
 						<div class="input-group mb-3">
