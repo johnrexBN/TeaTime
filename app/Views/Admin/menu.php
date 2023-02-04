@@ -115,7 +115,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title" style="font-family: Open Sans, sans-serif;">Our lists of Products</h3>     
+                <h3 class="card-title" style="font-family: Open Sans, sans-serif;">Lists of Products</h3>     
                 <div align="right"><a class="btn btn" href="addmenu" role="button" style=" background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-plus"></i> Add</a></div>          
               </div>
               <!-- /.card-header -->
@@ -144,7 +144,7 @@
                     <td><?= $item['discount']?></td>
                     <td><?= $item['stocks']?></td>
                     <td><img src="<?= base_url().'/'.'uploads/'.$item['image'] ?>" height="130" width="95"></td>
-                    <td><?= $item['status']?></td>
+                    <td style="color: #7E3517; font-weight: bolder;"><?= $item['status']?></td>
                     <td>
                       <span>
                       <a href="<?= site_url('editmenu/'.$item['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-pen"></i></a>

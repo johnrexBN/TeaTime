@@ -134,7 +134,7 @@
                     <td><?= $orders['name'] ?></td>
                     <td><?= $orders['email'] ?></td>
                     <td>₱ <?= $orders['total'] ?></td>
-                    <td style="color: #cb8c58;"><?= $orders['state'] ?></td>
+                    <td style="color: #7E3517; font-weight: bolder;"><?= $orders['state'] ?></td>
                     <td>
                       <span>
                       <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>

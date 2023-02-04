@@ -124,21 +124,23 @@
                       <th>Phone</th>
                       <th>Subject</th>
                       <th>Message</th>
+                      <th>Status</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody> 
                   <?php foreach($feeds as $inbox):?>
-                  <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif; font-size: 15px;>
+                  <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
                     <td><?= $inbox['name']?></td>
                     <td><?= $inbox['email']?></td>
                     <td><?= $inbox['phone']?></td>
                     <td><?= $inbox['subject']?></td>
                     <td><?= $inbox['message']?></td>
+                    <td style="color: #7E3517; font-weight: bolder;"><?= $inbox['status']?></td>
                     <td>
                       <span>
                       <a href="<?= site_url('contact_accept/'.$inbox['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
-                    
+                      
                       </span>
                     </td>
                   </tr>

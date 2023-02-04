@@ -125,7 +125,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
-                  <thead style="font-size: 15px;">
+                  <thead style="font-size: 13px;">
                     <tr>
                       <th>Name</th>
                       <th>Email</th>
@@ -148,7 +148,7 @@
                     <td><?= $inbox['tables']?></td>
                     <td><?= $inbox['message']?></td>
                     <td><?= $inbox['date']?></td>
-                    <td><?= $inbox['status']?></td>
+                    <td style="color: #7E3517; font-weight: bolder;"><?= $inbox['status']?></td>
                     <td>
                       <span>
                       <a href="<?= site_url('accept_book/'.$inbox['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
