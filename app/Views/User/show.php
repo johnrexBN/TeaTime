@@ -67,24 +67,24 @@
                                         <form class="form-horizontal">
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Name:</label>
-                                                <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for="">nikolcutiee</label>
+                                                <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                             <label for="inputEmail" class="col-sm-2 col-form-label">Username:</label>
-                                            <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for="">nikolcutiee</label>
+                                            <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Email: </label>
-                                                <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for="">nikolcutiee</label>
+                                                <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                             </div>
                                             <div class="form-group row">
                                             <label for="inputSkills" class="col-sm-2 col-form-label">Phone Number:</label>
-                                            <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for="">nikolcutiee</label>
+                                            <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputExperience" class="col-sm-2 col-form-label">Address: </label>
-                                                <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for="">nikolcutiee</label>
+                                                <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                             </div>
                                         </form>
                                     </div>

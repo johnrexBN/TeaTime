@@ -173,7 +173,7 @@ class admin extends BaseController
             'placeorder' => $order_model->select('*')
                 ->join('menu', 'menu.id = orders.menuid', 'right')
                 ->join('user', 'user.id = orders.userid', 'right')
-                ->where('state', 'pending')
+                ->where('state', 'Pending')
                 ->get()->getResultArray()
         ];
         // var_dump($data);

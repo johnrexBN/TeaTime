@@ -39,7 +39,7 @@
   </div>
 
   <!-- Sidebar Menu -->
-  <nav class="mt-2">
+  <nav class="mt-4">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
       <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
@@ -120,25 +120,25 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Reservation Table</h3>              
+                <h3 class="card-title" style="font-family: Open Sans, sans-serif;">Reserve their sits</h3>              
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
-                  <thead>
+                  <thead style="font-size: 15px;">
                     <tr>
-                      <th>name</th>
-                      <th>email</th>
-                      <th>phone</th>
-                      <th>subject</th>
-                      <th>tables</th>
-                      <th>message</th>
-                      <th>date</th>
-                      <th>status</th>
-                      <th>action</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Subject</th>
+                      <th>Tables</th>
+                      <th>Message</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody> 
+                  <tbody style="font-size: 15px;"> 
                   <?php foreach($book as $inbox):?>
                   <tr>
                     <td><?= $inbox['name']?></td>
@@ -151,8 +151,8 @@
                     <td><?= $inbox['status']?></td>
                     <td>
                       <span>
-                      <a href="<?= site_url('accept_book/'.$inbox['id']) ?>" class="btn-sm btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
-                      <a href="<?= site_url('decline_book/'.$inbox['id']) ?>" class="btn-sm btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a></span>
+                      <a href="<?= site_url('accept_book/'.$inbox['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
+                      <a href="<?= site_url('decline_book/'.$inbox['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a></span>
                     </td>
                   </tr>
                   <?php endforeach; ?>

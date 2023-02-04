@@ -31,7 +31,7 @@
   </div>
 
   <!-- Sidebar Menu -->
-  <nav class="mt-2">
+  <nav class="mt-4">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
       <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
@@ -112,24 +112,24 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Customer Service Inbox Table</h3>              
+                <h3 class="card-title" style="font-family: Open Sans, sans-serif;">Accomodate their needs</h3>              
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th>name</th>
-                      <th>email</th>
-                      <th>phone</th>
-                      <th>subject</th>
-                      <th>message</th>
-                      <th>action</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Subject</th>
+                      <th>Message</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody> 
                   <?php foreach($feeds as $inbox):?>
-                  <tr>
+                  <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
                     <td><?= $inbox['name']?></td>
                     <td><?= $inbox['email']?></td>
                     <td><?= $inbox['phone']?></td>
@@ -137,8 +137,8 @@
                     <td><?= $inbox['message']?></td>
                     <td>
                       <span>
-                      <a href="" class="btn-sm btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
-                      <a href="" class="btn-sm btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a>
+                      <a href="" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
+                      <a href="" class="btn-xs btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a>
                       </span>
                     </td>
                   </tr>

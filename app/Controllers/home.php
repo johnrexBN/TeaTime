@@ -84,7 +84,7 @@ class home extends BaseController
             'tables' => $tables,
             'message' => $message,
             'date' => $date,
-            'status' => 'pending',
+            'status' => 'Pending',
 
         ];
         $result = $bookmodel->insert($data);

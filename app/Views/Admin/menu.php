@@ -31,7 +31,7 @@
   </div>
 
   <!-- Sidebar Menu -->
-  <nav class="mt-2">
+  <nav class="mt-4">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
       <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
@@ -115,7 +115,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Menu Table</h3>     
+                <h3 class="card-title" style="font-family: Open Sans, sans-serif;">Our lists of Products</h3>     
                 <div align="right"><a class="btn btn" href="addmenu" role="button" style=" background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-plus"></i> Add</a></div>          
               </div>
               <!-- /.card-header -->
@@ -136,7 +136,7 @@
                   </thead>
                   <tbody> 
                   <?php foreach($menu as $item):?>
-                  <tr>
+                  <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
                     <td><?= $item['name']?></td>
                     <td><?= $item['description']?></td>
                     <td><?= $item['prices']?></td>
@@ -147,7 +147,7 @@
                     <td><?= $item['status']?></td>
                     <td>
                       <span>
-                      <a href="<?= site_url('editmenu/'.$item['id']) ?>" class="btn-sm btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-pen"></i></a>
+                      <a href="<?= site_url('editmenu/'.$item['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-pen"></i></a>
                       </span>
                     </td>
                   </tr>

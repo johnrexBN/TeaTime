@@ -31,7 +31,7 @@
   </div>
 
   <!-- Sidebar Menu -->
-  <nav class="mt-2">
+  <nav class="mt-4">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
       <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
@@ -99,7 +99,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <<li class="breadcrumb-item" ><a href="products" style="color: #cb8c58;">Home</a></li>
+              <li class="breadcrumb-item" ><a href="products" style="color: #cb8c58;">Home</a></li>
               <li class="breadcrumb-item active">Customer Orders Inbox Table</li>
             </ol>
           </div>
@@ -112,7 +112,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Customer Orders Inbox Table</h3>              
+                <h3 class="card-title" style="font-family: Open Sans, sans-serif;">Give them our best and quality products</h3>              
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -129,16 +129,16 @@
                   </thead>
                   <tbody> 
                   <?php foreach($placeorder as $orders): ?>
-                  <tr>
+                  <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
                     <td><img src="<?= base_url().'/'.'uploads/'.$orders['image'] ?>" height="130" width="95"></td>
                     <td><?= $orders['name'] ?></td>
                     <td><?= $orders['email'] ?></td>
-                    <td><?= $orders['total'] ?></td>
-                    <td><?= $orders['state'] ?></td>
+                    <td>₱ <?= $orders['total'] ?></td>
+                    <td style="color: #cb8c58;"><?= $orders['state'] ?></td>
                     <td>
                       <span>
-                      <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-sm btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
-                      <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-sm btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a>
+                      <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
+                      <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-xs btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a>
                       </span>
                     </td>
                   </tr>
