@@ -7,10 +7,11 @@ body {
     line-height: 1.7;
     color: black;
     overflow-x: hidden;
-    background-image: url('http://localhost/ci4/public/assets/img/hero-bg.png');
+    background-image: url(../img/hero-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(4px);
+    background-attachment: fixed;
 }
 
 img {
@@ -205,13 +206,13 @@ h6 span {
     box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
 }
 
-.input-icon {
+.form-group .fa {
     position: absolute;
     top: 0;
-    left: 18px;
+    left: 50px;
     height: 48px;
-    font-size: 24px;
-    line-height: 48px;
+    font-size: 15px;
+    line-height: 40px;
     text-align: left;
     color: #ffeba7;
     -webkit-transition: all 200ms linear;

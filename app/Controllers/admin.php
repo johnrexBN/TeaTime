@@ -2,27 +2,24 @@
 
 namespace App\Controllers;
 
-use App\Models\ProductModel;
+use App\Models\UsersModel;
 use App\Models\MenuModel;
+use App\Models\ContactModel;
+use App\Models\PlaceOrderModel;
+use App\Models\ReservationModel;
 
 class admin extends BaseController
 {
-
     protected $helpers = ['form'];
 
     public function index()
     {
-        return view('admin/index');
-    }
-    public function products()
-    {
-        $prod = new ProductModel();
-        $data = [
-            'products' => $prod->findAll()
-        ];
+        $info = new UsersModel();
+        $data['users'] = $info->selectCount('id', 'totaluser')->first();
 
-        return view('admin/products', $data);
+        return view('admin/index', $data);
     }
+
     public function menu()
     {
         $prod = new MenuModel();
@@ -38,122 +35,9 @@ class admin extends BaseController
     }
     public function addmenu()
     {
-        $prod_model = new ProductModel();
-        $prod_name = [
-           'prod_name' => $prod_model->findAll()
-        ];
-        return view('admin/addmenu', $prod_name);
-    }
-    public function saveproduct()
-    {
-
-        $validation = $this->validate([
-            'product' => [
-                'label' => 'Image File',
-                'rules' => 'uploaded[product]'
-                    . '|is_image[product]'
-                    . '|mime_in[product,image/jpg,image/jpeg,image/gif,image/png,image/webp]'
-
-            ],
-            'name' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Product name is required.'
-                ]
-            ],
-            'description' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Product description is required.'
-                ]
-            ],
-            'price' => [
-                'rules' => 'required|numeric',
-                'errors' => [
-                    'required' => 'Product price is required.',
-                    'numeric' => 'needs  to be numeric.'
-                ]
-            ],
-            'quantity' => [
-                'rules' => 'required|numeric',
-                'errors' => [
-                    'required' => 'Product quantity is required.',
-                    'numeric' => 'needs  to be numeric.'
-                ]
-            ],
-            'category' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Product category is required.'
-                ]
-            ],
-
-
-        ]);
-        if (!$validation) {
-            $msg = ['validation' => $this->validator];
-            return view('admin/addproducts', $msg);
-        } else {
-
-            $name = $this->request->getVar('name');
-            $description = $this->request->getVar('description');
-            $quantity = $this->request->getVar('quantity');
-            $price = $this->request->getVar('price');
-            $category = $this->request->getVar('category');
-            $img = $this->request->getFile('product');
-
-            if (!$img->hasMoved()) {
-                $img->move(FCPATH . 'uploads');
-
-                $prod = new ProductModel();
-                $data = [
-                    'name' => $name,
-                    'description' => $description,
-                    'quantity' => $quantity,
-                    'price' => $price,
-                    'category' => $category,
-                    'image' => $img->getClientName()
-                ];
-                $session = session();
-
-                if ($prod->save($data)) {
-                    $session->setFlashdata('msg', 'Successfully Addedd!');
-                    return redirect()->to($_SERVER['HTTP_REFERER']);
-                } else {
-                    return redirect('products');
-                }
-            }
-        }
+        return view('admin/addmenu');
     }
 
-
-    public function edit($id)
-    {
-        $prod = new ProductModel();
-        $data['products'] = $prod->find($id);
-        return view('admin/edit', $data);
-    }
-    public function update($id)
-    {
-        $prod = new ProductModel();
-        $data = [
-            'name' => $this->request->getPost('name'),
-            'description' => $this->request->getPost('description'),
-            'quantity' => $this->request->getPost('quantity'),
-            'price' => $this->request->getPost('price'),
-            'category' => $this->request->getPost('category')
-        ];
-        $prod->update($id, $data);
-        $session = session();
-        $session->setFlashdata('msg', 'Updated Successfully!');
-        return redirect()->to($_SERVER['HTTP_REFERER']);
-    }
-    public function delete($id = null)
-    {
-        $prod = new ProductModel();
-        $prod->delete($id);
-        return redirect()->to($_SERVER['HTTP_REFERER']);
-    }
 
     public function updatemenu($id)
     {
@@ -231,18 +115,8 @@ class admin extends BaseController
             $category = $this->request->getVar('category');
             $discount = $this->request->getVar('discount');
             $img = $this->request->getFile('menu');
-            $prod_model = new ProductModel();
-            $stocks = $prod_model->stockCount($name);
-            $status = '';
-            $prod_id = '';
-            foreach ($stocks as $count) {
-                if ($count['quantity'] == 0)
-                    $status = 'out of stock';
-                else
-                    $status = 'Available';
-
-                $prod_id = $count['id'];
-            }
+            $stocks = $this->request->getPost('stocks');
+            $description = $this->request->getPost('description');
 
             if (!$img->hasMoved()) {
                 $img->move(FCPATH . 'uploads');
@@ -250,13 +124,14 @@ class admin extends BaseController
                 $prod = new MenuModel();
                 $data = [
                     'name' => $name,
-                    'prod_name'=> $this->request->getVar('prod_name'),
                     'prices' => $price,
                     'category' => $category,
                     'discount' => $discount,
                     'image' => $img->getClientName(),
-                    'prod_id' => $prod_id,
-                    'status' => $status
+                    'status' => "Available",
+                    'stocks' => $stocks,
+                    'description' => $description
+
 
                 ];
                 $session = session();
@@ -270,6 +145,156 @@ class admin extends BaseController
             }
         }
     }
+    public function calendar()
+    {
+        return view('admin/calendar');
+    }
+    public function inbox()
+    {
+        $inbox = new ReservationModel();
+        $data = [
+            'book' => $inbox->findAll()
+        ];
+        return view('admin/inbox', $data);
+    }
+    public function contactus()
+    {
+        $inbox = new ContactModel();
+        $data = [
+            'feeds' => $inbox->findAll()
+        ];
+        return view('admin/contact', $data);
+    }
+    public function orders()
+    {
 
+        $order_model = new PlaceOrderModel();
+        $data = [
+            'placeorder' => $order_model->select('*')
+                ->join('menu', 'menu.id = orders.menuid', 'right')
+                ->join('user', 'user.id = orders.userid', 'right')
+                ->where('user.usertype', 'user')
+                ->get()->getResultArray()
+        ];
+        // var_dump($data);
+        return view('admin/orders', $data);
+    }
+    public function accept($id, $userid)
+    {
+        $email = \Config\Services::email();
+        $place_order = new PlaceOrderModel();
+        $place_order->set('state', 'approved')->where('userid', $userid)
+            ->where('menuid', $id)->update();
+        $postEmail = $place_order->where('userid', $userid)->where('menuid', $id)->first();
+        
+            
+                //     if (isset($postEmail)) {
+                //      $html = <<<HTML
+                //          <div class="card-body">
+                //              <div class="mb-4">      
+                //                  <p style="text-align: center;"><strong>Order Approved!</strong></p>
+                //                  <p class="mb-2" style="text-align: center;">Your Order is approved by the admin!</p>
+                //              </div>
+                //          </div>
+                //      HTML;
+         
+                //      $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+         
+                //      $email->setTo($postEmail['email']);
+         
+                //      $email->setSubject('Order Approval');
+                //      $email->setMessage("{$html}");
+                //     $email->send();
+                //      return redirect()->route('orders');     
+                //  }
+        
+    }
+    public function accept_book($id)
+    {
+        $email = \Config\Services::email();
 
+        $reservation = new ReservationModel();
+        $reservation->set('status', 'accepted')->where('id', $id)->update();
+        $postEmail = $reservation->where('id', $id)->first();
+        
+            if (isset($postEmail)) {
+                $html = <<<HTML
+                    <div class="card-body">
+                        <div class="mb-4">      
+                            <p style="text-align: center;"><strong>Order Approved!</strong></p>
+                            <p class="mb-2" style="text-align: center;">Your Order is approved by the admin!</p>
+                        </div>
+                    </div>
+                HTML;
+    
+                $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+    
+                $email->setTo($postEmail['email']);
+    
+                $email->setSubject('Order Approval');
+                $email->setMessage("{$html}");
+                $email->send();
+                return redirect()->route('inbox');     
+            }
+        
+
+    }
+    public function decline_book($id)
+    {
+        $email = \Config\Services::email();
+        $reservation = new ReservationModel();
+        $reservation->set('status', 'declined')->where('id', $id)->update();
+
+        $postEmail = $reservation->where('id', $id)->first();
+        
+            if (isset($postEmail)) {
+                $html = <<<HTML
+                    <div class="card-body">
+                        <div class="mb-4">      
+                            <p style="text-align: center;"><strong>Order Dispproved!</strong></p>
+                            <p class="mb-2" style="text-align: center;">Your Order is disapproved by the admin!</p>
+                        </div>
+                    </div>
+                HTML;
+    
+                $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+    
+                $email->setTo($postEmail['email']);
+    
+                $email->setSubject('Order Approval');
+                $email->setMessage("{$html}");
+                $email->send();
+                return redirect()->route('inbox');     
+            }
+    }
+    public function contact_accept($id)
+    {
+        $email = \Config\Services::email();
+
+        $contact = new ContactModel();
+        $contact->set('status', 'accepted')->where('id', $id)->update();
+        $postEmail = $contact->where('id', $id)->first();
+        
+            if (isset($postEmail)) {
+                $html = <<<HTML
+                    <div class="card-body">
+                        <div class="mb-4">      
+                            <p style="text-align: center;"><strong>Thank You!</strong></p>
+                            <p class="mb-2" style="text-align: center;">Your suggestions has been noted!</p>
+                        </div>
+                    </div>
+                HTML;
+    
+                $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+    
+                $email->setTo($postEmail['email']);
+    
+                $email->setSubject('Customer Service');
+                $email->setMessage("{$html}");
+                $email->send();
+                return redirect()->route('contactus');     
+            }
+        
+
+    }
 }

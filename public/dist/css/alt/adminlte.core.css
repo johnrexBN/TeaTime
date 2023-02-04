@@ -65,7 +65,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #cb8c58;
   text-align: left;
   background-color: #fff;
 }
@@ -522,7 +522,7 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
   color: #fff;
-  background-color: #212529;
+  background-color: #cb8c58;
   border-radius: 0.2rem;
   box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
 }
@@ -537,7 +537,7 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #212529;
+  color: #cb8c58;
 }
 
 pre code {
@@ -1673,7 +1673,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  color: #cb8c58;
   background-color: transparent;
 }
 
@@ -1724,7 +1724,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #212529;
+  color: #cb8c58;
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -1921,7 +1921,7 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #212529;
+  background-color: #cb8c58;
   border-color: #383f45;
 }
 
@@ -1933,7 +1933,7 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #212529;
+  background-color: #cb8c58;
 }
 
 .table-dark th,
@@ -2134,7 +2134,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: #212529;
+  color: #cb8c58;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2530,7 +2530,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #cb8c58;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2553,7 +2553,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-  color: #212529;
+  color: #cb8c58;
   text-decoration: none;
 }
 
@@ -3257,7 +3257,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #cb8c58;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3425,7 +3425,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #cb8c58;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3466,7 +3466,7 @@ input[type="button"].btn-block {
 .dropdown-item-text {
   display: block;
   padding: 0.25rem 1rem;
-  color: #212529;
+  color: #cb8c58;
 }
 
 .btn-group,
@@ -5606,7 +5606,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .list-group-item-action:active {
-  color: #212529;
+  color: #cb8c58;
   background-color: #e9ecef;
 }
 

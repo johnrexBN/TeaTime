@@ -3,8 +3,101 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <?= $this->include('admin/inc/navbar'); ?>
-        <?= $this->include('admin/inc/sidebar'); ?>
     </div>
+
+    <!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('admin'))) : ?>
+      <script>swal("Welcome back!", "Hello Miko Mandia", "success");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
+
+    <!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <!-- Sidebar user panel (optional) -->
+  <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+    <i class="fa fa-user fa-lg" style="color: white; margin-top: 8px;"><img src="" class="img-circle elevation-2"></i>
+    </div>
+    <div class="info">
+      <a href="#" class="d-block">Miko Mandia</a>
+    </div>
+  </div>
+  <!-- SidebarSearch Form -->
+  <div class="form-inline">
+    <div class="input-group" data-widget="sidebar-search">
+      <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+      <div class="input-group-append">
+        <button class="btn btn-sidebar">
+          <i class="fas fa-search fa-fw"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <nav class="mt-4">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+
+      <li class="nav-item">
+        <a href="index" class="nav-link active" style="background-color: #cb8c58;">
+        <i class="nav-icon fas fa-chart-pie"></i>
+          <p>Sales and Graph</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="<?= site_url('menu') ?>" class="nav-link">
+        <i class="nav-icon fas fa-list"></i>
+          <p>
+            Menu
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="<?= site_url('inbox') ?>" class="nav-link">
+          <i class="nav-icon fas fa-table"></i>
+          <p>
+            Booking
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="<?= site_url('orders') ?>" class="nav-link">
+          <i class="nav-icon fas fa-shopping-bag"></i>
+          <p>
+            Orders
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="<?= site_url('contactus') ?>" class="nav-link">
+          <i class="nav-icon fas fa-users"></i>
+          <p>
+          Customer Service
+          </p>
+        </a>
+      </li>
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      </div>
+      <li class="nav-item">
+        <a href="<?= site_url('logout') ?>" class="nav-link">
+          <i class="nav-icon fas fa-power-off"></i>
+          <p>
+            Log Out
+          </p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.sidebar-menu -->
+</div>
+<!-- /.sidebar -->
+</aside>
 
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="content-wrapper">
@@ -25,7 +118,7 @@
                                         <div class="icon">
                                             <i class="ion ion-bag"></i>
                                         </div>
-                                        <a href="products" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                        <a href="products" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- ./col -->
@@ -40,7 +133,7 @@
                                         <div class="icon">
                                             <i class="ion ion-stats-bars"></i>
                                         </div>
-                                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                        <a href="#" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- ./col -->
@@ -48,14 +141,14 @@
                                     <!-- small box -->
                                     <div class="small-box bg-warning">
                                         <div class="inner">
-                                            <h3>44</h3>
+                                            <h3><?= $users['totaluser'] ?></h3>
 
                                             <p>User Registrations</p>
                                         </div>
                                         <div class="icon">
                                             <i class="ion ion-person-add"></i>
                                         </div>
-                                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                        <a href="#" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- ./col -->
@@ -70,53 +163,13 @@
                                         <div class="icon">
                                             <i class="ion ion-pie-graph"></i>
                                         </div>
-                                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                        <a href="#" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- ./col -->
                             </div>
-                            <!-- /.row -->
-
-
-                            <div class="row">
-                                <section class="col-lg-7 connectedSortable">
-                                    <!-- Custom tabs (Charts with tabs)-->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h3 class="card-title">
-                                                <i class="fas fa-chart-pie mr-1"></i>
-                                                Sales
-                                            </h3>
-                                            <div class="card-tools">
-                                                <ul class="nav nav-pills ml-auto">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div><!-- /.card-header -->
-                                        <div class="card-body">
-                                            <div class="tab-content p-0">
-                                                <!-- Morris chart - Sales -->
-                                                <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
-                                                    <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-                                                </div>
-                                                <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                                                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.card-body -->
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
                     </section>
                 </ul>
             </nav>
         </div>
-    </body>
-
-    <?= $this->include('admin/inc/end'); ?>
+<?= $this->include('admin/inc/end'); ?>

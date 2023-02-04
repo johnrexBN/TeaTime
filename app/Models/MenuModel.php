@@ -14,7 +14,7 @@ class MenuModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'category', 'prices', 'discount','image', 'prod_name', 'status', 'description'];
+    protected $allowedFields    = ['name', 'category', 'prices', 'discount','image', 'stocks', 'status', 'description'];
 
     // Dates
     protected $useTimestamps = false;

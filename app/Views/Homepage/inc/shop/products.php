@@ -2,7 +2,6 @@
 	<!-- products -->
 	<div class="product-section mt-150 mb-150">
 		<div class="container">
-
 			<div class="row">
                 <div class="col-md-12">
                     <div class="product-filters">
@@ -25,19 +24,19 @@
 						</div>
 						<h3><?=$prod['name'] ?></h3>
 						<p class="product-price"><span></span>₱<?= number_format( $prod['prices'],2) ?> </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<a href="<?= site_url('single_product/'.$prod['id'])?>" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					</div>
 				</div>
 				<?php endforeach; ?>
 			</div>
 
 			<div class="row">
-				<div class="col-lg-12 text-center">
+				<div class="col-lg-12 text-center mb-5">
 					<div class="pagination-wrap">
 						<ul>
 							<li><a href="#">Prev</a></li>
-							<li><a href="#">1</a></li>
-							<li><a class="active" href="#">2</a></li>
+							<li><a class="active" href="#">1</a></li>
+							<li><a href="#">2</a></li>
 							<li><a href="#">3</a></li>
 							<li><a href="#">Next</a></li>
 						</ul>
