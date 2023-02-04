@@ -5,8 +5,8 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">	
-						<h3><span class="orange-text">Our</span> Products</h3>
-						<p>Our best seller products are here for you! Regrets come later so what are you waiting for? Let's dig in!</p>
+						<h3><span class="orange-text" >Our</span> Products</h3>
+						<p style="font-family: Open Sans, sans-serif; font-size: 18px;">Our best seller products are here for you! Regrets come later so what are you waiting for? Let's dig in!</p>
 					</div>
 				</div>
 			</div>
@@ -34,9 +34,9 @@
 	<!-- shop banner -->
 	<section class="shop-banner">
     	<div class="container">
-        	<h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
+        	<h3>Summer sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
             <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
-            <a href="shop.html" class="cart-btn btn-lg">Order Now</a>
+            <a href="shop" class="cart-btn btn-lg">Order Now</a>
         </div>
     </section>
 	<!-- end shop banner -->

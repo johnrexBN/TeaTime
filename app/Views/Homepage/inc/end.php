@@ -18,5 +18,11 @@
 	<script src="<?= base_url();?>/assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="<?= base_url();?>/assets/js/main.js"></script>
+	<script>
+	function menuToggle() {
+	const toggleMenu = document.querySelector(".menu");
+	toggleMenu.classList.toggle("active");
+	}
+	</script>
 </body>
 </html>

@@ -13,8 +13,8 @@
 										<i class="fas fa-shipping-fast"></i>
 									</div>
 									<div class="content">
-										<h3>Home Delivery</h3>
-										<p>TeaTime can deliver your order wherever you prefer within our delivery zones.</p>
+										<h3>Easy to Pick-up</h3>
+										<p>Quickly and easily to find the products that need to enjoy a delicious cup of tea with minimal effort. </p>
 									</div>
 								</div>
 							</div>
@@ -62,9 +62,9 @@
 	<!-- shop banner -->
 	<section class="shop-banner">
     	<div class="container">
-        	<h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
+        	<h3>Summer sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
             <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
-            <a href="shop.html" class="cart-btn btn-lg">Order Now</a>
+            <a href="shop" class="cart-btn btn-lg">Order Now</a>
         </div>
     </section>
 	<!-- end shop banner -->
