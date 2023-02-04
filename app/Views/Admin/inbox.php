@@ -138,7 +138,7 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody style="font-size: 15px;"> 
+                  <tbody style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif; font-size: 15px;"> 
                   <?php foreach($book as $inbox):?>
                   <tr>
                     <td><?= $inbox['name']?></td>

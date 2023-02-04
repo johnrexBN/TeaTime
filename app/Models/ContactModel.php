@@ -14,6 +14,7 @@ class ContactModel extends Model
         'phone',
         'subject',
         'message',
+        'status',
         'time_send'
     ];
 }

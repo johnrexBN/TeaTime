@@ -173,7 +173,7 @@ class admin extends BaseController
             'placeorder' => $order_model->select('*')
                 ->join('menu', 'menu.id = orders.menuid', 'right')
                 ->join('user', 'user.id = orders.userid', 'right')
-                ->where('state', 'Pending')
+                ->where('user.usertype', 'user')
                 ->get()->getResultArray()
         ];
         // var_dump($data);
@@ -181,11 +181,33 @@ class admin extends BaseController
     }
     public function accept($id, $userid)
     {
+        $email = \Config\Services::email();
         $place_order = new PlaceOrderModel();
         $place_order->set('state', 'approved')->where('userid', $userid)
             ->where('menuid', $id)->update();
-
-        return redirect()->route('orders');
+        $postEmail = $place_order->where('userid', $userid)->where('menuid', $id)->first();
+        
+            
+                //     if (isset($postEmail)) {
+                //      $html = <<<HTML
+                //          <div class="card-body">
+                //              <div class="mb-4">      
+                //                  <p style="text-align: center;"><strong>Order Approved!</strong></p>
+                //                  <p class="mb-2" style="text-align: center;">Your Order is approved by the admin!</p>
+                //              </div>
+                //          </div>
+                //      HTML;
+         
+                //      $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+         
+                //      $email->setTo($postEmail['email']);
+         
+                //      $email->setSubject('Order Approval');
+                //      $email->setMessage("{$html}");
+                //     $email->send();
+                //      return redirect()->route('orders');     
+                //  }
+        
     }
     public function accept_book($id)
     {
@@ -195,9 +217,6 @@ class admin extends BaseController
         $reservation->set('status', 'accepted')->where('id', $id)->update();
         $postEmail = $reservation->where('id', $id)->first();
         
-        if($postEmail['status'] == 'accepted') {
-           return redirect()->route('inbox')->with('accepted', 'accepted');
-        } else {
             if (isset($postEmail)) {
                 $html = <<<HTML
                     <div class="card-body">
@@ -214,16 +233,68 @@ class admin extends BaseController
     
                 $email->setSubject('Order Approval');
                 $email->setMessage("{$html}");
+                $email->send();
                 return redirect()->route('inbox');     
             }
-        }
+        
 
     }
     public function decline_book($id)
     {
+        $email = \Config\Services::email();
         $reservation = new ReservationModel();
         $reservation->set('status', 'declined')->where('id', $id)->update();
 
-        return redirect()->route('inbox');
+        $postEmail = $reservation->where('id', $id)->first();
+        
+            if (isset($postEmail)) {
+                $html = <<<HTML
+                    <div class="card-body">
+                        <div class="mb-4">      
+                            <p style="text-align: center;"><strong>Order Dispproved!</strong></p>
+                            <p class="mb-2" style="text-align: center;">Your Order is disapproved by the admin!</p>
+                        </div>
+                    </div>
+                HTML;
+    
+                $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+    
+                $email->setTo($postEmail['email']);
+    
+                $email->setSubject('Order Approval');
+                $email->setMessage("{$html}");
+                $email->send();
+                return redirect()->route('inbox');     
+            }
+    }
+    public function contact_accept($id)
+    {
+        $email = \Config\Services::email();
+
+        $contact = new ContactModel();
+        $contact->set('status', 'accepted')->where('id', $id)->update();
+        $postEmail = $contact->where('id', $id)->first();
+        
+            if (isset($postEmail)) {
+                $html = <<<HTML
+                    <div class="card-body">
+                        <div class="mb-4">      
+                            <p style="text-align: center;"><strong>Thank You!</strong></p>
+                            <p class="mb-2" style="text-align: center;">Your suggestions has been noted!</p>
+                        </div>
+                    </div>
+                HTML;
+    
+                $email->setFrom('johnrexmalik12@gmail.com', 'Tea Time Shop');
+    
+                $email->setTo($postEmail['email']);
+    
+                $email->setSubject('Customer Service');
+                $email->setMessage("{$html}");
+                $email->send();
+                return redirect()->route('contactus');     
+            }
+        
+
     }
 }

@@ -129,7 +129,7 @@
                   </thead>
                   <tbody> 
                   <?php foreach($placeorder as $orders): ?>
-                  <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
+                  <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
                     <td><img src="<?= base_url().'/'.'uploads/'.$orders['image'] ?>" height="130" width="95"></td>
                     <td><?= $orders['name'] ?></td>
                     <td><?= $orders['email'] ?></td>

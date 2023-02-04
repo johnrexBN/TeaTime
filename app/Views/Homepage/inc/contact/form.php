@@ -12,8 +12,8 @@
 					<div class="contact-form">
 						<form method="post" action="<?= site_url('save_contact') ?>" type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
 							<p>
-								<input type="text" placeholder="Name" name="name" id="name">
-								<input type="email" placeholder="Email" name="email" id="email">
+								<input type="text" placeholder="Name" name="name" value="<?= session()->get('name') ?>" id="name">
+								<input type="email" placeholder="Email" name="email" value="<?= session()->get('email') ?>" id="email">
 							</p>
 							<p>
 								<input type="tel" placeholder="Phone" name="phone" id="phone">

@@ -129,7 +129,7 @@
                   </thead>
                   <tbody> 
                   <?php foreach($feeds as $inbox):?>
-                  <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
+                  <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif; font-size: 15px;>
                     <td><?= $inbox['name']?></td>
                     <td><?= $inbox['email']?></td>
                     <td><?= $inbox['phone']?></td>
@@ -137,8 +137,8 @@
                     <td><?= $inbox['message']?></td>
                     <td>
                       <span>
-                      <a href="" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
-                      <a href="" class="btn-xs btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a>
+                      <a href="<?= site_url('contact_accept/'.$inbox['id']) ?>" class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
+                    
                       </span>
                     </td>
                   </tr>

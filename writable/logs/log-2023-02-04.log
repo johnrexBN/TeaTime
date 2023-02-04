@@ -1,0 +1,923 @@
+CRITICAL - 2023-02-04 00:01:40 --> syntax error, unexpected token ")", expecting variable or "{" or "$"
+in APPPATH\Controllers\admin.php on line 193.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:02:03 --> syntax error, unexpected token "[", expecting variable or "{" or "$"
+in APPPATH\Controllers\admin.php on line 205.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:02:18 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:02:18 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:02:18\'
+WHERE `id` = \'43\'
+AND `menuid` = \'25\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:02:18\'
+WHERE `id` = \'43\'
+AND `menuid` = \'25\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:02:18\'
+WHERE `id` = \'43\'
+AND `menuid` = \'25\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `id` = :id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:02:32 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:02:32 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:02:32\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'25\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:02:32\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'25\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:02:32\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'25\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:03:37 --> mysqli_sql_exception: Unknown column 'orders.user_id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:03:37 --> Unknown column 'orders.user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:37\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:37\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:37\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `orders`.`user_id` = :orders.user_id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:03:39 --> mysqli_sql_exception: Unknown column 'orders.user_id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:03:39 --> Unknown column 'orders.user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:39\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:39\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:39\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `orders`.`user_id` = :orders.user_id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:03:44 --> mysqli_sql_exception: Unknown column 'orders.user_id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:03:44 --> Unknown column 'orders.user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:44\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:44\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:03:44\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `orders`.`user_id` = :orders.user_id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:04:36 --> mysqli_sql_exception: Unknown column 'orders.user_id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:04:36 --> Unknown column 'orders.user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:36\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:36\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:36\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'25\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `orders`.`user_id` = :orders.user_id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:04:54 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:04:54 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:54\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'25\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:54\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'25\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:54\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'25\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('25', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:04:58 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:04:58 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:58\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:58\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:04:58\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:05:39 --> Cannot use object of type App\Models\PlaceOrderModel as array
+in APPPATH\Controllers\admin.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:06:03 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:06:03 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:06:03\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:06:03\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:06:03\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:06:50 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:06:50 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:06:50\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:06:50\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:06:50\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:08:46 --> mysqli_sql_exception: Unknown column 'orders.user_id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:08:46 --> Unknown column 'orders.user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:08:46\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:08:46\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:08:46\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `orders`.`user_id` = :orders.user_id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:08:53 --> mysqli_sql_exception: Unknown column 'orders.user_id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:08:53 --> Unknown column 'orders.user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:08:53\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:08:53\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:08:53\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `orders`.`user_id` = :orders.user_id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:09:51 --> mysqli_sql_exception: Unknown column 'orders.user_id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:09:51 --> Unknown column 'orders.user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:09:51\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:09:51\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:09:51\'
+WHERE `orders`.`user_id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `orders`.`user_id` = :orders.user_id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:10:03 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:10:03 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:03\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:03\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:03\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:10:05 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:10:05 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:05\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:05\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:05\'
+WHERE `user`.`id` = \'43\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:10:38 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:10:38 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:38\'
+WHERE `user`.`id` = \'24\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:38\'
+WHERE `user`.`id` = \'24\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:38\'
+WHERE `user`.`id` = \'24\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:10:42 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(190): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-04 00:10:42 --> Unknown column 'user.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:42\'
+WHERE `user`.`id` = \'24\'
+AND `menuid` = \'24\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:42\'
+WHERE `user`.`id` = \'24\'
+AND `menuid` = \'24\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders` SET `state` = \'approved\', `updated_at` = \'2023-02-04 00:10:42\'
+WHERE `user`.`id` = \'24\'
+AND `menuid` = \'24\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `orders` SET `state` = :state:, `updated_at` = :updated_at:
+WHERE `user`.`id` = :user.id:
+AND `menuid` = :menuid:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\admin.php(190): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:14:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:14:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:14:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:14:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 00:15:21 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-04 00:15:21 --> 220 smtp.googlemail.com ESMTP e1-20020a17090a118100b002302da23744sm2536206pja.50 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [175.176.56.51]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.googlemail.com at your service, [175.176.56.51]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK e1-20020a17090a118100b002302da23744sm2536206pja.50 - gsmtp
+
+to: 555 5.5.2 Syntax error. e1-20020a17090a118100b002302da23744sm2536206pja.50 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. e1-20020a17090a118100b002302da23744sm2536206pja.50 - gsmtp
+
+quit: 221 2.0.0 closing connection e1-20020a17090a118100b002302da23744sm2536206pja.50 - gsmtp
+
+CRITICAL - 2023-02-04 00:18:01 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:18:02 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:18:02 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:18:03 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 00:35:58 --> Unmatched '}'
+in APPPATH\Controllers\admin.php on line 300.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 01:41:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 01:41:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 01:41:52 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 01:41:52 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

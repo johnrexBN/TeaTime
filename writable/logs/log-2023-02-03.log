@@ -526,3 +526,559 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:20:43 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:20:43 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:20:43 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:20:44 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:24:46 --> Undefined array key "status"
+in APPPATH\Controllers\admin.php on line 190.
+ 1 APPPATH\Controllers\admin.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'APPPATH\\Controllers\\admin.php', 190)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->accept('24', '43')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:29:09 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:29:09 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:29:10 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:29:10 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-03 22:37:47 --> mysqli_sql_exception: Unknown column 'order.status' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(179): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->orders()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-03 22:37:47 --> Unknown column 'order.status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = \'user\'
+AND `order`.`status` = \'pending\'
+AND `order`.`status` = \'approved\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = \'user\'
+AND `order`.`status` = \'pending\'
+AND `order`.`status` = \'approved\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = \'user\'
+AND `order`.`status` = \'pending\'
+AND `order`.`status` = \'approved\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = :user.usertype:
+AND `order`.`status` = :order.status:
+AND `order`.`status` = :order.status.1:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin.php(179): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->orders()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-03 22:38:10 --> mysqli_sql_exception: Unknown column 'order.state' in 'where clause' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(179): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->orders()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-03 22:38:10 --> Unknown column 'order.state' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = \'user\'
+AND `order`.`state` = \'pending\'
+AND `order`.`state` = \'approved\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = \'user\'
+AND `order`.`state` = \'pending\'
+AND `order`.`state` = \'approved\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = \'user\'
+AND `order`.`state` = \'pending\'
+AND `order`.`state` = \'approved\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `orders`
+RIGHT JOIN `menu` ON `menu`.`id` = `orders`.`menuid`
+RIGHT JOIN `user` ON `user`.`id` = `orders`.`userid`
+WHERE `user`.`usertype` = :user.usertype:
+AND `order`.`state` = :order.state:
+AND `order`.`state` = :order.state.1:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin.php(179): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->orders()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:47:03 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:47:04 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:47:04 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:47:04 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:53:00 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:53:00 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:53:01 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 22:53:01 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:04:07 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:04:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:04:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:04:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-03 23:08:35 --> mysqli_sql_exception: Column 'phone' cannot be null in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(90): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->save_reservation()
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-03 23:08:35 --> Column 'phone' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `reservation` (`name`, `email`, `phone`, `subject`, `tables`, `message`, `date`, `status`) VALUES (\'Nicole Sauquillo\', \'sauquillonicole@gmail.com\', NULL, \'iseutgiqea\', \'2\', \'lhsrgo;alerfvjpoeaphbiy9aeprg9pw4[phu-8w4tuhoijaeo\', \'2023-02-16 12:00 PM\', \'Pending\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reservation` (`name`, `email`, `phone`, `subject`, `tables`, `message`, `date`, `status`) VALUES (\'Nicole Sauquillo\', \'sauquillonicole@gmail.com\', NULL, \'iseutgiqea\', \'2\', \'lhsrgo;alerfvjpoeaphbiy9aeprg9pw4[phu-8w4tuhoijaeo\', \'2023-02-16 12:00 PM\', \'Pending\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reservation` (`name`, `email`, `phone`, `subject`, `tables`, `message`, `date`, `status`) VALUES (\'Nicole Sauquillo\', \'sauquillonicole@gmail.com\', NULL, \'iseutgiqea\', \'2\', \'lhsrgo;alerfvjpoeaphbiy9aeprg9pw4[phu-8w4tuhoijaeo\', \'2023-02-16 12:00 PM\', \'Pending\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`name`, `email`, `phone`, `subject`, `tables`, `message`, `date`, `status`) VALUES (:name:, :email:, :phone:, :subject:, :tables:, :message:, :date:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\home.php(90): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->save_reservation()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:53:47 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-1.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:53:48 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-2.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:53:48 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'products', 'product-img-3.jpg')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-03 23:53:48 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(169): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-03 23:54:22 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-03 23:54:22 --> 220 smtp.googlemail.com ESMTP w23-20020a17090a15d700b00229b00cc8desm11863594pjd.0 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [175.176.56.51]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.googlemail.com at your service, [175.176.56.51]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK w23-20020a17090a15d700b00229b00cc8desm11863594pjd.0 - gsmtp
+
+to: 555 5.5.2 Syntax error. w23-20020a17090a15d700b00229b00cc8desm11863594pjd.0 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. w23-20020a17090a15d700b00229b00cc8desm11863594pjd.0 - gsmtp
+
+quit: 221 2.0.0 closing connection w23-20020a17090a15d700b00229b00cc8desm11863594pjd.0 - gsmtp
+

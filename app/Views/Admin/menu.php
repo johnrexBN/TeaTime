@@ -136,10 +136,10 @@
                   </thead>
                   <tbody> 
                   <?php foreach($menu as $item):?>
-                  <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
+                  <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
                     <td><?= $item['name']?></td>
                     <td><?= $item['description']?></td>
-                    <td><?= $item['prices']?></td>
+                    <td>₱ <?= $item['prices']?></td>
                     <td><?= $item['category']?></td>
                     <td><?= $item['discount']?></td>
                     <td><?= $item['stocks']?></td>

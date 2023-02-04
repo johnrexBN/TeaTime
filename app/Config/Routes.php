@@ -75,6 +75,7 @@ $routes->get('/orders', 'admin::orders');
 $routes->get('/accept/(:any)', 'admin::accept/$1');
 $routes->get('/accept_book/(:any)', 'admin::accept_book/$1');
 $routes->get('/decline_book/(:any)', 'admin::decline_book/$1');
+$routes->get('/contact_accept/(:any)', 'admin::contact_accept/$1');
 
 
 

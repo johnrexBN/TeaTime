@@ -15,7 +15,7 @@
 							<input type="email" placeholder="Email" name="email" id="email" value="<?= session()->get('email') ?>">
 						</p>
 						<p>
-							<input type="tel" placeholder="Phone" name="phone_number" id="phone">
+							<input type="tel" placeholder="Phone" name="phone" id="phone">
 							<input type="text" placeholder="Subject" name="subject" id="subject">
 						</p>
 						<div class="input-group mb-3">
