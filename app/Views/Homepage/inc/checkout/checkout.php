@@ -8,7 +8,7 @@
 						<div class="card single-accordion">
 							
 						</div>
-						<div class="card single-accordion">
+						<div class="card single-accordion" style="margin-top: -20px;">
 							<div class="card-header" id="headingTwo">
 								<h5 class="mb-0">
 									<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: black; color: white; opacity: 0.7;">
@@ -22,7 +22,7 @@
 										<div class="cart-table-wrap">
 											<table class="cart-table">
 												<thead class="cart-table-head">
-													<tr class="table-head-row" style="background-color: black; color: white; opacity: 0.7;">
+													<tr class="table-head-row" style="background-color: #cb8c58; color: white;">
 														<th class="product-image" style="border: 2px solid black;">Product Image</th>
 														<th class="product-name" style="border: 2px solid black;">Name</th>
 														<th class="product-price" style="border: 2px solid black;">Price</th>

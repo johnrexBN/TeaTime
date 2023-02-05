@@ -1,5 +1,5 @@
 <!-- cart -->
-<div class="cart-section mt-80 mb-80">
+<div class="cart-section mt-150 mb-150">
 	<div class="container">
 		<div class="row">
 				<div class="col-lg-8 col-md-12" style="border-radius: 20px;">
