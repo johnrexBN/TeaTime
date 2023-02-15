@@ -11,6 +11,7 @@
 				</div>
 			</div>
 			<div class="row">
+			<?php  shuffle($products); ?>
 			<?php $i = 0; foreach($products as $prod): ?>
 				<?php  $i++; 
 					if($i <= 3):?>

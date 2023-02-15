@@ -52,8 +52,7 @@ $routes->match(['get','post'],'/otp', 'Auth::otp');
 $routes->match(['get','post'],'/reset', 'Auth::reset');
 $routes->match(['get','post'],'/logout', 'Auth::logout');
 
-$routes->group('',['filter' => 'Authguard'], function($routes){
-
+// $routes->group('',['filter' => 'Authguard'], function($routes){
 
 //Admin Side
 $routes->get('/index', 'admin::index');
@@ -74,11 +73,15 @@ $routes->get('/editmenu/(:any)', 'admin::editmenu/$1');
 $routes->get('/inbox', 'admin::inbox');
 $routes->get('/contactus', 'admin::contactus');
 $routes->get('/orders', 'admin::orders');
+$routes->post('/orders', 'admin::orders');
 $routes->get('/accept/(:any)', 'admin::accept/$1');
 $routes->get('/accept_book/(:any)', 'admin::accept_book/$1');
 $routes->get('/decline_book/(:any)', 'admin::decline_book/$1');
 $routes->get('/contact_accept/(:any)', 'admin::contact_accept/$1');
-
+$routes->get('/decline_order/(:any)', 'admin::decline_order/$1');
+$routes->post('/transactions', 'admin::transactions');
+$routes->get('/transactions', 'admin::transactions');
+$routes->match(['get','post'],'/pick_up/(:any)', 'admin::pick_up/$1');
 
 //Homepage
 $routes->get('/homepage', 'home::homepage');
@@ -97,8 +100,11 @@ $routes->post('/userCart', 'home::userCart');
 $routes->get('/cart', 'home::cart');
 $routes->get('/delete_cart/(:any)', 'home::delete_cart/$1');
 $routes->post('/placeorder', 'home::place_order');
+$routes->get('/placeorder', 'home::place_order');
 $routes->post('/search', 'home::search');
 $routes->get('/search', 'home::search');
+
+
 
 
 //User Profile
@@ -111,7 +117,7 @@ $routes->get('/order_history', 'User::order_history');
 $routes->get('/order_status', 'User::order_status');
 $routes->match(['get','post'],'/cancel_order/(:any)', 'User::cancel_order/$1');
 
-});
+// });
 
 /*
  * --------------------------------------------------------------------

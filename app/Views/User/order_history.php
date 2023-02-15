@@ -103,7 +103,10 @@
                                         <tr>
                                             <th>Image</th>
                                             <th>Name</th>
+                                            <th>Quantity</th>
                                             <th>Total</th>
+                                            <th>Date Ordered</th>
+                                            <th>Date Modified</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
@@ -112,7 +115,10 @@
                                         <tr>
                                             <td><img src="<?= base_url().'/'.'uploads/'.$orders['image'] ?>" height="130" width="95"></td>
                                             <td><?= $orders['name'] ?></td>
+                                            <td><?= $orders['order_count'] ?></td>
                                             <td><?= $orders['total'] ?></td>
+                                            <td><?= $orders['created_at'] ?></td>
+                                            <td><?= $orders['updated_at'] ?></td>
                                             <td><?= $orders['state'] ?></td>
                                         </tr>
                                         <?php endforeach; ?>

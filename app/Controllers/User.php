@@ -57,9 +57,11 @@ class User extends BaseController{
         $data = [
             'placeorder' => $placeorder->select('*')
             ->join('menu', 'menu.id = orders.menuid', 'inner')
+            ->join('cart', 'cart.id = orders.cartid', 'inner')
             ->where('orders.userid', session()->get('loggedUser'))
-            ->where('orders.state', 'Approved')
-            ->orWhere('orders.state', 'Cancelled')
+            ->where('orders.state', 'approved')
+            ->orWhere('orders.state', 'cancelled')
+            ->orWhere('orders.state', 'declined')
             ->get()->getResultArray()
         ];
        

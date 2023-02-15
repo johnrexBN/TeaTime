@@ -4,7 +4,14 @@
   <div class="wrapper">
     <?= $this->include('admin/inc/navbar'); ?>
   </div>
-
+ <!-- Sweet alert -->
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <?php if (!empty(session()->getFlashdata('add_menu'))) : ?>
+    <script>
+      swal("Success!", "New product has been addedd.", "success");
+    </script>
+  <?php endif ?>
+  <!-- /Sweet alert -->
     <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
@@ -65,6 +72,14 @@
           <i class="nav-icon fas fa-shopping-bag"></i>
           <p>
             Orders
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="<?= site_url('transactions') ?>" class="nav-link">
+          <i class="nav-icon fas fa-calendar-check"></i>
+          <p>
+          Order History
           </p>
         </a>
       </li>

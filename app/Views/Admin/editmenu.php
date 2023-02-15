@@ -4,6 +4,15 @@
   <div class="wrapper">
     <?= $this->include('admin/inc/navbar'); ?>
   </div>
+
+   <!-- Sweet alert -->
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <?php if (!empty(session()->getFlashdata('update_menu'))) : ?>
+    <script>
+      swal("Success!", "Product has been updated.", "success");
+    </script>
+  <?php endif ?>
+  <!-- /Sweet alert -->
     <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
@@ -64,6 +73,14 @@
           <i class="nav-icon fas fa-shopping-bag"></i>
           <p>
             Orders
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="<?= site_url('transactions') ?>" class="nav-link">
+          <i class="nav-icon fas fa-calendar-check"></i>
+          <p>
+          Order History
           </p>
         </a>
       </li>
@@ -134,12 +151,14 @@
                       <input type="text" name="description" value="<?= $menu['description']; ?>" class="form-control" placeholder="Enter Menu Description">
                       <label>Category</label>
                       <input type="text" name="category" value="<?= $menu['category']; ?>" class="form-control" placeholder="Enter Menu Category">
+                      <label>Stocks</label>
+                      <input type="text" name="stocks" value=" <?= $menu['stocks']; ?>" class="form-control" placeholder="Enter Menu Stocks">
                       <label>Price</label>
-                      <input type="text" name="price" value="₱ <?= $menu['prices']; ?>" class="form-control" placeholder="Enter Menu Price">
+                      <input type="text" name="prices" value="<?= $menu['prices']; ?>" class="form-control" placeholder="Enter Menu Price">
                       <label>Discount</label>
                       <input type="text" name="discount" value="<?= $menu['discount']; ?>" class="form-control" placeholder="Enter Menu Discount">
                       <br>
-                      <div><button type="submit" class="btn btn" style="background-color: #cb8c58; color: white; margin-top: -20px; margin-bottom: -10px;"><i class="nav-icon fas fa-upload"></i>  Upload</button>
+                      <div><button type="submit" class="btn btn" style="background-color: #cb8c58; color: white; margin-top: -20px; margin-bottom: -10px;"><i class="nav-icon fas fa-upload"></i>  Update</button>
                     </form>
                   </div>
                 <!-- /.card-body -->

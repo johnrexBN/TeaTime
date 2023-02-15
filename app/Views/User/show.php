@@ -134,20 +134,20 @@
                                     
                                         <form class="form-horizontal">
                                             <div class="form-group row">
-                                                <label for="inputName" class="col-sm-2 col-form-label">Name: <?= $profile['name'] ?></label>
+                                                <label for="inputName" class="col-sm col-form-label">Name: <?= $profile['name'] ?></label>
                                                 <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                                 
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputEmail" class="col-sm-2 col-form-label">Username:<?= $profile['username'] ?></label>
+                                                <label for="inputEmail" class="col-sm-2 col-form-label">Username: <?= $profile['username'] ?></label>
                                                 <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Email: <?= $profile['email'] ?></label>
+                                                <label for="inputName2" class="col-sm col-form-label">Email: <?= $profile['email'] ?></label>
                                                 <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputSkills" class="col-sm-2 col-form-label">Phone Number:<?= $profile['phone_number'] ?></label>
+                                                <label for="inputSkills" class="col-sm col-form-label">Phone Number:<?= $profile['phone_number'] ?></label>
                                                 <label class="input-box col-sm-6 float-right" style="font-weight: normal;" for=""></label>
                                             </div>
                                             <div class="form-group row">

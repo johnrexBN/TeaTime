@@ -68,6 +68,14 @@
         </a>
       </li>
       <li class="nav-item">
+        <a href="<?= site_url('transactions') ?>" class="nav-link">
+          <i class="nav-icon fas fa-calendar-check"></i>
+          <p>
+          Order History
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
         <a href="<?= site_url('contactus') ?>" class="nav-link">
           <i class="nav-icon fas fa-users"></i>
           <p>

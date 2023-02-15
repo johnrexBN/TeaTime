@@ -1,0 +1,648 @@
+ERROR - 2023-02-06 23:46:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(115): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->cart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:46:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN :cart.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(115): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->cart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:47:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(115): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->cart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:47:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN :cart.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(115): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->cart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:47:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(115): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->cart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:47:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+RIGHT JOIN `menu` ON `cart`.`menuid` = `menu`.`id`
+WHERE `cart`.`userid` IS NULL
+AND `cart`.`id` NOT IN :cart.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(115): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->cart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:48:15 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:48:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(205): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:48:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = :menuid:
+AND `id` NOT IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(205): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:50:40 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:51:03 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:51:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(206): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:51:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = :menuid:
+AND `id` NOT IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(206): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:51:20 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:51:33 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:51:48 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:51:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(206): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:51:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = :menuid:
+AND `id` NOT IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(206): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:53:06 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:53:08 --> mysqli_sql_exception: Column 'userid' cannot be null in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(217): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-06 23:53:08 --> Column 'userid' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (:userid:, :menuid:, :order_count:, :total:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\home.php(217): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:53:08 --> mysqli_sql_exception: Column 'userid' cannot be null in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(217): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-06 23:53:08 --> Column 'userid' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (:userid:, :menuid:, :order_count:, :total:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\home.php(217): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:53:15 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:53:15 --> mysqli_sql_exception: Column 'userid' cannot be null in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\TeaTime\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\TeaTime\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(217): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#9 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#10 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-02-06 23:53:15 --> Column 'userid' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (NULL, 55, \'1\', 70)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`userid`, `menuid`, `order_count`, `total`) VALUES (:userid:, :menuid:, :order_count:, :total:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\home.php(217): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:54:04 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:54:06 --> Undefined variable $resultExist
+in APPPATH\Controllers\home.php on line 216.
+ 1 APPPATH\Controllers\home.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resultExist', 'APPPATH\\Controllers\\home.php', 216)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:54:06 --> Undefined variable $resultExist
+in APPPATH\Controllers\home.php on line 216.
+ 1 APPPATH\Controllers\home.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resultExist', 'APPPATH\\Controllers\\home.php', 216)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:54:54 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:54:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(206): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:54:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = :menuid:
+AND `id` NOT IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(206): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:55:21 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:56:12 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:56:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(206): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:56:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = :menuid:
+AND `id` NOT IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(206): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:56:36 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:56:56 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 23:56:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\TeaTime\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\TeaTime\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\TeaTime\app\Controllers\home.php(206): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\home->userCart()
+#7 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+#8 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-06 23:56:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = \'55\'
+AND `id` NOT IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cart`
+WHERE `userid` IS NULL
+AND `menuid` = :menuid:
+AND `id` NOT IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\home.php(206): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:57:12 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:58:42 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:58:42 --> count(): Argument #1 ($value) must be of type Countable|array, int given
+in APPPATH\Controllers\home.php on line 218.
+ 1 APPPATH\Controllers\home.php(218): count(0)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:59:20 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 181
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(181): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 23:59:21 --> count(): Argument #1 ($value) must be of type Countable|array, int given
+in APPPATH\Controllers\home.php on line 218.
+ 1 APPPATH\Controllers\home.php(218): count(0)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->userCart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -76,6 +76,15 @@
             </a>
           </li>
           <li class="nav-item">
+          <li class="nav-item">
+        <a href="<?= site_url('transactions') ?>" class="nav-link">
+          <i class="nav-icon fas fa-calendar-check"></i>
+          <p>
+          Order History
+          </p>
+        </a>
+      </li>
+          <li class="nav-item">
             <a href="<?= site_url('contactus') ?>" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
@@ -130,6 +139,8 @@
                     <tr>
                       <th>Image</th>
                       <th>Name</th>
+                      <th>Quantity</th>
+                      <th>Proof & Reference</th>
                       <th>Total</th>
                       <th>Status</th>
                       <th>Action</th>
@@ -139,13 +150,16 @@
                     <?php foreach ($placeorder as $orders) : ?>
                       <tr style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif; font-size: 15px;">
                         <td><img src="<?= base_url() . '/' . 'uploads/' . $orders['image'] ?>" height="130" width="95"></td>
-                        <td><?= $orders['name'] ?></td>
+                        <td><?= $orders['menuname'] ?></td>
+                        <td><?= $orders['order_count'] ?></td>
+                        <td><a href="<?= site_url('uploads/'.$orders['proof']) ?>" target="blank"><img  height="130" width="95" src="<?= site_url('uploads/'.$orders['proof']) ?>"></a></td>
                         <td>₱ <?= $orders['total'] ?></td>
                         <td style="color: #7E3517; font-weight: bolder;"><?= $orders['state'] ?></td>
                         <td>
                           <span>
-                            <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
-                            <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid']  ?> " class="btn-xs btn" style="background-color: #cb8c58; color: #7E3517;"><i class="nav-icon fas fa-trash"></i></a>
+                            <a href="<?= site_url('accept/') . $orders['menuid'] . '/' . $orders['userid'] . '/' . $orders['cartid'] ?> " class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-check"></i></a>
+                            <a href="<?= site_url('decline_order/') . $orders['menuid'] . '/' . $orders['userid'] . '/' . $orders['cartid'] ?> " class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-thumbs-down"></i></a>
+                            <a href="<?= site_url('pick_up/') . $orders['menuid'] . '/' . $orders['userid'] . '/' . $orders['cartid'] ?> " class="btn-xs btn" style="background-color: #cb8c58; color: white;"><i class="nav-icon fas fa-thumbs-up"></i></a>
                           </span>
                         </td>
                       </tr>

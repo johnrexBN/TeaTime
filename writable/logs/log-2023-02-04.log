@@ -1667,7 +1667,11 @@ in APPPATH\Views\Admin\index.php on line 214.
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:13:24 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 21:33:27 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1683,7 +1687,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:13:24 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 21:33:28 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1699,7 +1707,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:13:24 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 21:33:28 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1715,7 +1727,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:13:25 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 21:33:28 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1731,7 +1747,42 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:17:09 --> Trying to access array offset on value of type null
+=======
+ERROR - 2023-02-04 21:52:20 --> mysqli_sql_exception: Unknown column 'amount' in 'field list' in C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\TeaTime\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(amou...', 0)
+#1 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(amou...')
+#2 C:\xampp\htdocs\TeaTime\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(amou...')
+#3 C:\xampp\htdocs\TeaTime\app\Controllers\admin.php(23): CodeIgniter\Database\BaseConnection->query('SELECT SUM(amou...')
+#4 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(927): App\Controllers\admin->index()
+#5 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+#6 C:\xampp\htdocs\TeaTime\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TeaTime\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TeaTime\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-04 21:52:20 --> Unknown column 'amount' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(amount) as total FROM orders', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(amount) as total FROM orders')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(amount) as total FROM orders')
+ 4 APPPATH\Controllers\admin.php(23): CodeIgniter\Database\BaseConnection->query('SELECT SUM(amount) as total FROM orders')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 21:52:50 --> Undefined property: stdClass::$total_sales
+in APPPATH\Controllers\admin.php on line 35.
+ 1 APPPATH\Controllers\admin.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$total_sales', 'APPPATH\\Controllers\\admin.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\admin->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 21:54:11 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1747,7 +1798,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:17:09 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 21:54:11 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1763,7 +1818,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:17:10 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 21:54:12 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1779,7 +1838,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:17:10 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 21:54:12 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1795,7 +1858,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:42:16 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 23:23:15 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1811,7 +1878,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:42:16 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 23:23:15 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1827,7 +1898,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:42:17 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 23:23:16 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1843,7 +1918,11 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-02-04 21:42:17 --> Trying to access array offset on value of type null
+=======
+CRITICAL - 2023-02-04 23:23:16 --> Trying to access array offset on value of type null
+>>>>>>> Stashed changes
 in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
  1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
  2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
@@ -1859,3 +1938,164 @@ in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
 12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
+=======
+CRITICAL - 2023-02-04 23:31:23 --> Undefined array key "price"
+in APPPATH\Views\Homepage\inc\single\prod.php on line 62.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price"', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(170): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('25')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:31:25 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:31:48 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:32:43 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:33:34 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:33:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\Homepage\inc\single\prod.php on line 7.
+ 1 APPPATH\Views\Homepage\inc\single\prod.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Homepage\\inc\\single\\prod.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\inc\\single\\prod.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('Homepage/inc/single/prod', null, true)
+ 5 APPPATH\Views\Homepage\singleprods.php(4): CodeIgniter\View\View->include('Homepage/inc/single/prod')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Homepage\\singleprods.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homepage/singleprods', [], true)
+ 9 APPPATH\Controllers\home.php(170): view('Homepage/singleprods', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:34:48 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:35:27 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:35:45 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:36:22 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:37:38 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('Milktea')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('Milktea')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:38:05 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('Milktea')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('Milktea')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:38:27 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:41:31 --> Too few arguments to function App\Controllers\home::single_product(), 1 passed in C:\xampp\htdocs\TeaTime\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('25')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:42:29 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:43:10 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:58:45 --> Too few arguments to function App\Controllers\home::single_product(), 1 passed in C:\xampp\htdocs\TeaTime\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\home.php on line 163.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('25')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:59:17 --> CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type int, string given, called in C:\xampp\htdocs\TeaTime\app\Controllers\home.php on line 168
+in SYSTEMPATH\BaseModel.php on line 568.
+ 1 APPPATH\Controllers\home.php(168): CodeIgniter\BaseModel->findAll('FCPATH\\assets')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\home->single_product('FCPATH\\assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+>>>>>>> Stashed changes

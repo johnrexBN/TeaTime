@@ -5,8 +5,27 @@
 			<div class="col-lg-8">
 				<div class="checkout-accordion-wrap">
 					<div class="accordion" id="accordionExample">
+					<form action="placeorder" enctype="multipart/form-data" method="post">
 						<div class="card single-accordion">
-							
+							<div class="card-header" id="headingOne">
+								<h5 class="mb-0">
+									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: black;">
+										Billing
+									</button>
+								</h5>
+							</div>
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+								<div class="card-body">
+									<div class="billing-address-form">
+										
+											<p><input type="text" name="name" placeholder="Enter name" required></p>
+											<p><input type="text" name="reference" placeholder="Enter reference number" required></p>
+											<p><input type="file" name="proof" placeholder="Enter Proof of Payment (Screenshot of Gcash Receipt)" required></p>
+											
+										
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="card single-accordion" style="margin-top: -20px;">
 							<div class="card-header" id="headingTwo">
@@ -35,8 +54,9 @@
 														<?php if (count($cart) > 0) : ?>
 															<?php foreach ($cart as $item) : ?>
 																<tr class="table-body-row">
-																	<input type="hidden" name="menuid[]" value="<?= $item['menuid'] ?>"></input>
-																	<input type="hidden" name="total[]" value="<?= $item['total'] ?>"></input>
+																	<input type="hidden" name="cartid" value="<?= $item['id'] ?>">
+																	<input type="hidden" name="menuid[]" value="<?= $item['menuid'] ?>">
+																	<input type="hidden" name="total[]" value="<?= $item['total'] ?>">
 																	<td style="color: #000; border: 2px solid black;" class="product-image"><img src="<?= base_url() . '/' . 'uploads/' . $item['image'] ?>" alt=""></td>
 																	<td style="color: #000; border: 2px solid black;" class="product-name"><?= $item['name'] ?></td>
 																	<td style="color: #000; border: 2px solid black;" class="product-price">₱<?= number_format($item['prices'], 2) ?></td>
@@ -55,10 +75,10 @@
 								</div>
 							</div>
 						</div>
+					</form>
 					</div>
 				</div>
 			</div>
-
 			<div class="col-lg-4">
 				<div class="order-details-wrap">
 					<table class="order-details">
@@ -73,10 +93,7 @@
 								<td style="border: 2px solid black;">Subtotal</td>
 								<td style="border: 2px solid black;">₱<?= $total[0]['total'] ?></td>
 							</tr>
-
-
 						</tbody>
-
 					</table>
 					<a href="#" id="placeorder" class="boxed-btn">Place Order</a>
 				</div>

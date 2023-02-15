@@ -6,7 +6,7 @@
         </div>
     </div> -->
     <!--PreLoader Ends-->
-   	
+
 <!-- header -->
 <div class="top-header-area" id="sticker">
 		<div class="container">
@@ -15,9 +15,9 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
+							
 								<img src="<?php base_url() ?>/assets/img/logo.png" alt="">
-							</a>
+							
 						</div>
 						<!-- logo -->
 
@@ -33,7 +33,9 @@
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-										<a class="" href="<?= site_url('order_status');?>" ><i class="fas fa-user-circle" ></i></a>	
+										<a class="" href="<?= site_url('order_status');?>" ><i class="fas fa-user-circle"></i></a>	
+										<a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-qrcode"></i>
+										</a>
 									</div>
 								</li>
 							</ul>
@@ -45,6 +47,7 @@
 		</div>
 	</div>
 	<!-- end header -->
+	<?= $this->include('homepage/inc/qrmodal')?>
 
 
 	

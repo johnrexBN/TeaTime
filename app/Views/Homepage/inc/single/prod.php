@@ -16,11 +16,6 @@
 					<p class="single-product-pricing">₱ <?= $products['prices'] ?>.00</p>
 					<p style="font-size: 20px;"><?= $products['description'] ?></p>
 					<p ><strong>Categories: </strong><?= $products['category'] ?></p> 
-					<strong style="opacity: 0.9;">Select Size: </strong><select style="margin-top: 10px; margin-bottom: 10px;" class="selectpicker" title="Choose Sizes" data-style="btn-info">
-							<option value="Small">Small</option>
-							<option value="Medium">Medium</option>
-							<option value="Large">Large</option>
-						</select>
 					<div class="single-product-form">
 						<form action="<?= site_url('userCart') ?>" method="post" >
 						<strong style="opacity: 0.9;">Select Quantity: </strong><input type="number"  min="1" max="<?= $products['stocks'] ?>" name="quantity" style=" width: 50px;"
@@ -46,42 +41,29 @@
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2 text-center">
 				<div class="section-title">
-					<h3><span class="orange-text">Related</span> Products</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+					<h3><span class="orange-text">Other</span> Products</h3>
+					<p>Some other products you may like.</p>
 				</div>
 			</div>
 		</div>
+		
 		<div class="row">
+		<?php  shuffle($related); ?>
+		<?php $i = 0; foreach($related as $prod): ?>
+			<?php  $i++; 
+					if($i <= 6):?>
 			<div class="col-lg-4 col-md-6 text-center">
 				<div class="single-product-item">
 					<div class="product-image">
-						<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+						<a href="<?= site_url('single_product/'.$prod['id'])?>"><img src="<?= base_url().'/'.'uploads/'.$prod['image'] ?>" alt=""></a>
 					</div>
-					<h3>Strawberry</h3>
-					<p class="product-price"><span>Per Kg</span> 85$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					<h3><?= $prod['name'] ?></h3>
+					<p class="product-price"><span><?= $prod['description'] ?></span>₱<?=number_format( $prod['prices'],2)?></p>
+					<a href="<?= site_url('single_product/'.$prod['id'])?>" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 text-center">
-				<div class="single-product-item">
-					<div class="product-image">
-						<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
-					</div>
-					<h3>Berry</h3>
-					<p class="product-price"><span>Per Kg</span> 70$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
-				<div class="single-product-item">
-					<div class="product-image">
-						<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
-					</div>
-					<h3>Lemon</h3>
-					<p class="product-price"><span>Per Kg</span> 35$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-				</div>
-			</div>
+			<?php endif; ?>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div>

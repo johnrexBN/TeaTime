@@ -8,6 +8,8 @@ use CodeIgniter\Validation\Validation;
 use CodeIgniter\Files\File;
 use App\Models\ReservationModel;
 use App\Models\ContactModel;
+use App\Controller\BaseBuilder;
+use CodeIgniter\HTTP\RequestInterface;
 
 class home extends BaseController
 {
@@ -73,7 +75,7 @@ class home extends BaseController
         $tables = $this->request->getPost('tables');
         $message = $this->request->getPost('message');
         $date = $this->request->getPost('date');
-        
+
 
 
         $data = [
@@ -94,17 +96,30 @@ class home extends BaseController
     public function cart()
     {
         $checkout = new \App\Models\CheckoutModel();
-        
+
         $id = session()->get('id');
         $checkout->where('userid', $id)->delete();
         $cart_model = new CartModel();
+        $placeOrder = new  \App\Models\PlaceOrderModel();
 
+
+
+        $order['info'] = $placeOrder->select('cartid')->where('userid', session()->get('loggedUser'))->get()->getResultArray();
+        $orderData = [];
+        for ($i = 0; $i < count($order['info']); $i++) {
+            array_push($orderData, $order['info'][$i]['cartid']);
+        }
+        //    var_dump($orderData);
+        if(!$orderData) {
+            $orderData = ['0', '0'];
+        }
+        // var_dump($orderData);
         $cart['cart'] = $cart_model->select('*')
             ->join('menu', 'cart.menuid = menu.id', 'right')
-            ->where('cart.userid', $id)->get()->getResultArray();
+            ->where('cart.userid', $id)->whereNotIn('cart.id', $orderData)->get()->getResultArray();
 
         $cart['total'] = $cart_model->selectSum('total')
-            ->where('userid', $id)->get()->getResultArray();
+            ->where('userid', $id)->whereNotIn('cart.id', $orderData)->get()->getResultArray();
 
         return view('Homepage/cart', $cart);
     }
@@ -127,12 +142,12 @@ class home extends BaseController
                 ->join('menu', 'checkout.menuid = menu.id', 'right')
                 ->join('cart', 'checkout.menuid = cart.menuid', 'right')
                 ->where('checkout.userid', $id)->get()->getResultArray();
-            
-            $cart['total'] = $checkout_model->selectSum('total')
-            ->join('cart', 'checkout.menuid = cart.menuid', 'right')
-            ->where('checkout.userid', $id)->get()->getResultArray();
 
-                // var_dump($cart['cart']);
+            $cart['total'] = $checkout_model->selectSum('total')
+                ->join('cart', 'checkout.menuid = cart.menuid', 'right')
+                ->where('checkout.userid', $id)->get()->getResultArray();
+
+            // var_dump($cart['cart']);
             return view('Homepage/checkout', $cart);
         } else {
             return redirect()->route('cart');
@@ -154,8 +169,10 @@ class home extends BaseController
     }
     public function shop()
     {
+
         $menu_model = new MenuModel();
         $menu = $menu_model->retrieve_mod();
+
         return view('Homepage/shop', $menu);
     }
 
@@ -165,6 +182,7 @@ class home extends BaseController
         $prod = new MenuModel();
 
         $data['products'] = $prod->find($id);
+        $data['related'] = $prod->findAll($id);
 
         return view('Homepage/singleprods', $data);
     }
@@ -179,9 +197,21 @@ class home extends BaseController
         $quantity =  $this->request->getPost('quantity');
         $discount = (((float)$prod['prices'] * (int)$prod['discount']) / 100) * (int)$quantity;
         $price = (float)$prod['prices'] * (int)$quantity;
-        $resultExist = $new_cart->where('userid', $userid)->where('menuid', $id)->find();
+        
+        $placeOrder = new  \App\Models\PlaceOrderModel();
 
-
+        $order['info'] = $placeOrder->select('cartid')->where('userid', session()->get('loggedUser'))->get()->getResultArray();
+       
+        $orderData = [];
+        $resultExist = [];
+        
+        for ($i = 0; $i < count($order['info']); $i++) {
+            array_push($orderData, $order['info'][$i]['cartid']);
+        }
+        if($orderData) {
+            $resultExist = $new_cart->where('userid', $userid)->where('menuid', $id)->whereNotIn('id', $orderData)->get()->getResultArray();
+        }
+        
         $values = [
             'userid' => $userid,
             'menuid' => (int)$id,
@@ -191,12 +221,12 @@ class home extends BaseController
 
         if (count($resultExist) == 0 && $prod['stocks'] != 0) {
             $new_cart->insert($values);
+            
         } elseif (count($resultExist) > 0 && $prod['stocks'] != 0) {
             $new_cart->set('order_count', $resultExist[0]['order_count'] + $quantity)->set('total', $resultExist[0]['total'] + $price)->where('userid', $userid)->where('menuid', $id)->update();
         } else {
             echo 'out of stock';
         }
-
         return redirect('cart');
     }
     public function delete_cart($id = null)
@@ -212,28 +242,45 @@ class home extends BaseController
         $cart_model = new CartModel();
         $menuid = $this->request->getPost('menuid[]');
         $total = $this->request->getPost('total[]');
+        $cartid = $this->request->getPost('cartid');
+        $name = $this->request->getPost('name');
+        $reference = $this->request->getPost('reference');
+        $proof = $this->request->getFile('proof');
+        // var_dump($menuid);
+        if (!$proof->hasMoved()) {
+            $proof->move(FCPATH . 'uploads');
+        
+         for ($i = 0; $i < count($menuid); $i++) {
+             $data = [
+                 'cartid' => $cartid,
+                 'menuid' => $menuid[$i],
+                 'userid' => session()->get('loggedUser'),
+                 'total' => $total[$i],
+                 'name' => $name,
+                 'reference' => $reference,
+                 'proof' => $proof->getClientName()
+                    
+                
+         ];
 
-        for($i = 0; $i < count($menuid); $i++){
-            $data = [
-                'menuid' => $menuid[$i],
-                'userid' => session()->get('loggedUser'),
-                'total' => $total[$i]      
-            ];
-            if($order_model->insert($data) == 0){
-                
-                $cart_model->where('menuid',  $menuid[$i])->where('userid', session()->get('loggedUser'))->delete();
-                
-            }
-        }
-        return redirect()->route('order_status')->with('history', 'history');
+         var_dump($cartid);
+         if ($order_model->insert($data) == 0) {
+        //     $cart_model->where('menuid',  $menuid[$i])->where('userid', session()->get('loggedUser'))->delete();
+
+         }
     }
+    return redirect()->route('order_status')->with('history', 'history');
+    }
+}
     public function search()
-  {
-
-    $query = $this->request->getVar('search');
-    $search = new MenuModel();
-    $searching = array('name' => $query, 'category' => $query, '');
-    $result['products'] = $search->like('name', $query)->orLike('category', $query)->orLike('description', $query)->get()->getResultArray();
-    return view('Homepage/shop', $result);
-  }
+    {
+        $query = $this->request->getVar('search');
+        $search = new MenuModel();
+        $searching = array('name' => $query, 'category' => $query, '');
+        $result['products'] = $search->like('name', $query)->orLike('category', $query)->orLike('description', $query)->get()->getResultArray();
+        return view('Homepage/shop', $result);
+    }
+    public function qrcode(){
+      
+    }
 }

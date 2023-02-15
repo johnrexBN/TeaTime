@@ -35,3 +35,9 @@
 		</div>
 	</div>
 	<!-- end breadcrumb section -->
+<!-- Sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('stocks'))) : ?>
+      <script>swal("!", "Quantity Exceeds Stocks!.", "error");</script>
+      <?php endif ?>
+<!-- /Sweet alert -->
